@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <html>
+            <head>
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+                <title>Admin Login</title>
+                <link rel="stylesheet" type="text/css"
+                      href="images/styles5.css"/>
+            </head>
+            <body>
+                <div class="main-container">
+                    <div class="left-img-adm"></div>
+                    <div class="right-content">
+                        <div class="system-title">Traffic Offence Management</div>
+                        <h:messages globalOnly="true" layout="list"
+                                    styleClass="global-messages"/>
+                         
+                        <h:panelGroup rendered="#{not empty backing_AdminLogin.message}">
+                            <div class="global-messages">
+                                <h:outputText value="#{backing_AdminLogin.message}"/>
+                            </div>
+                        </h:panelGroup>
+                         
+                        <h:form id="mainForm">
+                            <!-- Signup Card -->
+                            <h:panelGroup rendered="#{!backing_AdminLogin.loginMode}"
+                                          styleClass="card">
+                                <div class="card-header">Signup</div>
+                                <h:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             cellpadding="5">
+                                    <h:outputLabel for="signupDesignationId"
+                                                   value="Designation ID:"/>
+                                    <h:inputText id="signupDesignationId"
+                                                 value="#{backing_AdminLogin.signupDesignationId}"
+                                                 required="true"
+                                                 requiredMessage="Designation ID is required."/>
+                                    <h:outputLabel for="signupOldPassword"
+                                                   value="Old Password:"/>
+                                    <h:inputSecret id="signupOldPassword"
+                                                   value="#{backing_AdminLogin.signupOldPassword}"
+                                                   required="true"
+                                                   requiredMessage="Old Password is required."/>
+                                    <h:outputLabel for="signupPassword"
+                                                   value="New Password:"/>
+                                    <h:inputSecret id="signupPassword"
+                                                   value="#{backing_AdminLogin.signupPassword}"
+                                                   required="true"
+                                                   requiredMessage="New Password is required."/>
+                                    <h:outputLabel for="signupConfirmPassword"
+                                                   value="Confirm Password:"/>
+                                    <h:inputSecret id="signupConfirmPassword"
+                                                   value="#{backing_AdminLogin.signupConfirmPassword}"
+                                                   required="true"
+                                                   requiredMessage="Confirm Password is required."/>
+                                </h:panelGrid>
+                                <div class="btn-row">
+                                    <h:commandButton value="Signup"
+                                                     action="#{backing_AdminLogin.signupAction}"
+                                                     styleClass="btn-primary"/>
+                                     
+                                    <h:commandButton value="Login"
+                                                     action="#{backing_AdminLogin.switchToLogin}"
+                                                     immediate="true"
+                                                     styleClass="btn-secondary"/>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Login Card -->
+                            <h:panelGroup rendered="#{backing_AdminLogin.loginMode}"
+                                          styleClass="card">
+                                <div class="card-header">Login</div>
+                                <h:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             cellpadding="5">
+                                    <h:outputLabel for="loginDesignationId"
+                                                   value="Designation ID:"/>
+                                    <h:inputText id="loginDesignationId"
+                                                 value="#{backing_AdminLogin.loginDesignationId}"
+                                                 required="true"
+                                                 requiredMessage="Designation ID is required."/>
+                                    <h:outputLabel for="loginPassword"
+                                                   value="Password:"/>
+                                    <h:inputSecret id="loginPassword"
+                                                   value="#{backing_AdminLogin.loginPassword}"
+                                                   required="true"
+                                                   requiredMessage="Password is required."/>
+                                </h:panelGrid>
+                                <div class="btn-row">
+                                    <h:commandButton value="Login"
+                                                     action="#{backing_AdminLogin.loginAction}"
+                                                     styleClass="btn-primary"/>
+                                     
+                                    <h:commandButton value="Signup"
+                                                     action="#{backing_AdminLogin.switchToSignup}"
+                                                     immediate="true"
+                                                     styleClass="btn-secondary"/>
+                                </div>
+                            </h:panelGroup>
+                        </h:form>
+                    </div>
+                </div>
+            </body>
+        </html>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_AdminLogin-->
+</jsp:root>

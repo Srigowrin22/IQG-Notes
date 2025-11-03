@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="customerBean" class="training.iqgateway.business.impl.Customer" 
+		scope="singleton"> <property name="id" value="1001" /> --> <!-- Setter Injection -->
+	<!-- <property name="name" value="" /> -->	<!-- Setter Injection <property -->
+	<!-- name="address" value="" /> -->	 <!-- Setter Injection <property name="contact" -->
+	<!-- value="9876543212" /> -->	<!-- Setter Injection </bean> -->
+
+	<!--<bean id="ccBean" class="training.iqgateway.business.impl.CurrencyConverterImpl"> 
+		Dependency Injection <property name="customer" ref="customerBean" /> </bean> -->
+
+<bean id="logBeforeAdvice" class="training.iqgateway.aop.LoggingBeforeAdvise"></bean>
+
+<bean id="logAfterAdvice" class="training.iqgateway.aop.LoggingAfterAdvice"></bean>
+
+	<bean id="customerBean" class="training.iqgateway.business.impl.Customer"
+		scope="singleton">
+		<constructor-arg value="1001" index="0" />
+		<constructor-arg value="Rahul" index="1" />
+		<constructor-arg value="Indiranagar Bengaluru" index="2" />
+		<constructor-arg value="9847365789" index="3" />
+	</bean>
+
+	<bean id="ccBean" class="training.iqgateway.business.impl.CurrencyConverterImpl" scope="singleton">
+		<!-- Customer dependency Injection -->
+		<constructor-arg ref="customerBean"></constructor-arg>
+	</bean>
+
+</beans>
+
+ 

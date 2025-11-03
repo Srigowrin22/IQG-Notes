@@ -1,0 +1,93 @@
+package training.iqgateway.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import training.iqgateway.dto.AdminDTO;
+import training.iqgateway.dto.RolesDTO;
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.service.AdminService;
+
+@RestController
+//@RequestMapping("/api/admin")
+//@CrossOrigin(origins = "url")
+public class AdminController {
+
+	@Autowired
+	private AdminService adminServiceRef;
+
+	@GetMapping("/showAdmins")
+	public List<AdminDTO> fetchAllAdmin() {
+		return adminServiceRef.getAdminEOFindAll();
+	}
+	
+	@PostMapping("/addAdmin")
+	public ResponseEntity<AdminEO> addAdmin(@RequestBody AdminEO adminEO) {
+	    try {
+	        AdminEO savedAdmin = adminServiceRef.persistAdminEO(adminEO);
+	        // Return 201 Created with saved entity in body
+	        return ResponseEntity.status(HttpStatus.CREATED).body(savedAdmin);
+	    } catch (Exception e) {
+	        // Log the error if needed
+	        // Return 400 Bad Request or 500 Internal Server Error as appropriate
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+	    }
+	}
+
+	@PutMapping("/updateAdmin")
+	public String updateRole(@RequestBody AdminEO adminEO) {
+		return adminServiceRef.mergeAdminEO(adminEO);
+	}
+
+	// TODO
+
+	@GetMapping("/findByAdminByRoleID/{roleId}")
+	public List<AdminEO> findAdminByRoleID(@PathVariable Long roleId) {
+		return adminServiceRef.findAdminByRoleID(roleId);
+	}
+
+	@GetMapping("/showRoles")
+	public List<RolesDTO> fetchAllRoles() {
+		return adminServiceRef.getRoleEOFindAll();
+	}
+
+	@PostMapping("/addRole")
+	public String addRole(@RequestBody RoleEO roleEO) {
+		String res = adminServiceRef.persistRoleEO(roleEO);
+		return res;
+	}
+
+	@PutMapping("/updateRole")
+	public String updateRole(@RequestBody RoleEO roleEO) {
+		return adminServiceRef.mergeRoleEO(roleEO);
+	}
+
+	@DeleteMapping("/deleteRole")
+	public Boolean deleteRole(@RequestBody RoleEO roleEO) {
+		return adminServiceRef.removeRoleEO(roleEO);
+	}
+
+	@GetMapping("/findByRoleID/{roleId}")
+	public RoleEO findByRoleID(@PathVariable Long roleId) {
+		return adminServiceRef.findRoleByRoleID(roleId);
+	}
+
+	@GetMapping("/findByRoleName/{roleName}")
+	public RoleEO findByRoleName(@PathVariable String roleName) {
+		return adminServiceRef.findRoleByRoleName(roleName);
+	}
+
+}

@@ -1,0 +1,946 @@
+SQL> 
+SQL> DROP VIEW PRODUCT_CATEGORIES;
+
+View dropped.
+
+SQL> DROP VIEW PRODUCTS;
+
+View dropped.
+
+SQL> 
+SQL> 
+SQL> CREATE TABLE PRODUCT_CATEGORIES_TEMP
+  2  AS SELECT
+  3  --    CATEGORY_TRANSLATIONS.LANGUAGE LANGUAGE_ID,
+  4      CATEGORY_TRANSLATIONS.CATEGORY_NAME CATEGORY_NAME,
+  5      CATEGORY_TRANSLATIONS.CATEGORY_DESCRIPTION CATEGORY_DESCRIPTION,
+  6      CATEGORY_ID CATEGORY_ID,
+  7      PRODUCT_CATEGORIES_BASE.PARENT_CATEGORY_ID PARENT_CATEGORY_ID,
+  8      PRODUCT_CATEGORIES_BASE.CATEGORY_LOCKED_FLAG CATEGORY_LOCKED_FLAG
+  9  FROM CATEGORY_TRANSLATIONS INNER JOIN PRODUCT_CATEGORIES_BASE USING (CATEGORY_ID)
+ 10  WHERE
+ 11      CATEGORY_TRANSLATIONS.LANGUAGE = 'US'
+ 12  ;
+
+Table created.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> CREATE TABLE PRODUCTS_TEMP AS SELECT
+  2      PRODUCT_TRANSLATIONS.DESCRIPTION DESCRIPTION,
+  3      PRODUCT_TRANSLATIONS.ADDITIONAL_INFO ADDITIONAL_INFO,
+  4  --    PRODUCT_TRANSLATIONS.LANGUAGE LANGUAGE_ID,
+  5      PRODUCTS_BASE.COST_PRICE COST_PRICE,
+  6      PRODUCTS_BASE.SUPPLIER_ID SUPPLIER_ID,
+  7      PRODUCTS_BASE.PRODUCT_NAME PRODUCT_NAME,
+  8      PRODUCTS_BASE.LIST_PRICE LIST_PRICE,
+  9      PRODUCT_ID PRODUCT_ID,
+ 10      PRODUCTS_BASE.CATEGORY_ID CATEGORY_ID,
+ 11      PRODUCTS_BASE.MIN_PRICE MIN_PRICE,
+ 12      PRODUCTS_BASE.WARRANTY_PERIOD_MONTHS WARRANTY_PERIOD_MONTHS,
+ 13      PRODUCTS_BASE.SHIPPING_CLASS_CODE SHIPPING_CLASS_CODE,
+ 14      PRODUCTS_BASE.EXTERNAL_URL EXTERNAL_URL,
+ 15      PRODUCTS_BASE.ATTRIBUTE_CATEGORY ATTRIBUTE_CATEGORY
+ 16  --    PRODUCTS_BASE.ATTRIBUTE15 ATTRIBUTE15,
+ 17  --    PRODUCTS_BASE.ATTRIBUTE1 ATTRIBUTE1,
+ 18  --    PRODUCTS_BASE.ATTRIBUTE2 ATTRIBUTE2,
+ 19  --    PRODUCTS_BASE.ATTRIBUTE3 ATTRIBUTE3,
+ 20  --    PRODUCTS_BASE.ATTRIBUTE4 ATTRIBUTE4,
+ 21  --    PRODUCTS_BASE.ATTRIBUTE5 ATTRIBUTE5,
+ 22  --    PRODUCTS_BASE.ATTRIBUTE6 ATTRIBUTE6,
+ 23  --    PRODUCTS_BASE.ATTRIBUTE7 ATTRIBUTE7,
+ 24  --    PRODUCTS_BASE.ATTRIBUTE8 ATTRIBUTE8,
+ 25  --    PRODUCTS_BASE.ATTRIBUTE9 ATTRIBUTE9,
+ 26  --    PRODUCTS_BASE.ATTRIBUTE10 ATTRIBUTE10,
+ 27  --    PRODUCTS_BASE.ATTRIBUTE11 ATTRIBUTE11,
+ 28  --    PRODUCTS_BASE.ATTRIBUTE12 ATTRIBUTE12,
+ 29  --    PRODUCTS_BASE.ATTRIBUTE13 ATTRIBUTE13,
+ 30  --    PRODUCTS_BASE.ATTRIBUTE14 ATTRIBUTE14
+ 31  FROM
+ 32      PRODUCT_TRANSLATIONS INNER JOIN PRODUCTS_BASE USING (PRODUCT_ID)
+ 33  WHERE
+ 34      PRODUCT_TRANSLATIONS.LANGUAGE = 'US'
+ 35  ;
+
+Table created.
+
+SQL> 
+SQL> 
+SQL> select   object_type,
+  2           object_name
+  3  from     user_objects
+  4  group by object_type, object_name
+  5  order by object_type desc, object_name;
+
+OBJECT_TYPE
+-------------------
+OBJECT_NAME
+--------------------------------------------------------------------------------------------------------------------------------
+VIEW
+DISCOUNTS
+
+VIEW
+MEMBERSHIPS
+
+VIEW
+PERSONS_V
+
+VIEW
+PERSON_INFORMATION
+
+VIEW
+SHIPPING_OPTIONS
+
+TRIGGER
+ASSIGN_ADDRESS_ID
+
+TRIGGER
+ASSIGN_ADDRESS_USAGES_ID
+
+TRIGGER
+ASSIGN_CUSTOMER_INTRSTS_ID
+
+TRIGGER
+ASSIGN_DISCOUNT_ID
+
+TRIGGER
+ASSIGN_DISCOUNT_TRANS_ID
+
+TRIGGER
+ASSIGN_LINE_ITEM_ID
+
+TRIGGER
+ASSIGN_MEMBERSHIP_ID
+
+TRIGGER
+ASSIGN_MEMBERSHIP_TRANS_ID
+
+TRIGGER
+ASSIGN_ORDER_ID
+
+TRIGGER
+ASSIGN_PAYMENT_OPTION_ID
+
+TRIGGER
+ASSIGN_PERSON_ID
+
+TRIGGER
+ASSIGN_PRODUCT_IMAGE_ID
+
+TRIGGER
+ASSIGN_SHIPPING_OPTION_ID
+
+TRIGGER
+ASSIGN_SHIPPING_TRANS_ID
+
+TRIGGER
+ASSIGN_SUPPLIER_ID
+
+TRIGGER
+ASSIGN_WAREHOUSE_ID
+
+TABLE
+ADDRESSES
+
+TABLE
+ADDRESS_USAGES
+
+TABLE
+AVAILABLE_LANGUAGES
+
+TABLE
+CATEGORY_TRANSLATIONS
+
+TABLE
+COUNTRY_CODES
+
+TABLE
+COUPON_USAGES
+
+TABLE
+CUSTOMER_IDENTIFICATIONS
+
+TABLE
+CUSTOMER_INTERESTS
+
+TABLE
+DEMO_OPTIONS
+
+TABLE
+DISCOUNTS_BASE
+
+TABLE
+DISCOUNT_TRANSLATIONS
+
+TABLE
+ELIGIBLE_DISCOUNTS
+
+TABLE
+LOOKUP_CODES
+
+TABLE
+MEMBERSHIPS_BASE
+
+TABLE
+MEMBERSHIP_TRANSLATIONS
+
+TABLE
+ORDERS
+
+TABLE
+ORDER_ITEMS
+
+TABLE
+PAYMENT_OPTIONS
+
+TABLE
+PERSONS
+
+TABLE
+PRODUCTS_BASE
+
+TABLE
+PRODUCTS_TEMP
+
+TABLE
+PRODUCT_CATEGORIES_BASE
+
+TABLE
+PRODUCT_CATEGORIES_TEMP
+
+TABLE
+PRODUCT_IMAGES
+
+TABLE
+PRODUCT_TRANSLATIONS
+
+TABLE
+SHIPPING_OPTIONS_BASE
+
+TABLE
+SHIPPING_OPTION_TRANSLATIONS
+
+TABLE
+SUPPLIERS
+
+TABLE
+WAREHOUSES
+
+TABLE
+WAREHOUSE_STOCK_LEVELS
+
+SEQUENCE
+ADDRESS_SEQ
+
+SEQUENCE
+ADDRESS_USAGES_SEQ
+
+SEQUENCE
+CATEGORY_SEQ
+
+SEQUENCE
+CUSTOMER_INTERESTS_SEQ
+
+SEQUENCE
+DISCOUNT_SEQ
+
+SEQUENCE
+DISCOUNT_TRANSLATIONS_SEQ
+
+SEQUENCE
+MEMBER_SEQ
+
+SEQUENCE
+MEMBER_TRANSLATIONS_SEQ
+
+SEQUENCE
+ORDER_ITEMS_SEQ
+
+SEQUENCE
+ORDER_SEQ
+
+SEQUENCE
+PAYMENT_OPTION_SEQ
+
+SEQUENCE
+PERSON_SEQ
+
+SEQUENCE
+PRODUCT_IMAGE_SEQ
+
+SEQUENCE
+PRODUCT_SEQ
+
+SEQUENCE
+SHIPPING_OPTION_SEQ
+
+SEQUENCE
+SHIPPING_TRANSLATIONS_SEQ
+
+SEQUENCE
+SUPPLIER_SEQ
+
+SEQUENCE
+WAREHOUSE_SEQ
+
+PACKAGE BODY
+PERSON_API
+
+PACKAGE
+PERSON_API
+
+LOB
+SYS_LOB0000021974C00005$$
+
+INDEX
+ADDRESSES_PK
+
+INDEX
+ADDRESS_USAGES_PK
+
+INDEX
+AVAILABLE_LANGUAGES_PK
+
+INDEX
+CATEGORY_TRANSLATIONS_PK
+
+INDEX
+COUNTRY_CODES_PK
+
+INDEX
+COUPON_USAGES_PK
+
+INDEX
+CUSTOMER_CATEGORY_ID_UNIQUE
+
+INDEX
+CUSTOMER_INTERESTS_PK
+
+INDEX
+DEMO_OPTIONS_PK
+
+INDEX
+DISCOUNTS_PK
+
+INDEX
+DISCOUNT_TRANSLATIONS_PK
+
+INDEX
+ELIGIBLE_DISCOUNTS_PK
+
+INDEX
+LOOKUP_CODES_PK
+
+INDEX
+MEMBERSHIPS_BASE_PK
+
+INDEX
+MEMBERSHIP_TRANSLATIONS_PK
+
+INDEX
+ORDERS_PK
+
+INDEX
+ORDER_ITEMS_PK
+
+INDEX
+PAYMENT_OPTIONS_PK
+
+INDEX
+PERSONS_PK
+
+INDEX
+PRODUCTS_PK
+
+INDEX
+PRODUCT_IMAGES_PK
+
+INDEX
+PRODUCT_TAGS_PK
+
+INDEX
+PRODUCT_TRANSLATIONS_PK
+
+INDEX
+SHIPPING_OPTIONS_PK
+
+INDEX
+SHIPPING_OPTION_TRANSLATI_PK
+
+INDEX
+SUPPLIERS_PK
+
+INDEX
+VERIFIED_ID_PK
+
+INDEX
+WAREHOUSES_PK
+
+INDEX
+WAREHOUSE_STOCK_LEVELS_PK
+
+
+101 rows selected.
+
+SQL> 
+SQL> 
+SQL> COMMENT ON TABLE PRODUCT_CATEGORIES_TEMP IS 'This table combines the Category_base table and the Category_Translations table. The table includes only the US language translations.'
+  2  ;
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON TABLE PRODUCTS_TEMP IS 'This table combines the Products_Base and Product_Translation tables. The table includes only the US language translations.'
+  2  ;
+
+Comment created.
+
+SQL> 
+SQL> 
+SQL> --DROP TABLES
+SQL> 
+SQL> 
+SQL> DROP TABLE PRODUCT_CATEGORIES_BASE CASCADE constraints;
+
+Table dropped.
+
+SQL> DROP TABLE PRODUCT_TRANSLATIONS CASCADE constraints;
+
+Table dropped.
+
+SQL> DROP TABLE PRODUCTS_BASE CASCADE constraints;
+
+Table dropped.
+
+SQL> DROP TABLE CATEGORY_TRANSLATIONS CASCADE constraints;
+
+Table dropped.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> -- create real tables from temp
+SQL> 
+SQL> CREATE TABLE PRODUCTS AS
+  2          SELECT * FROM PRODUCTS_TEMP;
+
+Table created.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE PRODUCTS
+  2  ADD CONSTRAINT PRODUCTS_PK PRIMARY KEY
+  3  (
+  4  PRODUCT_ID
+  5  )
+  6   ENABLE
+  7  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> CREATE TABLE CATEGORIES AS
+  2          SELECT * FROM product_CATEGORIES_TEMP;
+
+Table created.
+
+SQL> 
+SQL> 
+SQL> ALTER TABLE CATEGORIES
+  2  ADD CONSTRAINT CATEGORIES_PK PRIMARY KEY
+  3  (
+  4  CATEGORY_ID
+  5  )
+  6   ENABLE
+  7  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> -- drop test
+SQL> 
+SQL> DROP TABLE PRODUCTS_TEMP CASCADE constraints;
+
+Table dropped.
+
+SQL> 
+SQL> 
+SQL> DROP TABLE PRODUCT_CATEGORIES_TEMP CASCADE constraints;
+
+Table dropped.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> -- Remove extra audit columns and add object_version_id to products and categories
+SQL> 
+SQL> 
+SQL> --alter table orders drop column created_by;
+SQL> --alter table orders drop column creation_date;
+SQL> --alter table orders drop column last_updated_by;
+SQL> --alter table orders drop column last_update_date;
+SQL> 
+SQL> 
+SQL> --alter table order_items drop column created_by;
+SQL> --alter table order_items drop column creation_date;
+SQL> --alter table order_items drop column last_updated_by;
+SQL> --alter table order_items drop column last_update_date;
+SQL> 
+SQL> 
+SQL> --alter table persons drop column created_by;
+SQL> --alter table persons drop column creation_date;
+SQL> --alter table persons drop column last_updated_by;
+SQL> --alter table persons drop column last_update_date;
+SQL> 
+SQL> alter table products add
+  2  (created_by varchar(60),
+  3   creation_date date,
+  4   last_updated_by varchar(60),
+  5   last_update_date date,
+  6   OBJECT_VERSION_ID NUMBER(15));
+
+Table altered.
+
+SQL> 
+SQL> alter table categories add
+  2  (created_by varchar(60),
+  3   creation_date date,
+  4   last_updated_by varchar(60),
+  5   last_update_date date,
+  6   OBJECT_VERSION_ID NUMBER(15));
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> -- Fix data in order_items (remove rows with products that are not in our products table)
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> -- Cleanup data that points to products that are no longer in the products table
+SQL> 
+SQL> 
+SQL> 
+SQL> delete from order_items
+  2  where
+  3  product_id not in (select product_id from products)
+  4  ;
+
+9 rows deleted.
+
+SQL> 
+SQL> delete from warehouse_stock_levels
+  2  where
+  3  product_id not in (select product_id from products)
+  4  ;
+
+182 rows deleted.
+
+SQL> 
+SQL> 
+SQL> ALTER TABLE ORDER_ITEMS
+  2  ADD CONSTRAINT ORDER_ITEMS_PRODUCTS_FK FOREIGN KEY
+  3  (
+  4  PRODUCT_ID
+  5  )
+  6  REFERENCES PRODUCTS
+  7  (
+  8  PRODUCT_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE PRODUCTS
+  2  ADD CONSTRAINT PRODUCTS_SUPPLIERS_FK FOREIGN KEY
+  3  (
+  4  SUPPLIER_ID
+  5  )
+  6  REFERENCES SUPPLIERS
+  7  (
+  8  SUPPLIER_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE PRODUCTS
+  2  ADD CONSTRAINT PRODUCTS_PRODUCT_CATEGORIES_FK FOREIGN KEY
+  3  (
+  4  CATEGORY_ID
+  5  )
+  6  REFERENCES CATEGORIES
+  7  (
+  8  CATEGORY_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE CATEGORIES
+  2  ADD CONSTRAINT PRODUCT_CATEGORIES_FK FOREIGN KEY
+  3  (
+  4  PARENT_CATEGORY_ID
+  5  )
+  6  REFERENCES CATEGORIES
+  7  (
+  8  CATEGORY_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE PRODUCT_IMAGES
+  2  ADD CONSTRAINT PRODUCT_IMAGES_PRODUCTS_FK FOREIGN KEY
+  3  (
+  4  PRODUCT_ID
+  5  )
+  6  REFERENCES PRODUCTS
+  7  (
+  8  PRODUCT_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE WAREHOUSE_STOCK_LEVELS
+  2  ADD CONSTRAINT WAREHOUSE_STOCK_LEVELS_FK1 FOREIGN KEY
+  3  (
+  4  PRODUCT_ID
+  5  )
+  6  REFERENCES PRODUCTS
+  7  (
+  8  PRODUCT_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE CUSTOMER_INTERESTS
+  2  ADD CONSTRAINT CUSTOMER_INTERESTS_FK1 FOREIGN KEY
+  3  (
+  4  CATEGORY_ID
+  5  )
+  6  REFERENCES CATEGORIES
+  7  (
+  8  CATEGORY_ID
+  9  ) ENABLE
+ 10  ;
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> ALTER TABLE CATEGORIES
+  2  ADD CONSTRAINT PRODUCT_CATEGORIES_LOCKED_CHK CHECK
+  3  (CATEGORY_LOCKED_FLAG in ('Y','N'))
+  4   ENABLE
+  5  ;
+
+Table altered.
+
+SQL> 
+SQL> -- This is the BOOKS table from Bijoy for the JavaEE Transactional practice.
+SQL> 
+SQL> DROP TABLE BOOKS;
+DROP TABLE BOOKS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> 
+SQL> CREATE TABLE BOOKS (
+  2    BOOK_ID NUMBER(8,0) NOT NULL,
+  3    NAME VARCHAR2(50) NOT NULL,
+  4    GENRE VARCHAR2(4000) NOT NULL
+  5  );
+
+Table created.
+
+SQL> 
+SQL> ALTER TABLE BOOKS
+  2  ADD CONSTRAINT BK_PK PRIMARY KEY (BOOK_ID) ENABLE;
+
+Table altered.
+
+SQL> 
+SQL> Insert into BOOKS values
+  2  (100,'The Time Machine','Science fiction novel/Allegory');
+
+1 row created.
+
+SQL> 
+SQL> Insert into BOOKS values
+  2  (101,'The Count of Monte Cristo','Historical, Adventure');
+
+1 row created.
+
+SQL> 
+SQL> Insert into BOOKS values
+  2  (102,'The Lord of the Rings','High fantasy, Adventure novel, Heroic romance, Action adventure');
+
+1 row created.
+
+SQL> 
+SQL> Insert into BOOKS values
+  2  (103,'Pride and Prejudice','Romantic comedy, Novel of manners');
+
+1 row created.
+
+SQL> 
+SQL> Insert into BOOKS values
+  2  (104,'The Adventures of Sherlock Holmes','Detective fiction short stories');
+
+1 row created.
+
+SQL> 
+SQL> -- This is the LOGIN table from Bijoy for the JavaEE
+SQL> 
+SQL> DROP TABLE LOGIN;
+DROP TABLE LOGIN
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> 
+SQL> CREATE TABLE LOGIN(
+  2    USERID NUMBER(15) NOT NULL,
+  3    UNAME VARCHAR2(60) NOT NULL,
+  4    PASSWORD VARCHAR2(12),
+  5    FIRST_NAME VARCHAR2(30),
+  6    LAST_NAME VARCHAR2(30)
+  7  );
+
+Table created.
+
+SQL> 
+SQL> insert into LOGIN values
+  2      (100
+  3      , 'sking'
+  4      , 'oracle'
+  5      , 'Steven'
+  6      , 'King'
+  7      );
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> insert into LOGIN values
+  2      (110
+  3      , 'jchen'
+  4      , 'oracle'
+  5      , 'John'
+  6      , 'Chen'
+  7      );
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> insert into LOGIN values
+  2      (106
+  3      , 'vpatabal'
+  4      , 'oracle'
+  5      , 'Valli'
+  6      , 'Pataballa'
+  7      );
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> commit
+  2  ;
+
+Commit complete.
+
+SQL> 
+SQL> 
+SQL> REM And Commit all that
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> REM Report Back
+SQL> Prompt What OBJECTS were created?
+What OBJECTS were created?
+SQL> column object_name format a30
+SQL> column object_type format a30
+SQL> 
+SQL> select   object_type,
+  2           object_name
+  3  from     user_objects
+  4  group by object_type, object_name
+  5  order by object_type desc, object_name
+  6  /
+
+OBJECT_TYPE                    OBJECT_NAME
+------------------------------ ------------------------------
+VIEW                           DISCOUNTS
+VIEW                           MEMBERSHIPS
+VIEW                           PERSONS_V
+VIEW                           PERSON_INFORMATION
+VIEW                           SHIPPING_OPTIONS
+TRIGGER                        ASSIGN_ADDRESS_ID
+TRIGGER                        ASSIGN_ADDRESS_USAGES_ID
+TRIGGER                        ASSIGN_CUSTOMER_INTRSTS_ID
+TRIGGER                        ASSIGN_DISCOUNT_ID
+TRIGGER                        ASSIGN_DISCOUNT_TRANS_ID
+TRIGGER                        ASSIGN_LINE_ITEM_ID
+TRIGGER                        ASSIGN_MEMBERSHIP_ID
+TRIGGER                        ASSIGN_MEMBERSHIP_TRANS_ID
+TRIGGER                        ASSIGN_ORDER_ID
+TRIGGER                        ASSIGN_PAYMENT_OPTION_ID
+TRIGGER                        ASSIGN_PERSON_ID
+TRIGGER                        ASSIGN_PRODUCT_IMAGE_ID
+TRIGGER                        ASSIGN_SHIPPING_OPTION_ID
+TRIGGER                        ASSIGN_SHIPPING_TRANS_ID
+TRIGGER                        ASSIGN_SUPPLIER_ID
+TRIGGER                        ASSIGN_WAREHOUSE_ID
+TABLE                          ADDRESSES
+TABLE                          ADDRESS_USAGES
+TABLE                          AVAILABLE_LANGUAGES
+TABLE                          BOOKS
+TABLE                          CATEGORIES
+TABLE                          COUNTRY_CODES
+TABLE                          COUPON_USAGES
+TABLE                          CUSTOMER_IDENTIFICATIONS
+TABLE                          CUSTOMER_INTERESTS
+TABLE                          DEMO_OPTIONS
+TABLE                          DISCOUNTS_BASE
+TABLE                          DISCOUNT_TRANSLATIONS
+TABLE                          ELIGIBLE_DISCOUNTS
+TABLE                          LOGIN
+TABLE                          LOOKUP_CODES
+TABLE                          MEMBERSHIPS_BASE
+TABLE                          MEMBERSHIP_TRANSLATIONS
+TABLE                          ORDERS
+TABLE                          ORDER_ITEMS
+TABLE                          PAYMENT_OPTIONS
+TABLE                          PERSONS
+TABLE                          PRODUCTS
+TABLE                          PRODUCT_IMAGES
+TABLE                          SHIPPING_OPTIONS_BASE
+TABLE                          SHIPPING_OPTION_TRANSLATIONS
+TABLE                          SUPPLIERS
+TABLE                          WAREHOUSES
+TABLE                          WAREHOUSE_STOCK_LEVELS
+SEQUENCE                       ADDRESS_SEQ
+SEQUENCE                       ADDRESS_USAGES_SEQ
+SEQUENCE                       CATEGORY_SEQ
+SEQUENCE                       CUSTOMER_INTERESTS_SEQ
+SEQUENCE                       DISCOUNT_SEQ
+SEQUENCE                       DISCOUNT_TRANSLATIONS_SEQ
+SEQUENCE                       MEMBER_SEQ
+SEQUENCE                       MEMBER_TRANSLATIONS_SEQ
+SEQUENCE                       ORDER_ITEMS_SEQ
+SEQUENCE                       ORDER_SEQ
+SEQUENCE                       PAYMENT_OPTION_SEQ
+SEQUENCE                       PERSON_SEQ
+SEQUENCE                       PRODUCT_IMAGE_SEQ
+SEQUENCE                       PRODUCT_SEQ
+SEQUENCE                       SHIPPING_OPTION_SEQ
+SEQUENCE                       SHIPPING_TRANSLATIONS_SEQ
+SEQUENCE                       SUPPLIER_SEQ
+SEQUENCE                       WAREHOUSE_SEQ
+PACKAGE BODY                   PERSON_API
+PACKAGE                        PERSON_API
+LOB                            SYS_LOB0000021974C00005$$
+INDEX                          ADDRESSES_PK
+INDEX                          ADDRESS_USAGES_PK
+INDEX                          AVAILABLE_LANGUAGES_PK
+INDEX                          BK_PK
+INDEX                          CATEGORIES_PK
+INDEX                          COUNTRY_CODES_PK
+INDEX                          COUPON_USAGES_PK
+INDEX                          CUSTOMER_CATEGORY_ID_UNIQUE
+INDEX                          CUSTOMER_INTERESTS_PK
+INDEX                          DEMO_OPTIONS_PK
+INDEX                          DISCOUNTS_PK
+INDEX                          DISCOUNT_TRANSLATIONS_PK
+INDEX                          ELIGIBLE_DISCOUNTS_PK
+INDEX                          LOOKUP_CODES_PK
+INDEX                          MEMBERSHIPS_BASE_PK
+INDEX                          MEMBERSHIP_TRANSLATIONS_PK
+INDEX                          ORDERS_PK
+INDEX                          ORDER_ITEMS_PK
+INDEX                          PAYMENT_OPTIONS_PK
+INDEX                          PERSONS_PK
+INDEX                          PRODUCTS_PK
+INDEX                          PRODUCT_IMAGES_PK
+INDEX                          SHIPPING_OPTIONS_PK
+INDEX                          SHIPPING_OPTION_TRANSLATI_PK
+INDEX                          SUPPLIERS_PK
+INDEX                          VERIFIED_ID_PK
+INDEX                          WAREHOUSES_PK
+INDEX                          WAREHOUSE_STOCK_LEVELS_PK
+
+98 rows selected.
+
+SQL> 
+SQL> Prompt ------------------------------------------------------
+> Prompt
+----------------------------------------------------- Prompt
+SQL> Prompt Are there any INVALID OBJECTS?
+Are there any INVALID OBJECTS?
+SQL> 
+SQL> select   object_type,
+  2           object_name
+  3  from     user_objects
+  4  where    status='INVALID'
+  5  group by object_type, object_name
+  6  order by object_type desc, object_name
+  7  /
+
+no rows selected
+
+SQL> 
+SQL> 
+SQL> REM Add package for setting up user for UI Training
+SQL> REM @@UI_Training_User_Setup
+SQL> 
+SQL> Prompt Disconnecting....
+Disconnecting....
+SQL> disconnect
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+SQL> 
+SQL> spool off

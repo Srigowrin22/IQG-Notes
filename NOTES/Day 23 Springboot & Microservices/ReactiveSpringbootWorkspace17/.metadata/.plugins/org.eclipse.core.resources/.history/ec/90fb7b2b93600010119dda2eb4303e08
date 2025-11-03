@@ -1,0 +1,40 @@
+package training.iqgateway.dto;
+
+public class OffenceTypesDTO {
+	private Long offenceTypeId;
+	private String offenceTypeName;
+	private String description;
+
+	public OffenceTypesDTO() {
+	}
+
+	public OffenceTypesDTO(Long offenceTypeId, String offenceTypeName, String description) {
+		this.offenceTypeId = offenceTypeId;
+		this.offenceTypeName = offenceTypeName;
+		this.description = description;
+	}
+
+	public Long getOffenceTypeId() {
+		return offenceTypeId;
+	}
+
+	public void setOffenceTypeId(Long offenceTypeId) {
+		this.offenceTypeId = offenceTypeId;
+	}
+
+	public String getOffenceTypeName() {
+		return offenceTypeName;
+	}
+
+	public void setOffenceTypeName(String offenceTypeName) {
+		this.offenceTypeName = offenceTypeName;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+}

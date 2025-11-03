@@ -1,0 +1,135 @@
+package training.iqgateway.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import training.iqgateway.dto.RegistrationDTO;
+import training.iqgateway.entities.RegistrationEO;
+import training.iqgateway.entities.VehicleEO;
+import training.iqgateway.entities.OwnerEO;
+import training.iqgateway.repository.RegistrationRepository;
+import training.iqgateway.repository.VehicleRepository;
+import training.iqgateway.repository.OwnerRepository;
+import training.iqgateway.service.RegistrationService;
+
+@Service
+public class RegistrationServiceImpl implements RegistrationService {
+
+    @Autowired
+    private RegistrationRepository registrationRepository;
+
+    @Autowired
+    private VehicleRepository vehicleRepository;
+
+    @Autowired
+    private OwnerRepository ownerRepository;
+
+    private RegistrationDTO toDTO(RegistrationEO eo) {
+        if (eo == null) return null;
+        RegistrationDTO dto = new RegistrationDTO();
+        dto.setRegistrationId(eo.getRegistrationId());
+        dto.setLocation(eo.getLocation());
+        dto.setRegistrationDate(eo.getRegistrationDate());
+        dto.setRegistrar(eo.getRegistrar());
+        dto.setVehicleId(eo.getVehicle() != null ? eo.getVehicle().getVehicleId() : null);
+        dto.setOwnerAadhar(eo.getOwner() != null ? eo.getOwner().getOwnerAadhar() : null);
+        return dto;
+    }
+
+    @Override
+    public String persistRegistrationEO(RegistrationEO regisEO) {
+        if (regisEO == null) throw new IllegalArgumentException("Registration cannot be null");
+
+        if (registrationRepository.existsById(regisEO.getRegistrationId())) {
+            throw new RuntimeException("Registration already exists with ID: " + regisEO.getRegistrationId());
+        }
+
+        VehicleEO vehicle = vehicleRepository.findById(
+                regisEO.getVehicle() != null ? regisEO.getVehicle().getVehicleId() : null)
+                .orElseThrow(() -> new RuntimeException("Vehicle not found"));
+
+        OwnerEO owner = ownerRepository.findById(
+                regisEO.getOwner() != null ? regisEO.getOwner().getOwnerAadhar() : null)
+                .orElseThrow(() -> new RuntimeException("Owner not found"));
+
+        regisEO.setVehicle(vehicle);
+        regisEO.setOwner(owner);
+
+        registrationRepository.save(regisEO);
+        return "Registration created with ID " + regisEO.getRegistrationId();
+    }
+
+    @Override
+    public String mergeRegistrationEO(RegistrationEO regisEO) {
+        if (regisEO == null || regisEO.getRegistrationId() == null) {
+            throw new IllegalArgumentException("Registration and registrationId cannot be null.");
+        }
+
+        RegistrationEO existing = registrationRepository.findById(regisEO.getRegistrationId())
+                .orElseThrow(() -> new RuntimeException("Registration not found: " + regisEO.getRegistrationId()));
+
+        VehicleEO vehicle = vehicleRepository.findById(
+                regisEO.getVehicle() != null ? regisEO.getVehicle().getVehicleId() : null)
+                .orElseThrow(() -> new RuntimeException("Vehicle not found"));
+
+        OwnerEO owner = ownerRepository.findById(
+                regisEO.getOwner() != null ? regisEO.getOwner().getOwnerAadhar() : null)
+                .orElseThrow(() -> new RuntimeException("Owner not found"));
+
+        existing.setLocation(regisEO.getLocation());
+        existing.setRegistrationDate(regisEO.getRegistrationDate());
+        existing.setRegistrar(regisEO.getRegistrar());
+        existing.setVehicle(vehicle);
+        existing.setOwner(owner);
+
+        registrationRepository.save(existing);
+        return "Registration updated successfully";
+    }
+
+    @Override
+    public Boolean removeRegistrationEO(String regisID) {
+        if (regisID == null) throw new IllegalArgumentException("Registration ID must not be null");
+
+        if (!registrationRepository.existsById(regisID)) {
+            return false;
+        }
+
+        registrationRepository.deleteById(regisID);
+        return true;
+    }
+
+    @Override
+    public RegistrationDTO findRegistrationByID(String regisID) {
+        return registrationRepository.findById(regisID).map(this::toDTO).orElse(null);
+    }
+
+    @Override
+    public RegistrationDTO findRegistrationByVehID(Integer vehID) {
+        RegistrationEO eo = registrationRepository.findByVehicleVehicleId(vehID);
+        return toDTO(eo);
+    }
+
+    @Override
+    public List<RegistrationDTO> findRegistrationByAadhar(String aadhar) {
+        List<RegistrationEO> list = registrationRepository.findByOwnerOwnerAadhar(aadhar);
+        List<RegistrationDTO> dtos = new ArrayList<>();
+        for (RegistrationEO eo : list) {
+            dtos.add(toDTO(eo));
+        }
+        return dtos;
+    }
+
+    @Override
+    public List<RegistrationDTO> findAllRegistrations() {
+        List<RegistrationEO> list = registrationRepository.findAll();
+        List<RegistrationDTO> dtos = new ArrayList<>();
+        for (RegistrationEO eo : list) {
+            dtos.add(toDTO(eo));
+        }
+        return dtos;
+    }
+
+}

@@ -1,0 +1,15 @@
+package training.iqgateway;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DepartmentService {
+
+	@Autowired
+	private DepartmentRepository deeptRepositoryRef;
+	
+	public List<DepartmentEO> getAllDepartments(){
+		return deeptRepositoryRef.findAll();
+	}
+}

@@ -1,0 +1,9 @@
+package training.iqgateway;
+
+import reactor.core.publisher.Flux;
+
+public class ReactiveService {
+	public Flux<String> getMessage(){
+		
+	}
+}

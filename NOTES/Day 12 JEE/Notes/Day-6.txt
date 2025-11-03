@@ -1,0 +1,103 @@
+Day 6 
+
+	Agenda :
+	
+		Module 10 : Java EE 
+		
+			Lesson 14 : Messaging With JMS and MDB
+			
+			Lesson 15 : Transaction Management using JTA
+			
+			Lesson 16 : Security Management using JAAS
+			
+			Lesson 17 : Packaging and Deploying Applications on the Middleware 
+			
+			
+			Lesson 14 : Messaging With JMS and MDB
+			
+			
+				JEE uses MOM for Messaging
+
+				M-- Message
+				O-- Oriented
+				M-- Middleware
+
+
+				JMS :
+
+					Its is a  Simple and Standardized API for Sending , Creating , Receiveing and Publishing
+
+
+						Synchronous and ASynchronous
+
+						Reilable
+
+
+
+				1.  Point 2 Point ( QUEUES )
+
+				2.	Publish and Subscribe ( TOPICS )
+
+
+				JMS Architecture
+
+				Administarted Objects
+
+				1.	Connections
+
+						ConnectionFactory
+
+								QueueConnection
+
+								TopicConnection
+
+				2.	Sessions
+
+								QueueSession
+
+								TopicSession
+
+				3.	Message Producers
+
+								QueueSender
+
+								TopicSender
+
+				4.	Message Consumers
+
+								QueueReceiver
+
+								TopicSubscriber
+
+				5.	Messages
+
+
+						Byte Messages ( non Java message Consumers, Producers )
+						
+						Map Messages	 ( Like HashMap ) 
+
+						Message - empty body just header and properties
+
+						Object Message -- Serialize Objects
+
+						Stream Message --- Seq stream of Java Primitives
+
+						TextMessage ---  String Message ( Send XML Messages )
+
+
+
+				Transactions
+
+					
+					Attributes
+
+						Required
+
+						Supports
+
+						Mandatory
+
+						Never
+
+
+

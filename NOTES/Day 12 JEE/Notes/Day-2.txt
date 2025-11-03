@@ -1,0 +1,166 @@
+Day 2 
+
+	Agenda :
+	
+		Lesson 03 : Developing Web Applications Using Servlets 
+		
+		Lesson 04 : Developing Web Applications Using JSP 
+		
+		
+		Lesson 03 : Developing Web Applications Using Servlets 
+		
+			Evolution of Web Application 
+			
+				It All Started with HTML 
+				
+				Scripting Was Introduced
+				
+				1.  Server Side Scritping
+				
+					a. CGI 
+					
+					b. Mod Perl 
+					
+					c. Servlets 
+					
+					d. ASP
+					
+					e. JSP
+					
+					f. JSF
+					
+					g. PHP
+					
+					h. ASP.Net 
+					
+						...
+				
+				2.  Client Side Scripting
+				
+					a. Java Script
+					
+					b. VB Script 
+					
+					
+				Request Response Architecture 
+			
+			1.  Encapsulation of Client Details
+			
+					Gathering the Details About the Client. 
+			
+			2.  Request Processing Phase
+			
+					Middleware then Delegates the Request to the Respective Component Who Can intake the Request, Process the Request
+			
+			3.  Response Generation Phase 
+			
+					Component After Processing the Request, Generation of Response and it Hands Over to the Server, Server Inturn Hands it Back to the Client
+					
+					
+			http://127.0.0.1:7101/Lesson04-ServletsIntro-ServletsDemo-context-root/datetime
+		
+				HTTP Protocol is Stateless Protocol 
+			
+				How do We Make HTTP Protocol as a Statefull Protocol
+				
+				Session  :
+						
+						A Session is a Period of Time during which client and server interact with each other interms of Req's And Res's
+						
+				Session Tracking :
+				
+						Keeping Track of the Clients [ Client / Server ]
+			
+				1.  URL Rewriting
+
+						www.abc.com 
+						
+						www.abc.com?jsessionid=dsfkjasdkj4545kdsfjksl
+						
+							On the Server it Creates a MAP
+							
+								Key    						Value
+							dsfkjasdkj4545kdsfjksl ---     Client Details
+							
+							
+				2.  Cookies
+				
+						Is a Small Text File Containing Client Information, Sent To and Fro From Client to the Server and Server to the Client interms of Request's and Response's
+						
+						
+					Client     ------------------------      Server 
+															
+															On the Server
+															It Creates a 
+															Cookie File, 
+															Puts all the 
+															Client Details
+															into it.
+															
+						With the Response the Cookie is attached and sent to the Client. Downloaded on the Client Maintained on Client for a Specific Period of Time Set by the server.
+						
+						
+					With the Consecutive Request the Cookie File is Attached to the Request and Sent to the Server.
+				
+				
+				3.  Hidden Form Fields
+				
+						An Input component In HTML Form Fields 
+				
+				4.  HttpSession 
+				
+						Session : Period of Time [During which Client and Server Communicates With Each Other in terms of Request's and Response's ]
+				
+						Is a Session Object which is Created and Maintained on the Middleware 
+						
+							a.  Client Information 
+							
+							b.  User Information 
+			
+				
+				HTTP Methods 
+				
+				1.  GET
+				
+				2.  POST
+				
+				3.  PUT
+				
+				4.  DELETE
+				
+				5.  HEAD
+				
+				6.  TRACE
+				
+				7.  OPTION 
+				
+				
+				URL is Composed of 
+				
+				< Protocol > : // < IP Address > : < Port No > / AppName / ResName 
+				
+				http://localhost:9090/BankingApp/CustomerDetails.jsp
+				
+				
+				Accession Application Using IP Address of the Server on Which Application is Deployed is lil Difficult to Remember 
+				
+				DNS [ Domain Naming Service ]
+				
+				www.iqgateway.com 
+				
+				[ IP Address : Port / AppName ]
+				
+				
+			Lesson 04 : Developing Web Applications Using JSP 
+			
+				Phases In JSP
+
+				1.  Translation Phase 
+				
+					PageCompileServlet Converts JSP Page into Servlets 
+								
+				2.  Request Processing Phase 
+				
+					Now Container Will Ask the Generated Servlet to Process the Request 
+					
+					

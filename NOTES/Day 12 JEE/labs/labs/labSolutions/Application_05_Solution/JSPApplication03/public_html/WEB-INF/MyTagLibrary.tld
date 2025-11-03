@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<taglib xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd" version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+  <display-name>MyTagLibrary</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>MyTagLibrary</short-name>
+  <uri>/WEB-INF/MyTagLibrary</uri>
+<tag>
+    <description>Populates the page context with a BookBean</description>
+    <name>searchBook</name>
+    <tag-class>bookdetails.oracle.tag.SearchBookTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>var</name>
+      <required>true</required>
+    </attribute>
+  </tag>
+  <function>
+    <description>Converts the string to all caps</description>
+    <name>caps</name>
+    <function-class>bookdetails.oracle.el.Functions</function-class>
+    <function-signature>java.lang.String caps( java.lang.String )</function-signature>
+  </function>
+  <function>
+    <description>Reverse the string</description>
+    <name>reverse</name>
+    <function-class>bookdetails.oracle.el.Functions</function-class>
+    <function-signature>java.lang.String reverse( java.lang.String )</function-signature>
+  </function>
+</taglib>
+

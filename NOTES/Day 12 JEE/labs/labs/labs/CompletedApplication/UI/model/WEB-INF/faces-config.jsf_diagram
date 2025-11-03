@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <Page
+      id="Page2">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">141.0</property>
+      <property
+         name="x">323.0</property>
+      <property
+         name="jspName">/Main.jspx</property>
+      <property
+         name="realized">true</property>
+   </Page>
+   <Page
+      id="Page3">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">141.0</property>
+      <property
+         name="x">545.0</property>
+      <property
+         name="jspName">/EditProduct.jspx</property>
+      <property
+         name="realized">true</property>
+   </Page>
+   <Page
+      id="Page4">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">334.0</property>
+      <property
+         name="x">323.0</property>
+      <property
+         name="jspName">/AddProduct.jspx</property>
+      <property
+         name="realized">true</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase5"
+      from="Page2"
+      to="Page3">
+      <property
+         name="fromOutcome">editProduct</property>
+      <property
+         name="description">&lt;html>&lt;p align="left" style="font-family:Tahoma;font-size:11pt">Navigation Case&lt;/p>&lt;/html></property>
+      <property
+         name="label">success</property>
+      <property
+         name="rawDescription">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">R46,364.0,137.5,504.0,137.5,L46</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase6"
+      from="Page2"
+      to="Page4">
+      <property
+         name="fromOutcome">addProduct</property>
+      <property
+         name="description">&lt;html>&lt;p align="left" style="font-family:Tahoma;font-size:11pt">Navigation Case&lt;/p>&lt;/html></property>
+      <property
+         name="label">success</property>
+      <property
+         name="rawDescription">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">B44,319.5,195.0,319.5,280.0,T44</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase7"
+      from="Page3"
+      to="Page2">
+      <property
+         name="fromOutcome">success</property>
+      <property
+         name="description">&lt;html>&lt;p align="left" style="font-family:Tahoma;font-size:11pt">Navigation Case&lt;/p>&lt;/html></property>
+      <property
+         name="label">success</property>
+      <property
+         name="rawDescription">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">L54,504.0,144.5,364.0,144.5,R54</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase8"
+      from="Page4"
+      to="Page2">
+      <property
+         name="fromOutcome">success</property>
+      <property
+         name="description">&lt;html>&lt;p align="left" style="font-family:Tahoma;font-size:11pt">Navigation Case&lt;/p>&lt;/html></property>
+      <property
+         name="label">success</property>
+      <property
+         name="rawDescription">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">T56,326.5,280.0,326.5,195.0,B56</property>
+   </NavigationCase>
+</SDM>

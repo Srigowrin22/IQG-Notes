@@ -1,0 +1,24 @@
+package training.iqgateway.service;
+
+import java.util.List;
+
+import training.iqgateway.entities.VehicleOffenceEO;
+
+public interface VehicleOffenceService {
+
+	String persistVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO);
+
+	String mergeVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO);
+
+	String clearVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO);
+
+	Boolean removeVehicleOffenceEO(Integer vehicleOffenceID);
+
+	VehicleOffenceEO findVehicleOffenceByID(Integer vehicleOffenceID);
+
+	List<VehicleOffenceEO> findAllVehicleOffences();
+
+	List<VehicleOffenceEO> findVehicleOffenceByRegisID(String registrationID);
+
+	List<VehicleOffenceEO> findVehicleOffenceByStatus(String registrationID, Integer status);
+}

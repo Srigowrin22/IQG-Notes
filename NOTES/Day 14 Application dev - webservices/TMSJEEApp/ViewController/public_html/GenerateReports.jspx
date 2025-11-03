@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>GenerateReports</title>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_ClerkDashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Generate Reports</div>
+            <div class="form-row">
+              <h:outputLabel value="Designation ID" for="desigID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_ClerkDashboard.designationId}"
+                           id="desigID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+             <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_ClerkDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Raise Offence"
+                               action="#{backing_ClerkDashboard.raiseOffence_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Pending Offences"
+                               action="#{backing_ClerkDashboard.pendingOffences_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="View Owner"
+                               action="#{backing_ClerkDashboard.viewOwner_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Generate reports"
+                               action="#{backing_ClerkDashboard.generateReports_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types"
+                               action="#{backing_ClerkDashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_GenerateReports-->
+</jsp:root>

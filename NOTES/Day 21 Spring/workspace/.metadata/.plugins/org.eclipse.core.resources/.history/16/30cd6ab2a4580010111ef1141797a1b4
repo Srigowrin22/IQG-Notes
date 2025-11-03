@@ -1,0 +1,5 @@
+package training.iqgateway.web;
+
+public class CurrencyConvertorServlet {
+
+}

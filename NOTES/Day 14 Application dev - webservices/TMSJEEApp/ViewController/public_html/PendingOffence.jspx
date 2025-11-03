@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <html>
+            <head>
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+                <title>Pending Offence</title>
+                <link rel="stylesheet" type="text/css"
+                      href="images/styles1.css"/>
+            </head>
+            <body>
+                <!-- Header panel -->
+                <div class="header">
+                    <div class="header-left"></div>
+                    <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+                    <div class="header-right">
+                        <h:form style="margin:0; padding:0;">
+                            <h:commandButton value="Logout"
+                                             styleClass="logout-btn"
+                                             action="#{backing_ClerkDashboard.logout_action}"/>
+                        </h:form>
+                    </div>
+                </div>
+                <!-- Side panel -->
+                <div class="main-layout">
+                    <div class="sidebar">
+                        <div class="sidebar-title">Pending Offences</div>
+                        <div class="form-row">
+                            <h:outputLabel value="Designation ID" for="desigID"
+                                           styleClass="sidebar-label"/>
+                             
+                            <h:inputText value="#{backing_ClerkDashboard.designationId}"
+                                         id="desigID" readonly="true"
+                                         styleClass="sidebar-input"/>
+                        </div>
+                         <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_ClerkDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Raise Offence"
+                               action="#{backing_ClerkDashboard.raiseOffence_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Pending Offences"
+                               action="#{backing_ClerkDashboard.pendingOffences_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="View Owner"
+                               action="#{backing_ClerkDashboard.viewOwner_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Generate reports"
+                               action="#{backing_ClerkDashboard.generateReports_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types"
+                               action="#{backing_ClerkDashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+                    </div>
+                    <div class="center-content">
+                        <h:form id="pendingOffenceForm">
+                            <!-- Message Display -->
+                            <h:panelGroup rendered="#{not empty backing_PendingOffence.message}">
+                                <div class="admin-msg">
+                                    <h:outputText value="#{backing_PendingOffence.message}"/>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Search Section -->
+                            <div class="card search-card">
+                                <h:outputText value="Search Pending Offences"
+                                              styleClass="card-header"/>
+                                <div class="form-group">
+                                    <div class="field-row">
+                                        <h:outputLabel for="regId"
+                                                       value="Registration ID:"
+                                                       styleClass="field-label"/>
+                                         
+                                        <h:inputText id="regId"
+                                                     value="#{backing_PendingOffence.searchedRegistrationID}"
+                                                     styleClass="field-input"/>
+                                         
+                                        <h:commandButton value="SEARCH"
+                                                         id="search"
+                                                         styleClass="search-button"
+                                                         action="#{backing_PendingOffence.search_action}"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pending Offence Table (Pure JSF, no JS, with selection) -->
+                            <h:panelGroup rendered="#{not empty backing_PendingOffence.allVehicleOffence}">
+                                <h:dataTable value="#{backing_PendingOffence.allVehicleOffence}"
+                                             var="offence" border="1"
+                                             styleClass="offence-table"
+                                             style="margin-top:20px;">
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Select"/>
+                                        </f:facet>
+                                        <h:selectBooleanCheckbox value="#{backing_PendingOffence.selected[offence.vehicleOffenceId]}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="ID"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.vehicleOffenceId}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Offence Type"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.offenceTypesEO.offenceType}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Location"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.location}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Date"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.offenceDate}">
+                                            <f:convertDateTime pattern="dd-MMM-yyyy"/>
+                                        </h:outputText>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Time"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.time}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Reporter"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.reporter}"/>
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Penalty"/>
+                                        </f:facet>
+                                        <h:outputText value="#{offence.offenceTypesEO.penaltyAmt}"/>
+                                    </h:column>
+                                </h:dataTable>
+                            </h:panelGroup>
+                            <!-- Button to open payment card -->
+                            <h:panelGroup rendered="#{not empty backing_PendingOffence.allVehicleOffence}">
+                                <h:commandButton value="Clear Offence"
+                                                 action="#{backing_PendingOffence.showPaymentCard_action}"
+                                                 styleClass="button-pink"
+                                                 style="margin-top:16px"/>
+                            </h:panelGroup>
+                            <!-- Payment Confirmation Card -->
+                            <h:panelGroup rendered="#{backing_PendingOffence.showPaymentCard}">
+                                <div class="card payment-card">
+                                    <h2>Payment Confirmation</h2>
+                                    <p>
+                                        <strong>
+                                            <h:outputText value="Total Payable: "/></strong>
+                                         
+                                        <h:outputText value="#{backing_PendingOffence.totalPenalty}">
+                                            <f:convertNumber type="currency"
+                                                             currencySymbol="?"/>
+                                        </h:outputText>
+                                    </p>
+                                    <h:commandButton value="Pay"
+                                                     action="#{backing_PendingOffence.pay_action}"
+                                                     styleClass="button-success"/>
+                                     
+                                    <h:commandButton value="Cancel"
+                                                     action="#{backing_PendingOffence.cancelPayment_action}"
+                                                     styleClass="button-danger"/>
+                                </div>
+                            </h:panelGroup>
+                            <h:messages globalOnly="true"/>
+                        </h:form>
+                    </div>
+                </div>
+            </body>
+        </html>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_PendingOffence-->
+</jsp:root>

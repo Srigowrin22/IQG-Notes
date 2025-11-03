@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf17516150034310" configfile="/Lesson07-Spring-JSF-Hibernate/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="addDepartment.xhtml" id="pf17516155425041" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf17516155425042" path="/addDepartment.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Success.xhtml" id="pf17516155425043" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf17516155425042" path="/Success.xhtml"/>
+  <links id="pf17516155425042" target="pf17516155425043" source="pf17516155425041" outcome="success"/>
+</pageflow:Pageflow>

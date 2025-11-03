@@ -1,0 +1,33 @@
+Day 8
+
+	Lesson 15: JDBC DAO App
+	
+	Lesson 16 : Java 8 Date and Time API
+	
+	
+		Lesson 15 : JDBC DAO App
+		
+			Design Pattern 
+			
+				What is a Design  Pattern ?
+				
+					A Design Pattern is a Set of Guide Lines Given By One Developer to Another Developer in the S/W Industry for Recurring Problems 
+					
+				DAO [ Data Access Object ] Pattern 
+				
+				Singleton Pattern [ Only One Object ]
+				
+				Factory Pattern 
+				
+					Is a Simple Class Involved with Creation of Objects
+					
+					public interface 
+					
+					
+					public class DepartmentDAOFactory
+					{
+						private DepartmentDAO departmentDAORef;
+						
+						...
+					}
+				

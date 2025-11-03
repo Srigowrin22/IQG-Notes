@@ -1,0 +1,47 @@
+package training.iqgateway.service.impl;
+
+import java.util.List;
+
+import training.iqgateway.dto.OwnerDTO;
+import training.iqgateway.entities.OwnerEO;
+import training.iqgateway.service.OwnerService;
+
+public class OwnerServiceImpl implements OwnerService {
+
+	@Override
+	public String persistOwnerEO(OwnerEO ownerEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String mergeOwnerEO(OwnerEO ownerEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean removeOwnerEO(String ownerAadhar, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public OwnerEO findOwnerByAadhar(String ownerAadhar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OwnerDTO> findAllOwners() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OwnerDTO> findOwnerByName(String ownerName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

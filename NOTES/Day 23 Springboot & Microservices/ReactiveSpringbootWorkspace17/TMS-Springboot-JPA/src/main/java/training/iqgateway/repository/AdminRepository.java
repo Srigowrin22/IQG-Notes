@@ -1,0 +1,18 @@
+package training.iqgateway.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import training.iqgateway.entities.AdminEO;
+
+@Repository
+public interface AdminRepository extends JpaRepository<AdminEO, String>{
+
+    List<AdminEO> findByRoleId(Long roleId);
+
+    @Query("SELECT COALESCE(MAX(a.id), 0) FROM AdminEO a")
+    Long findMaxId();
+}

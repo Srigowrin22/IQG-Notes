@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="FOD">
+    <provider>
+      org.eclipse.persistence.jpa.PersistenceProvider
+    </provider>
+    <jta-data-source>
+      java:/app/jdbc/jdbc/fodDS
+    </jta-data-source>
+    <class>
+      oracle.model.Category
+    </class>
+    <class>
+      oracle.model.Product
+    </class>
+    <properties>
+      <property name="eclipselink.target-server" value="WebLogic_10"/>
+      <property name="javax.persistence.jtaDataSource"
+                value="java:/app/jdbc/jdbc/fodDS"/>
+    </properties>
+  </persistence-unit>
+</persistence>

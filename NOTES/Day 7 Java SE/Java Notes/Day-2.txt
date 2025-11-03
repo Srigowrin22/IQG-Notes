@@ -1,0 +1,58 @@
+Day 2 
+
+Module-7 : Java SE
+
+	Agenda 
+	
+		Lesson 04 : Primitive Datatypes and Operators
+		
+		Lesson 05 : Control Flow
+		
+		Lesson 06 : Introduction to IDE [ JDeveloper ]
+		
+
+			
+
+		Lesson 04 : Primitive Data Types and Operators
+		
+		Access Modifiers
+
+			1. Private   ( Variable, Method & Class )
+
+				a)  Accessible Only Within the Class [ Visibility only to Class ]
+
+			2. Public    ( Variable, Method & Class )
+
+				a)  Accessible to Every Class
+
+			3. Protected ( Variable, Method & Class )
+				
+				a)  Accessible to All the Classes in Same Package
+
+				b)  Accessible to All the Derived Class in Same Package or in Different Package
+
+			4. Default ( Variable, Method & Class ) [ Package Protected / Friendly ]
+
+				a)  Accessible to All the Classes in Same Package
+
+				b)  Accessible to All the Derived Class in Same Package BUT NOT in Different Package
+
+			5. Abstract  ( Method & Class )
+
+			6. Final     ( Variable, Method & Class )
+
+			7. Static    ( Variable, Method, Block & Class )
+
+			8. Native    ( Method )
+
+			9. Volatile  ( Variable )
+
+			10.Sychronized ( Block & Method )
+
+			11.Transient ( Variable )
+
+			12.Strictfp  ( Method )
+
+								
+								
+							

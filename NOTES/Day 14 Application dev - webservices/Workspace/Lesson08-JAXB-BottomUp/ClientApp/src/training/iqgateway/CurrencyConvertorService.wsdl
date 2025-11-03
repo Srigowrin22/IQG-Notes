@@ -1,0 +1,125 @@
+<wsdl:definitions
+     name="CurrencyConvertorService"
+     targetNamespace="http://iqgateway.training/"
+     xmlns:tns="http://iqgateway.training/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    >
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://iqgateway.training/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://iqgateway.training/">
+            <xsd:complexType name="dollarToRs">
+                <xsd:sequence>
+                    <xsd:element name="arg0" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="dollarToRs" type="tns:dollarToRs"/>
+            <xsd:complexType name="dollarToRsResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="dollarToRsResponse" type="tns:dollarToRsResponse"/>
+            <xsd:complexType name="eurosToRs">
+                <xsd:sequence>
+                    <xsd:element name="arg0" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="eurosToRs" type="tns:eurosToRs"/>
+            <xsd:complexType name="eurosToRsResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="eurosToRsResponse" type="tns:eurosToRsResponse"/>
+            <xsd:complexType name="yensToRs">
+                <xsd:sequence>
+                    <xsd:element name="arg0" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="yensToRs" type="tns:yensToRs"/>
+            <xsd:complexType name="yensToRsResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="yensToRsResponse" type="tns:yensToRsResponse"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="dollarToRsInput">
+        <wsdl:part name="parameters" element="tns:dollarToRs"/>
+    </wsdl:message>
+    <wsdl:message name="dollarToRsOutput">
+        <wsdl:part name="parameters" element="tns:dollarToRsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="eurosToRsInput">
+        <wsdl:part name="parameters" element="tns:eurosToRs"/>
+    </wsdl:message>
+    <wsdl:message name="eurosToRsOutput">
+        <wsdl:part name="parameters" element="tns:eurosToRsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="yensToRsInput">
+        <wsdl:part name="parameters" element="tns:yensToRs"/>
+    </wsdl:message>
+    <wsdl:message name="yensToRsOutput">
+        <wsdl:part name="parameters" element="tns:yensToRsResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="CurrencyConvertor">
+        <wsdl:operation name="dollarToRs">
+            <wsdl:input message="tns:dollarToRsInput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+            <wsdl:output message="tns:dollarToRsOutput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+        </wsdl:operation>
+        <wsdl:operation name="eurosToRs">
+            <wsdl:input message="tns:eurosToRsInput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+            <wsdl:output message="tns:eurosToRsOutput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+        </wsdl:operation>
+        <wsdl:operation name="yensToRs">
+            <wsdl:input message="tns:yensToRsInput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+            <wsdl:output message="tns:yensToRsOutput" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action=""/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CurrencyConvertorSoapHttp" type="tns:CurrencyConvertor">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="dollarToRs">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="eurosToRs">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="yensToRs">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CurrencyConvertorService">
+        <wsdl:port name="CurrencyConvertorPort" binding="tns:CurrencyConvertorSoapHttp">
+            <soap:address location="http://localhost:7101/Lesson08-JAXB-BottomUp-Project1-context-root/CurrencyConvertorPort"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

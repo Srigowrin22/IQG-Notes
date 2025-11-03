@@ -1,0 +1,132 @@
+Day 3 
+
+	Agenda :
+	
+		Module-7
+		
+			
+			Lesson 07 : Working with Classes and Objects
+			
+			Lesson 08 : Object Life Cycle and Inner Classes 
+			
+			
+			
+			Lesson 07 : Working with Classes and Objects
+			
+			Memory Areas
+
+			1.   Registers           [  Processors ]
+
+			2.   Stack Area		     [  RAM  ]
+
+			3.   Object Heap         [  RAM  ]
+
+			4.   Static Storage      [  RAM  ]
+
+			5.   Constant Storage    [  RAM  ]
+
+			6.   Method Area         [  RAM  ]
+
+			7.   Persistence Storage [  Non RAM ]
+
+			Object Creation Syntax
+			
+				// Declaration of Variable 
+				
+				< PreDefined DataType >  < Variable/IdentifierName >  = [ Optional Initialization Value ];
+				
+				< UserDefined Datatype > < ObjectReference Name>  = new 
+				<Constructor Function> ();
+				
+				< ClassName > < ObjectReferenceName > = new <ClassName>();
+				
+					
+			Assigning One Reference to Another Leads into 2 References Pointed to the Same Object 
+			
+			int i = 10 , j = 20;
+			
+			i = j ;
+			
+			mov1 = mov2;
+			
+	
+		Access Modifiers 
+		
+			1. Private   ( Variable, Method & Class )
+
+				a)  Accessible Only Within the Class [ Visibility only to Class ]
+
+			2. Public    ( Variable, Method & Class )
+
+				a)  Accessible to Every Class
+
+			3. Protected ( Variable, Method & Class )
+				
+				a)  Accessible to All the Classes in Same Package
+
+				b)  Accessible to All the Derived Class in Same Package or in Different Package
+
+			4. Default ( Variable, Method & Class ) [ Package Protected / Friendly ]
+
+				a)  Accessible to All the Classes in Same Package
+
+				b)  Accessible to All the Derived Class in Same Package BUT NOT in Different Package
+
+
+			Java Bean Specification [ Data Encapsulation ]
+
+				1.	A class if it Contains private properties it should be accessed by Instance Methods.
+
+				2.	Each and every property which is available can contain appropriate Getter and Setter Methods
+
+				3.	All the Methods should be public 
+
+				4.	Methods we write for property should Always prefixed with set Or get. And the suffixed property name Should be TitleCase.
+
+					a.	Getter Methods : Are always used in retreiving value
+
+						The Return type of getter Method should be same as the type of Property.
+
+						Parameter to Getter Method should always be VOID
+
+						Example
+
+						public class LanguageBean 
+						{
+							private String name;
+
+							public String getName()
+							{
+								 return this.name;
+							}
+
+						}
+
+					b.  Setter Method : Is always used in Updating Property
+
+						->	Setter Method should have void as Return Type
+
+						->	Setter Method Should always have a parameter of the type of Property
+
+
+						Example
+
+							public class LanguageBean 
+							{
+								private String name;
+					
+								public void setName(String NewValue)
+								{
+									this.name = NewValue;
+								}
+
+							}
+							
+							
+				
+					
+					
+				
+				
+
+					

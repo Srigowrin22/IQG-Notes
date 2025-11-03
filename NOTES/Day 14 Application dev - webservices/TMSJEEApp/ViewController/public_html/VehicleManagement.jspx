@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Vehicle Management</title>
+        <link rel="stylesheet" type="text/css" href="images/styles2.css"/>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_RTODashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Vehicle Management</div>
+            <div class="form-row">
+              <h:outputLabel value="RTO Officer ID" for="rtoID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_RTODashboard.designationId}"
+                           id="rtoID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+            <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_RTODashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Vehicle Management"
+                               action="#{backing_RTODashboard.vehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types Management"
+                               action="#{backing_RTODashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Registration"
+                               action="#{backing_RTODashboard.registration_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Transfer Vehicle"
+                               action="#{backing_RTODashboard.transferVehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <!-- Center content is now a sibling of sidebar, not a child -->
+          <div class="center-content">
+            <h:form id="offenceTypesTableForm">
+              <!-- Feedback Message -->
+              <h:panelGroup rendered="#{not empty backing_VehicleManagement.message}">
+                <div class="admin-message-in-card">
+                  <h:outputText value="#{backing_VehicleManagement.message}"/>
+                </div>
+              </h:panelGroup>
+              <!-- Add Vehicle Button -->
+              <div class="admin-card-actions" style="margin-bottom:18px;"
+                   rendered="#{!backing_VehicleManagement.addMode}">
+                <h:commandButton value="Add Vehicle"
+                                 action="#{backing_VehicleManagement.showAddCard}"
+                                 styleClass="admin-card-actions-btn"/>
+              </div>
+              <!-- Add Vehicle Card -->
+              <h:panelGroup rendered="#{backing_VehicleManagement.addMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle ID:" for="newVehicleId"/>
+                     
+                    <h:inputText id="newVehicleId"
+                                 value="#{backing_VehicleManagement.newVehicleId}"
+                                 required="true"
+                                 requiredMessage="Vehicle ID is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Brand:" for="newVehicleBrand"/>
+                     
+                    <h:inputText id="newVehicleBrand"
+                                 value="#{backing_VehicleManagement.newVehicleBrand}"
+                                 required="true"
+                                 requiredMessage="Vehicle brand is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Model:" for="newVehicleModel"/>
+                     
+                    <h:inputText id="newVehicleModel"
+                                 value="#{backing_VehicleManagement.newVehicleModel}"
+                                 required="true"
+                                 requiredMessage="Vehicle model is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Type:" for="newVehicleType"/>
+                     
+                    <h:inputText id="newVehicleType"
+                                 value="#{backing_VehicleManagement.newVehicleType}"
+                                 required="true"
+                                 requiredMessage="Vehicle type is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Color:" for="newColor"/>
+                     
+                    <h:inputText id="newColor"
+                                 value="#{backing_VehicleManagement.newColor}"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Fuel Type:" for="newFuelType"/>
+                     
+                    <h:inputText id="newFuelType"
+                                 value="#{backing_VehicleManagement.newFuelType}"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Manufacture Date:"
+                                   for="newManufactureDate"/>
+                     
+                    <h:inputText id="newManufactureDate"
+                                 value="#{backing_VehicleManagement.newManufactureDateStr}"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="No. of Exhaust:"
+                                   for="newNoOfExhaust"/>
+                     
+                    <h:inputText id="newNoOfExhaust"
+                                 value="#{backing_VehicleManagement.newNoOfExhaust}"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save"
+                                     action="#{backing_VehicleManagement.saveNewVehicle}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_VehicleManagement.cancelAdd}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Update Vehicle Card -->
+              <h:panelGroup rendered="#{backing_VehicleManagement.updateMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Edit Vehicle ID:"
+                                   for="updateVehicleId"/>
+                     
+                    <h:inputText id="updateVehicleId"
+                                 value="#{backing_VehicleManagement.updateVehicleId}"
+                                 readonly="true"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Brand:" for="updateVehicleBrand"/>
+                     
+                    <h:inputText id="updateVehicleBrand"
+                                 value="#{backing_VehicleManagement.updateVehicleBrand}"
+                                 required="true"
+                                 requiredMessage="Vehicle brand is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Model:" for="updateVehicleModel"/>
+                     
+                    <h:inputText id="updateVehicleModel"
+                                 value="#{backing_VehicleManagement.updateVehicleModel}"
+                                 required="true"
+                                 requiredMessage="Vehicle model is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Type:" for="updateVehicleType"/>
+                     
+                    <h:inputText id="updateVehicleType"
+                                 value="#{backing_VehicleManagement.updateVehicleType}"
+                                 required="true"
+                                 requiredMessage="Vehicle type is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Color:" for="updateColor"/>
+                     
+                    <h:inputText id="updateColor"
+                                 value="#{backing_VehicleManagement.updateColor}"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Fuel Type:" for="updateFuelType"/>
+                     
+                    <h:inputText id="updateFuelType"
+                                 value="#{backing_VehicleManagement.updateFuelType}"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Manufacture Date:"
+                                   for="updateManufactureDate"/>
+                     
+                    <h:inputText id="updateManufactureDate"
+                                 value="#{backing_VehicleManagement.updateManufactureDateStr}"
+                                 readonly="true"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="No. of Exhaust:"
+                                   for="updateNoOfExhaust"/>
+                     
+                    <h:inputText id="updateNoOfExhaust"
+                                 value="#{backing_VehicleManagement.updateNoOfExhaust}"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save"
+                                     action="#{backing_VehicleManagement.saveUpdate}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_VehicleManagement.cancelUpdate}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Delete Confirmation Card -->
+              <h:panelGroup rendered="#{backing_VehicleManagement.deleteMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputText value="Are you sure you want to delete vehicle '#{backing_VehicleManagement.selectedVehicle.vehicleId}'?"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Delete"
+                                     action="#{backing_VehicleManagement.delete}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-delete"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_VehicleManagement.cancelDelete}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Vehicles Table -->
+              <div class="admin-card admin-role-table">
+             <!--   <h:outputText value="No vehicles found."
+                              styleClass="vehicle-empty-message"
+                              rendered="#{empty backing_VehicleManagement.vehicleList}"/>-->
+                 
+                <h:dataTable value="#{backing_VehicleManagement.vehicleList}"
+                             var="vehicle" styleClass="role-table"
+                             rendered="#{not empty backing_VehicleManagement.vehicleList}">
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="ID"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.vehicleId}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Brand"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.vehicleBrand}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Model"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.vehicleModel}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Type"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.vehicleType}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Color"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.color}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Fuel"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.fuelType}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Manufacture Date"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.manufactureDate}">
+                      <f:convertDateTime pattern="yyyy-MM-dd"/>
+                    </h:outputText>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Exhausts"/>
+                    </f:facet>
+                    <h:outputText value="#{vehicle.noOfExhaust}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Actions"/>
+                    </f:facet>
+                    <div class="role-table-action-group">
+                      <h:commandButton value="Update"
+                                       action="#{backing_VehicleManagement.prepareUpdate}"
+                                       styleClass="admin-card-actions-btn">
+                        <f:setPropertyActionListener target="#{backing_VehicleManagement.selectedVehicle}"
+                                                     value="#{vehicle}"/>
+                      </h:commandButton>
+                       
+                      <h:commandButton value="Delete"
+                                       action="#{backing_VehicleManagement.prepareDelete}"
+                                       styleClass="admin-card-actions-btn admin-card-actions-delete">
+                        <f:setPropertyActionListener target="#{backing_VehicleManagement.selectedVehicle}"
+                                                     value="#{vehicle}"/>
+                      </h:commandButton>
+                    </div>
+                  </h:column>
+                </h:dataTable>
+              </div>
+            </h:form>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_VehicleManagement-->
+</jsp:root>

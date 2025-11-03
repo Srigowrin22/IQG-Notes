@@ -1,0 +1,149 @@
+Day 24 
+
+	Agenda :
+	
+		Module 10: Java EE 
+		
+			Lesson 00 : Overview of Servers 
+			
+			Lesson 01 : Java EE 7 Fundamentals 
+			
+			Lesson 02 : Designing Java EE Applications
+			
+			
+			Lesson 00 : Overview of Servers 
+			
+				Recap of Application Architectures 
+				
+				Multi Tier [ Multiple Layers ] 
+			
+				Client Tier
+				
+					Can Contain Presentation Logic
+				
+				Middleware 	
+				
+					Can Contain Presentation Logic
+				
+					Business Logic
+				
+				EIS  
+				
+					Persistence Logic 
+					
+				
+				
+				We Have a Brother / Genie Next to us [ Middleware / Container / Server ]
+				
+				What is a Middleware  ? 
+				
+					A Middleware is a Software Which Provides Lot of Services 
+					
+					
+				Types : 
+						
+							Web Server 
+							
+								[ Web Tier ( Supports Only Web Components ) ]
+							
+								Eg : Apache Tomcat, JWS
+							
+							Application Server 
+							
+								[ Web Tier ( Supports Web Components ) ]
+								
+												+
+												
+								[ Business Tier ( Supports Business Components ) ]
+							
+								Eg : Oracle Weblogic , Oracle Glassfish, Oracle Application Server, IBM WebShphere, JBoss JBoss, 
+								Wildfly, James ... 
+								
+						
+						Services Provided By Middleware
+						
+						1. Instance Pooling
+						
+						2. Instance Passivation
+						
+						3. Database Connection Pooling
+						
+						4. Pre Cached Instances [ Load on Startup ]
+						
+						5. Life Cycle Management
+						
+						6. Security Management
+						
+						7. Transaction Management 
+						
+						8. Low Level Services 
+						
+							a. Exception Handling
+							
+							b. Multi Threading
+							
+							c. IO Interaction
+							
+						9.  Naming Services
+						
+						10. Timer Services
+						
+						11. Messaging Services
+						
+						12. Remoting Services
+						
+						13. Logging Services
+						
+						14. Request Response Delegation 
+						
+							...
+			
+					
+				People Involved In JEE Application Development 
+				
+				1.	Development Team
+
+					a.  Component Provider [ Developer ( WE )]
+				
+				2.  Production Team 
+		
+					a.  Server Provider [ Vendors ( Oracle, IBM, JBoss ) ]
+					
+					b.  Application Assembler 
+					
+					c.  Application Deployer
+					
+					d.  Application Server Administrator 
+					
+				In Web Applications Clients and Server Usally Communicate Using HTTP Protocol 
+			
+			
+			1.  Client Details 
+			
+				Machine / Browser Which Invoked the Request 
+				
+				
+			2.  User Details
+					
+				Details Pertaining to the User [ User = WE ]
+			
+			Request Response Architecture 
+			
+			1.  Encapsulation of Client Details
+			
+					Gathering the Details About the Client. 
+			
+			2.  Request Processing Phase
+			
+					Middleware then Delegates the Request to the Respective Component Who Can intake the Request, Process the Request
+			
+			3.  Response Generation Phase 
+			
+					Component After Processing the Request, Generation of Response ( Response Object is in Java Format ) With Formulation of Response ( Convertion of Java Object Containing the Response into the Respective Type ( Markup )) and it Hands Over to the Server, Server Inturn Hands it Back to the Client
+			
+			
+					
+					
+					
+					
+					

@@ -1,0 +1,87 @@
+Day 1 : 
+
+	Agenda :
+	
+		Module 13 : Application Development Using Web Services [ SOAP and REST ]
+		
+			Lesson 01 : Introduction to Web Services 
+			
+			Lesson 02 : XML Document Structure 
+			
+			
+			
+			
+			Lesson 01 : Introduction to Web Services 
+			
+				People Involved in Java EE Development 
+				
+					1.  Development Environment 
+					
+						a. Component Provider 
+						
+					2.  Production Environment
+					
+						a. Application Server Provider 
+						
+						b. Application Assembler 
+						
+						c. Application Deployer
+						
+						d. Application Server Administrator 
+						
+						
+				Now We will Install Application Server 
+				
+					1.  Download the App Server Software From the Vendor Provider Location 
+					
+						fmw_12_2_1_WLS_DISK_1.zip
+						
+					
+					2.  Unpack this File Leads into a Jar File 
+					
+						fmw_12_2_1.0.0_wls.jar
+						
+					3.  Run this Jar File to Install the App Server 
+					
+						Follow the Steps and Install It 
+						
+					
+				What is a Web Service ?
+				
+					Web [ Over the Globe ]
+					
+					Service [ Execution ]
+					
+				RPC [ Remote Procedure Call ]
+				
+					Cross System Execution [ Client can Be On One Machine , Execution Logic Can Be Another Machine ]
+					
+				RMI [ Remote Method Invocation ]
+				
+					One JVM Invokes a Method on Another JVM 
+					
+				
+				Whether it is RMI, .Net Remoting, CORBA [ Both Client and Executor Should be Defined in the Same Language ]
+				
+				Many of the Remoting Technologies do Suffer From Problems
+				
+				1. Platform Specific 
+				
+					If Logic is built in Java, Then The Client Who is Accessing the Logic Should also Be in Java [ For Example ]
+					
+				2.  Complexity [ Need of Rewriting the Logic Again & Again in the Respective Form ]
+				
+				
+			Web Service Acts as Solution for This Problem.
+			
+				Client You Be on Any End [ Platform ], Executor You Be on Any End [ Platform ].
+				
+				But Still Communication Happens Between Them 
+				
+					Mediator / Bridge  ( Web Services { SOAP or REST } Uses [ XML/JSON ] for Data Transfers )
+
+	
+					
+					
+						
+			

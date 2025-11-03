@@ -1,0 +1,46 @@
+Day 20
+
+	Agenda : 
+	
+		Module 7 : Data Structures 
+		
+			Lesson 05 : Sorting
+			
+		Module 8 : Java Design Patterns
+		
+			Lesson 02 : Working With Creational Design Patterns 
+			
+		Module 9 :  Front End Application Development Using HTML5 and CSS3 
+		
+			Lesson 03 : HTML5 Markup 
+			
+			Lesson 04 : HTML5 Tables and Lists 
+			
+			
+			
+		Day 2 
+
+			Front End Application Development Using HTML5 and CSS3
+	
+				Lesson 03 : HTML5 Markup 
+				
+					Tag Types 
+					
+					1. Pre Defined 
+					
+					2. User Defined 
+					
+						Sub Division
+						
+							a.  Tag With Body With Attributes
+							
+							b.  Tag Without Body With Attributes 
+							
+							c.  Tag With Body Without Attributes
+							
+							d.  Tag Without Body Without Attributes 
+							
+							
+			
+			
+				Lesson 04 : HTML5 Tables and Lists

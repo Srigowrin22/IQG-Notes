@@ -1,0 +1,138 @@
+package training.iqgateway.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.repository.AdminRepository;
+import training.iqgateway.repository.RolesRepository;
+import training.iqgateway.service.AdminService;
+
+@Service
+public class AdminServiceImpl implements AdminService {
+
+	@Autowired
+	private RolesRepository rolesRepositoryRef;
+
+	@Autowired
+	private AdminRepository adminRepositoryRef;
+
+	 @Override
+	    public AdminDTO persistAdminEO(AdminEO adminEO) {
+	        Long maxId = Optional.ofNullable(adminRepositoryRef.findMaxId()).orElse(0L);
+	        Long newId = maxId + 1;
+	        adminEO.setId(newId);
+
+	        // Fetch managed role
+	        if (adminEO.getRole() == null || adminEO.getRole().getRoleId() == null) {
+	            throw new IllegalArgumentException("Role must be provided with roleId");
+	        }
+	        RoleEO managedRole = rolesRepositoryRef.findById(adminEO.getRole().getRoleId())
+	                .orElseThrow(() -> new RuntimeException("Role not found: " + adminEO.getRole().getRoleId()));
+	        adminEO.setRole(managedRole);
+
+	        AdminEO saved = adminRepositoryRef.save(adminEO);
+	        return toDTO(saved);
+	    }
+
+	    @Override
+	    public String mergeAdminEO(AdminEO adminEO) {
+	        AdminEO existingAdmin = adminRepositoryRef.findByDesignationId(adminEO.getDesignationId())
+	                .orElseThrow(() -> new RuntimeException("Admin Not Found: " + adminEO.getDesignationId()));
+
+	        RoleEO roleEO = rolesRepositoryRef.findById(adminEO.getRole().getRoleId())
+	                .orElseThrow(() -> new RuntimeException("Role not found: " + adminEO.getRole().getRoleName()));
+
+	        // Update fields
+	        existingAdmin.setRole(roleEO);
+	        existingAdmin.setName(adminEO.getName());
+	        existingAdmin.setGender(adminEO.getGender());
+	        existingAdmin.setAadhar(adminEO.getAadhar());
+	        existingAdmin.setPhone(adminEO.getPhone());
+	        existingAdmin.setPassword(adminEO.getPassword());
+	        existingAdmin.setHireDate(adminEO.getHireDate());
+	        existingAdmin.setSignup(adminEO.getSignup());
+
+	        adminRepositoryRef.save(existingAdmin);
+	        return "Admin updated successfully";
+	    }
+
+	    @Override
+	    public Boolean removeAdminEO(AdminEO adminEO) {
+	        if (adminEO == null || adminEO.getAadhar() == null) {
+	            throw new IllegalArgumentException("Admin or Aadhar must not be null");
+	        }
+	        adminRepositoryRef.deleteById(adminEO.getAadhar());
+	        return true;
+	    }
+
+	    @Override
+	    public int authorizeAdmin(String designationId, String password, String newPassword) {
+	        Optional<AdminEO> optionalAdmin = adminRepositoryRef.findByDesignationId(designationId);
+	        if (!optionalAdmin.isPresent()) {
+	            return 0; // Admin not found
+	        }
+	        AdminEO admin = optionalAdmin.get();
+	        if (admin.getPassword() != null && admin.getPassword().equals(password)) {
+	            admin.setPassword(newPassword);
+	            admin.setSignup(1);
+	            adminRepositoryRef.save(admin);
+	            return 1; // Success
+	        }
+	        return -1; // Password mismatch
+	    }
+
+	    @Override
+	    public List<AdminDTO> getAdminEOFindAll() {
+	        List<AdminEO> adminEOList = adminRepositoryRef.findAll();
+	        List<AdminDTO> adminDTOList = new ArrayList<>();
+	        for (AdminEO adm : adminEOList) {
+	            adminDTOList.add(toDTO(adm));
+	        }
+	        return adminDTOList;
+	    }
+
+	    @Override
+	    public AdminDTO findAdminByDesigID(String designationId) {
+	        return adminRepositoryRef.findByDesignationId(designationId)
+	                .map(this::toDTO)
+	                .orElse(null);
+	    }
+
+	    @Override
+	    public AdminDTO findAdminByAadhar(String aadhar) {
+	        return adminRepositoryRef.findByAadhar(aadhar)
+	                .map(this::toDTO)
+	                .orElse(null);
+	    }
+
+	    @Override
+	    public List<AdminDTO> findAdminByRoleID(Long roleId) {
+	        List<AdminEO> adminEOList = adminRepositoryRef.findByRoleRoleId(roleId);
+	        List<AdminDTO> adminDTOList = new ArrayList<>();
+	        for (AdminEO adm : adminEOList) {
+	            adminDTOList.add(toDTO(adm));
+	        }
+	        return adminDTOList;
+	    }
+
+	    @Override
+	    public List<AdminDTO> findAdminByName(String name) {
+	        List<AdminEO> adminEOList = adminRepositoryRef.findByNameContainingIgnoreCase(name);
+	        List<AdminDTO> adminDTOList = new ArrayList<>();
+	        for (AdminEO adm : adminEOList) {
+	            adminDTOList.add(toDTO(adm));
+	        }
+	        return adminDTOList;
+	    }
+
+	    @Override
+	    public Boolean login(AdminEO adminEO) {
+	        // Implement as needed
+	        return null;
+	    }
+
+}

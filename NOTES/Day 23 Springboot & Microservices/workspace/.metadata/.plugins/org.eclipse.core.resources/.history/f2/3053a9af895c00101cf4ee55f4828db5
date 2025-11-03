@@ -1,0 +1,27 @@
+package training.iqgateway;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringbootJPA implements CommandLineRunner{
+	
+	@Autowired(required = true)
+	private DepartmentService departmentServiceRef;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootJPA.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		DepartmentEO deptEORef = new DepartmentEO(300,"New Department", 100, 1700);
+		departmentServiceRef.addDepartment(deptEORef);
+		
+		List<DepartmentEO> deptList = departmentServiceRef.getAllDepartments();
+	}
+}

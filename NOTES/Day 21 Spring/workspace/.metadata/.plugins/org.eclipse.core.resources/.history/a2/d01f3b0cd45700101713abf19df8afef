@@ -1,0 +1,7 @@
+package training.iqgateway.events;
+
+import org.springframework.context.ApplicationListener;
+
+public class SimpleApplicationListener implements ApplicationListener<E> {
+
+}

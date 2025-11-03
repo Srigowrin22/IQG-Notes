@@ -1,0 +1,10 @@
+package training.iqgateway;
+
+@RestController
+public class HomeController {
+	
+	@requestMapping("/hello")
+	public String sayHello(){
+		return "Welcome to the New Era of Developing Spring Boot Application";
+	}
+}

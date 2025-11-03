@@ -1,0 +1,8 @@
+select 	 object_type,
+         object_name 
+from     user_objects 
+where    status='INVALID'
+group by object_type, object_name
+order by object_type desc, object_name
+
+/

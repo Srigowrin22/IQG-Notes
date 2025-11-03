@@ -1,0 +1,85 @@
+J2EE uses MOM for Messaging
+
+M-- Message
+O-- Oriented
+M-- Middleware
+
+
+JMS :
+
+	Its is a  Simple and Standardized API for Sending , Creating , Receiveing and Publishing
+
+
+		Synchronous and ASynchronous
+
+		Reilable
+
+
+
+1.  Point 2 Point ( QUEUES )
+
+2.	Publish and Subscribe ( TOPICS )
+
+
+JMS Architecture
+
+1.	Administarted Objects
+
+2.	Connections
+
+		ConnectionFactory
+
+				QueueConnection
+
+				TopicConnection
+
+3.	Sessions
+
+				QueueSession
+
+			 	TopicSession
+
+4.	Message Producers
+
+				QueueSender
+
+				TopicSender
+
+5.	Message Consumers
+
+				QueueReceiver
+
+				TopicSubscriber
+
+6.	Messages
+
+
+		Byte Messages ( non Java message Consumers, Producers )
+		
+		Map Messages	 ( Like HashMap ) 
+
+		Message - empty body just header and properties
+
+		Object Message -- Serialize Objects
+
+		Stream Message --- Seq stream of Java Primitives
+
+		TextMessage ---  String Message ( Send XML Messages )
+
+
+
+Transactions
+
+	
+	Attributes
+
+		Required
+
+		Supports
+
+		Mandatory
+
+		Never
+
+
+

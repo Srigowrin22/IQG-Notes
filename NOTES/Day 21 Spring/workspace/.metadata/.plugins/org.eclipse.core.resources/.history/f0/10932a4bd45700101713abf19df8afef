@@ -1,0 +1,13 @@
+package training.iqgateway.events;
+
+import org.springframework.context.ApplicationListener;
+
+public class SimpleApplicationListener implements ApplicationListener<E> {
+
+	@Override
+	public void onApplicationEvent(E arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("Event Type: %s%n", event.getClass().getSimpleName());
+	}
+
+}

@@ -1,0 +1,124 @@
+package training.iqgateway.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import training.iqgateway.controller.AdminController;
+import training.iqgateway.dto.AdminDTO;
+import training.iqgateway.dto.RolesDTO;
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.repository.AdminRepository;
+import training.iqgateway.repository.RolesRepository;
+import training.iqgateway.service.AdminService;
+
+@Service
+public class AdminServiceImpl implements AdminService {
+
+	@Autowired
+	private RolesRepository rolesRepositoryRef;
+
+	@Autowired
+	private AdminRepository adminRepositoryRef;
+
+	@Override
+	public AdminEO persistAdminEO(AdminEO adminEO) {
+		Long maxId = adminRepositoryRef.findMaxId();
+		Long newId = maxId + 1;
+		adminEO.setId(newId);
+		return adminRepositoryRef.save(adminEO);
+	}
+
+	public String mergeAdminEO(AdminEO adminEO) {
+		AdminEO existingAdmin = adminRepositoryRef.findByDesignationId(adminEO.getDesignationId())
+				.orElseThrow(() -> new RuntimeException("Admin Not Found" + adminEO.getDesignationId()));
+		RoleEO roleEO = rolesRepositoryRef.findById(adminEO.getRole().getRoleId())
+				.orElseThrow(() -> new RuntimeException("Role not found: " + adminEO.getRole().getRoleName()));
+		AdminEO admin = new AdminEO(adminEO.getId(), adminEO.getRole(), adminEO.getDesignationId(), adminEO.getName(),
+				adminEO.getGender(), adminEO.getAadhar(), adminEO.getPhone(), adminEO.getPassword(),
+				adminEO.getHireDate(), adminEO.getSignup());
+		adminRepositoryRef.save(admin);
+		return "Admin updated successfully";
+	}
+
+	public Boolean removeAdminEO(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int authorizeAdmin(String designationId, String password, String newPassword) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<AdminDTO> getAdminEOFindAll() {
+		List<AdminEO> adminEO = adminRepositoryRef.findAll();
+		List<AdminDTO> adminDTO = new ArrayList<AdminDTO>();
+		for (AdminEO adm : adminEO) {
+			AdminDTO dto = new AdminDTO(adm.getId(), adm.getRole().getRoleName(), adm.getDesignationId(), adm.getName(),
+					adm.getGender(), adm.getAadhar(), adm.getPhone(), adm.getPassword(), adm.getHireDate(),
+					adm.getSignup());
+			adminDTO.add(dto);
+		}
+		return adminDTO;
+	}
+
+	public AdminEO findAdminByDesigID(String designationId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public AdminEO findAdminByAadhar(String aadhar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<AdminEO> findAdminByRoleID(Long roleId) {
+		return adminRepositoryRef.findByRoleRoleId(roleId);
+	}
+
+	public List<AdminEO> findAdminByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String persistRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.save(roleEO);
+		return "Success";
+	}
+
+	public String mergeRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.save(roleEO);
+		return "Updated";
+	}
+
+	public Boolean removeRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.delete(roleEO);
+		return true;
+	}
+
+	public List<RolesDTO> getRoleEOFindAll() {
+		List<RoleEO> roles = rolesRepositoryRef.findAll();
+		List<RolesDTO> rolesDTO = new ArrayList<RolesDTO>();
+		for (RoleEO role : roles) {
+			RolesDTO dto = new RolesDTO(role.getRoleId(), role.getRoleName());
+			rolesDTO.add(dto);
+		}
+		return rolesDTO;
+	}
+
+	public RoleEO findRoleByRoleID(Long roleId) {
+		return rolesRepositoryRef.findById(roleId).orElse(null);
+	}
+
+	public RoleEO findRoleByRoleName(String roleName) {
+		return rolesRepositoryRef.findByroleName(roleName);
+	}
+
+	public Boolean login(AdminEO adminEO) {
+		return null;
+	}
+
+}

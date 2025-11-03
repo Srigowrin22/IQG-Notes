@@ -1,0 +1,129 @@
+Day 7 :
+
+	Module : Java SE 
+	
+		Agenda :
+		
+			
+			Lesson 14 : Exception Handling
+			
+			Lesson 15 : JDBC			
+			
+			Lesson 14 : Exception Handling
+			
+				What is an Exception ?
+				
+					An Exception is a Condition Which is Usually Occurred Either at Compilation Phase or Execution Phase, but Whatever may be the Case, It Leads into Abrupt Termination
+					
+					Types :
+					
+						1.  Compile Time Exception  [ Checked Exception ]
+						
+						2.  Run Time Exception [ UnChecked Exception ]
+						
+					Causes of Exception 
+					
+						1.  Invalid User Input
+						
+						2.  Design Errors
+						
+						3.  IO Errors 
+						
+						
+				Usage of Finally 
+				
+				try
+				{
+					OpenFile
+					ReadWriteContentsToFile
+				
+				}
+				catch(ExceptionType1 E1)
+				{
+					E1.printStackTrace();
+					return;
+				}
+				catch(ExceptionType1 E1)
+				{
+					E1.printStackTrace();
+				}
+				catch(ExceptionType1 E1)
+				{
+					E1.printStackTrace();
+				}
+				finally
+				{
+					CloseFile
+				}
+				
+				
+			Try Without Resource 
+			
+				try
+				{
+					InputStream in = new FileInputStream(SomeFile);
+					...
+					
+					in.close();
+				}
+				
+			Try Without Resource 
+			
+				try ( InputStream in = new FileInputStream(SomeFile); )
+				{
+					
+					...
+					No Need to Release Resource ( Try With Resource AutoCloses ]
+					
+				}
+				
+				
+			Lesson 15 : JDBC
+		
+			Why Prepared Statement ?
+			
+				
+				SELECT * FROM LINKSTABLE WHERE SEARCH = 'JAVA';
+				
+				SELECT * FROM LINKSTABLE WHERE SEARCH = 'TESTING';
+				
+				SELECT * FROM LINKSTABLE WHERE SEARCH = 'PHP';
+				
+				SELECT * FROM LINKSTABLE WHERE SEARCH = '.NET';
+				
+				SELECT * FROM LINKSTABLE WHERE SEARCH = 'C#';
+				
+				
+			Reason Behind Prepared Statement [ Performance Improvement ]
+			
+				Instead of Converting the Whole Query FROM JAVA TO SQL 
+				
+				PreparedStatement maintains a PreCompiled QUERY [ Most Part of the Query Which is Common ]
+				
+				Only the Portion of the Query Which needs to Changed can be Parameterized and Only that Can be Converted From Java to SQL 
+			
+				SELECT * FROM LINKSTABLE WHERE SEARCH = ?;
+				
+				
+				
+			Design Pattern 
+			
+				What is a Design  Pattern ?
+				
+					A Design Pattern is a Set of Guide Lines Given By One Developer to Another Developer in the S/W Industry for Recurring Problems 
+					
+				DAO [ Data Access Object ] Pattern 
+				
+				Factory Pattern 
+				
+					Is a Simple Class Involved with Creation of Objects
+					
+					public interface 
+					
+					
+					public class DepartmentDAOFactory
+					{
+						private DepartmentDAO departmentDAORef;
+				
+				
+				

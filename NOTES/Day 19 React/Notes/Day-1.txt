@@ -1,0 +1,92 @@
+
+Day 1 : 
+
+	Module-15: React JS
+	
+		Agenda :
+		
+			Lesson 01 : Breif Intro to Require JS
+			
+			Lesson 02 : Overview of React JS 
+			
+			Lesson 03 : Building Applications Using React JS
+			
+			
+			Lesson 01 : Breif Intro to Require JS
+			
+				Require JS
+				
+					1.  Library Management
+					
+					2. 	Dependency Management 
+					
+					
+					AMD [ Asynchronous Module Defination ]
+					
+						Require JS 
+						
+						1.  define(id?, dependencies?, factory)
+						
+							ID : Identity for a Module 
+							
+							Dependency List : [ Array of Other JS Modules On Which Our Module is Dependent On ]
+							
+							Factory : Is a Call Back Function, Which Gets Fired Once All the Dependency Lib Loaded With Our Module 
+							
+							[ ON DEMAND ]
+							
+						2.  require(dependencies?, factory)
+			
+							Dependency List : [ Array of Other JS Modules On Which Our Module is Dependent On ]
+							
+							Factory : Is a Call Back Function, Which Gets Fired Once All the Dependency Lib Loaded With Our Module 
+							
+							[ LOAD AT THE START OF THE APPLICATION ]
+							
+			
+			
+					Lesson 02 : Overview of React JS 
+					
+						React JS is a JavaScript Lib for Creating Reactive and Fast JS Driven Web Applications
+						
+							JS Running in the Browser , Allows the Creation of Applications that Run Fast and Feel Like Mobile Applications
+							
+						
+						React JS Was Born on 2013, It Was Created By JORDAN WALKE. He was Working in Facebook.
+						
+						
+						React Make Uses of Best Design Pattern [ MVC ]
+						
+						React is Targeted For SPA 
+						
+						What Does React Contain ?
+						
+							Modules --- Lib
+							
+							Reusable Components 
+							
+								Component 
+								
+									Is a Software Unit
+									
+									a.  View Part [ HTML and CSS ]
+									
+									b.  Model Part [ JavaScript ]
+									
+								Component Defination in JSX
+								
+									a. JSX File [ View ( HTML ) and Model ( JS ) ]
+									
+									b. CSS File { Containing the Style Factor ]
+									
+									
+								<script>
+								
+									var fname = "James";
+									var lname = "Bond";
+									
+									givenName = document.getElementById("nameSpan");
+									givenName.innerHTML = fname + " " + lName;
+								
+								
+								</script>

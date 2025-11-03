@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Mon Jul 07 16:34:15 IST 2025
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson08-SpringMVC-FormHandling\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5.jar=WEB-INF/lib/spring-web-5.3.5.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson08-SpringMVC-Validation\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5-sources.jar=WEB-INF/lib/spring-web-5.3.5-sources.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson07-Spring-JSF-Hibernate\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5.jar=WEB-INF/lib/spring-web-5.3.5.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson08-SpringMVC-Validation\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5.jar=WEB-INF/lib/spring-web-5.3.5.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson07-Spring-JSF-Hibernate\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5-sources.jar=WEB-INF/lib/spring-web-5.3.5-sources.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\srigowri.n\\OneDrive\ -\ iqgateway\ pvt\ ltd\\Desktop\\NOTES\\Day\ 21\ Spring\\workspace\\Lesson08-SpringMVC-FormHandling\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5-sources.jar=WEB-INF/lib/spring-web-5.3.5-sources.jar

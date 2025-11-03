@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="ExampleProject"/>
+<aop-project name="TMS-Springboot-JPA"/>
+<aop-project name="Lesson03-Springboot-JPA"/>
+<aop-project name="Lesson03-SpringbootJDBC"/>
+<aop-project name="Lesson04-Springboot-Validation"/>
+<aop-project name="spring-boot-demo-logging-2"/>
+<aop-project name="way-to-create-spring-boot-1"/>
+<aop-project name="Lesson07-Springboot-Actuator"/>
+<aop-project name="Lesson05-Springboot-Interceptors"/>
+<aop-project name="spring-boot-demo-web"/>
+<aop-project name="Lesson04-Springboot-Thymleaf"/>
+</aop-reference-model>

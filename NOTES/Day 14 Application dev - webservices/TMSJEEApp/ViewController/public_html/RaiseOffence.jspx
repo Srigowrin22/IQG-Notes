@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Raise Offence</title>
+        <link rel="stylesheet" type="text/css" href="images/styles1.css"/>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_ClerkDashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Raise Offence</div>
+            <div class="form-row">
+              <h:outputLabel value="Designation ID" for="desigID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_ClerkDashboard.designationId}"
+                           id="desigID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+             <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_ClerkDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Raise Offence"
+                               action="#{backing_ClerkDashboard.raiseOffence_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Pending Offences"
+                               action="#{backing_ClerkDashboard.pendingOffences_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="View Owner"
+                               action="#{backing_ClerkDashboard.viewOwner_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Generate reports"
+                               action="#{backing_ClerkDashboard.generateReports_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types"
+                               action="#{backing_ClerkDashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <!-- Message display -->
+          <div class="center-content">
+            <h:panelGroup rendered="#{not empty backing_RaiseOffence.message}">
+              <div class="admin-msg">
+                <h:outputText value="#{backing_RaiseOffence.message}"/>
+              </div>
+            </h:panelGroup>
+             
+            <!-- Centered Raise card -->
+            <div class="raise-center-wrapper">
+              <h:panelGroup rendered="#{backing_RaiseOffence.showCard}"
+                            styleClass="raise-center-content">
+                <h:form binding="#{backing_RaiseOffence.raiseOffence}"
+                        id="raiseOffence">
+                  <div class="form-row">
+                    <h:outputLabel for="registrationID" value="Registration ID:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:inputText value="#{backing_RaiseOffence.registrationID}"
+                                 id="registrationID"
+                                 styleClass="centersidebar-input"
+                                 required="true"/>
+                  </div>
+                  <div class="form-row">
+                    <h:outputLabel for="location" value="Location:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:inputText value="#{backing_RaiseOffence.location}"
+                                 id="location" styleClass="centersidebar-input"
+                                 required="true"/>
+                  </div>
+                  <div class="form-row">
+                    <h:outputLabel for="reporter" value="Reporter:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:outputText value="#{backing_ClerkDashboard.loggedInAdmin.designationId}"
+                                 id="reporter" styleClass="centersidebar-input"/>
+                  </div>
+                  <div class="form-row">
+                    <h:outputLabel for="offenceDate" value="Offence Date:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:inputText value="#{backing_RaiseOffence.offenceDate}"
+                                 id="offenceDate"
+                                 styleClass="centersidebar-input"/>
+                  </div>
+                  <div class="form-row">
+                    <h:outputLabel for="time" value="Time:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:inputText value="#{backing_RaiseOffence.time}" id="time"
+                                 styleClass="centersidebar-input"/>
+                  </div>
+                  <div class="form-row">
+                    <label for="imageUpload" class="centersidebar-label">Upload
+                                                                         Image:</label>
+                     
+                    <input type="file" id="imageUpload" name="imageUpload"
+                           class="centersidebar-input"/>
+                  </div>
+                  <div class="form-row">
+                    <label for="videoUpload" class="centersidebar-label">Upload
+                                                                         Video:</label>
+                     
+                    <input type="file" id="videoUpload" name="videoUpload"
+                           class="centersidebar-input"/>
+                  </div>
+                  <div class="form-row">
+                    <h:outputLabel for="offenceType" value="Offence Type:"
+                                   styleClass="centersidebar-label"/>
+                     
+                    <h:selectOneMenu id="offenceType"
+                                     value="#{backing_RaiseOffence.selectedOffenceType}"
+                                     styleClass="centersidebar-input">
+                      <f:selectItems value="#{backing_RaiseOffence.offenceItems}"/>
+                    </h:selectOneMenu>
+                  </div>
+                  <div class="form-row centered-buttons">
+                    <h:commandButton value="SUBMIT" id="submit"
+                                     styleClass="dashboard-btn button-submit"
+                                     action="#{backing_RaiseOffence.submit_action}"/>
+                     
+                    <h:commandButton value="CANCEL" id="cancel"
+                                     styleClass="dashboard-btn button-cancel"
+                                     action="#{backing_RaiseOffence.cancel_action}"/>
+                  </div>
+                </h:form>
+              </h:panelGroup>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_RaiseOffence-->
+</jsp:root>

@@ -1,0 +1,144 @@
+Day 5 
+
+	Agenda :
+	
+		Lesson 11 : Developing User Interfaces Using JSF
+		
+		Lesson 12 : Planning Navigation 
+		
+		Lesson 13 : Handling Application Events
+		
+		Lesson 14 : JMS and MDB
+		
+		Lesson 15 : Java Trasaction API 
+		
+		
+		
+		Lesson 11 : Developing User Interfaces Using JSF
+		
+			Navigation in JSF 
+			
+				Is Centralized [ faces-config.xml ] ( Not in the Source Code )
+				
+				Navigation is JSF is Always Based on String Outcome 
+				
+				1.  Static Navigation 
+				
+						[ Hard Coded String Value ]
+				
+				2.  Dynamic Navigation 
+				
+						[ Calling a Method in Managed Bean, After Evaluation it Returns a String Value, Now Based on the String Value Navigation is DONE ]
+				
+				
+				
+				State Management 
+				
+					http://127.0.0.1:7101/JavaEEApps_Lesson11-JSF-ViewController-context-root/faces/index.jsp;jsessionid=MpZpk29GJN0TldvVyvhP9wxvlwYyVLZXkqvJ0lZR3KJ4QyzXyfpV!2036865413
+					
+					
+				On top of JSF, There are Many third Party Component Providers 
+				
+				
+				1.  Oracle    ---  ADFFaces 
+				
+				2.  Prime     ---  PrimeFaces
+				
+				3.  ICESoft   ---  ICEFaces
+				
+				4.  JBoss     ---  RichFaces
+				
+				5.  Apache    ---  MyFaces 
+				
+				...
+				
+				
+				JSF Architecture 
+				
+					When a Page is Request to the Controller, Controller inturn Delegates it to Backend Code.
+					
+						The Backend Code, Generates the Component Tree Structure for Every Client Separately 
+						
+						
+						
+				JSF Life Cycle 
+			
+				Stages 
+				
+					1.  Initial Request Stage [ When First time the Request for the Page ]
+					
+						Phases
+						
+						a.  Restore View / Create View [ Controller Asks the Backend Code To Generate Component Tree Structure ]
+						
+						b.  Render Response [ Now Renders Convert the Object Tree Structure into Viewable Components on the UI ]
+						
+					
+					
+					2.  Postback Stage [ Using the Page We Postback Back the Request to Server ]
+					
+					
+						a.  Apply Request Values [ The Input Values Given By the Client needs to Stored Temp ( On the Corresponding Object Tree Structure ) ]
+						
+						b.  Process Validation 
+						
+							i.  Firstly It goes Conversion
+							
+							ii. Validation 
+							
+							If Either of Them Fails, then Control is Directly taken to the Render Response Phase With Error Msgs
+							
+						c.  Update Model [ Validated and Converted Data is Now Stored in the Managed Bean Properties ( Connected the UI Components With Managed Bean using Exp Language ) ]
+
+						
+						d.  Invoke Application 
+						
+							i.  Fire Any Events if Present 
+							
+							ii. Navigation 
+							
+						e.  Render Response [ Now the Renderer Converts the Response into Viewable Components on the Client Side ]
+								
+							
+					
+					Backing Bean is a Special Type of Managed Bean 
+					
+					Why ?
+					
+						In Any Case If Developer Wants to the Get the Control of the Object Tree Structure Which Was Created by the JSF, So that Developer Can Programmatically Perform Activites 
+						
+						A Backing Bean is Associated With One Page 
+					
+					
+					
+				Lesson 13 : Handling Application Events	
+					
+				What is an Event ? 
+			
+					An Event is an Interaction Between Client and the Application 
+				
+					Any GUI Application Without Events is Incomplete
+				
+					What all Components are Part of the Event ?
+			
+						a. UI Component 
+						
+						b. Event Listener  
+						
+						c. Event Handler 
+						
+					Firstly We need to Add Event Listener on the UI Component, So its Constantly Listening for a Particular Type of Event.
+				
+					When an Event is fired/Triggered, the Next Moment Event Object is Constructed and Passed on to the Event Handler 
+				
+					Contents of Event Object 
+				
+					1.  Source Component which has raised the Event
+					
+					2.  Category of the Event 
+					
+					3.  Time/Sequence of the Event 
+					
+					Thirdly the Event Handler Receives the Event Object as Parameter, Event Handler is the Place, Where What is Needs to Be Done is Defined [ Action ]
+				
+			

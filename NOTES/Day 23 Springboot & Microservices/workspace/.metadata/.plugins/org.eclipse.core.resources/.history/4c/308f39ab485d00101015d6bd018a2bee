@@ -1,0 +1,8 @@
+package training.iqgateway;
+
+import org.springframework.web.servlet.HandlerInterceptor;
+
+@Component
+public class CustomLoggerInterceptor implements HandlerInterceptor {
+
+}

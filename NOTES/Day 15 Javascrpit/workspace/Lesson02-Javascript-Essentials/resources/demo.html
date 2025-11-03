@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Snowman with Fixed Arms</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      border: 1px solid black;
+      background-color: #9999ff; /* lavender background */
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // a. Layer of snow on the ground
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 500, 600, 100);
+
+    // g. Sun - yellow circle with orange stroke in top right
+    ctx.beginPath();
+    ctx.arc(550, 100, 60, 0, Math.PI * 2, false);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'orange';
+    ctx.stroke();
+
+    // Helper function to draw circle with fill and stroke
+    function drawCircle(x, y, radius, fillColor, strokeColor, strokeWidth) {
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+      ctx.fillStyle = fillColor;
+      ctx.fill();
+      if (strokeColor) {
+        ctx.lineWidth = strokeWidth || 1;
+        ctx.strokeStyle = strokeColor;
+        ctx.stroke();
+      }
+    }
+
+    // Helper function to draw square with fill and stroke
+    function drawSquare(x, y, size, fillColor, strokeColor, strokeWidth) {
+      ctx.beginPath();
+      ctx.rect(x, y, size, size);
+      ctx.fillStyle = fillColor;
+      ctx.fill();
+      if (strokeColor) {
+        ctx.lineWidth = strokeWidth || 1;
+        ctx.strokeStyle = strokeColor;
+        ctx.stroke();
+      }
+    }
+
+    // b. Three balls for body and head
+    drawCircle(300, 450, 100, 'white', 'black', 1); // bottom ball
+    drawCircle(300, 320, 70, 'white', 'black', 1);  // middle ball
+    drawCircle(300, 210, 50, 'white', 'black', 1);  // head ball
+
+    // f. Buttons - black squares on middle ball
+    drawSquare(295, 280, 12, 'black');
+    drawSquare(295, 310, 12, 'black');
+    drawSquare(295, 340, 12, 'black');
+
+    // c. Eyes - black circles on head
+    drawCircle(280, 200, 7, 'black');
+    drawCircle(320, 200, 7, 'black');
+
+    // c. Mouth - red arc
+    ctx.beginPath();
+    ctx.arc(300, 230, 18, 0, Math.PI, false);
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // c. Nose - orange triangle
+    ctx.beginPath();
+    ctx.moveTo(300, 210);
+    ctx.lineTo(335, 220);
+    ctx.lineTo(300, 230);
+    ctx.closePath();
+    ctx.fillStyle = 'orange';
+    ctx.fill();
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // d. Hat - brim and top rectangle
+    ctx.fillStyle = 'black';
+    ctx.fillRect(240, 160, 120, 15);  // brim
+    ctx.strokeRect(240, 160, 120, 15);
+    ctx.fillRect(270, 90, 60, 70);    // top
+    ctx.strokeRect(270, 90, 60, 70);
+
+    // e. Arms - brown sticks with branches
+
+    ctx.strokeStyle = '#8B4513'; // saddlebrown
+    ctx.lineWidth = 6;
+
+    // Left arm main branch
+    ctx.beginPath();
+    ctx.moveTo(230, 320);
+    ctx.lineTo(140, 390);
+    ctx.stroke();
+
+    // Left arm smaller branches
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(140, 390);
+    ctx.lineTo(120, 380);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(140, 390);
+    ctx.lineTo(130, 410);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(140, 390);
+    ctx.lineTo(150, 400);
+    ctx.stroke();
+
+    // Right arm main branch
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(370, 320);
+    ctx.lineTo(460, 270);
+    ctx.stroke();
+
+    // Right arm smaller branches
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(460, 270);
+    ctx.lineTo(480, 260);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(460, 270);
+    ctx.lineTo(470, 280);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(460, 270);
+    ctx.lineTo(450, 290);
+    ctx.stroke();
+
+  </script>
+</body>
+</html>

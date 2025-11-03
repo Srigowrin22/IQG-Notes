@@ -1,0 +1,34 @@
+package training.iqgateway.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.servicesimpl.AdminEOServiceImpl;
+
+@RestController
+@RequestMapping("/admin")
+public class AdminEOController {
+
+    @Autowired
+    private AdminEOServiceImpl adminEOServiceImpl;
+
+    @GetMapping
+    public ResponseEntity<List<AdminEO>> fetchAllAdmin() {
+        List<AdminEO> admins = adminEOServiceImpl.getAll();
+        return ResponseEntity.ok(admins);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AdminEO> fetchAdminById(@PathVariable("id") String id) {
+        AdminEO admin = adminEOServiceImpl.getByIdd(id);
+        if (admin != null) {
+            return ResponseEntity.ok(admin);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+}

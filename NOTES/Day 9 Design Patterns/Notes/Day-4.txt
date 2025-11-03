@@ -1,0 +1,251 @@
+Day 22 :
+
+	Agenda : 
+	
+		Module-8: Java Design Patterns 
+		
+			Lesson 04: Behavioural Design Patterns - Part I
+
+		
+			Business Logic 
+		
+			a.  Logic Execution
+			
+			b.  Services 
+			
+				Stage 1 :
+				
+				public class Account
+				{
+					
+					public void deposit()
+					{
+						 Authentication
+						 
+						 Authorization
+						 
+							 Deposit Logic
+							 
+						 Logging 
+						 
+						 Transaction
+					}
+					
+					public void withdraw()
+					{
+						 Authentication
+						 
+						 Authorization
+						 
+							 Withdraw Logic
+							 
+						 Logging 
+						 
+						 Transaction
+					}
+				}
+		
+		Stage 2 : Reusable To the Business Classes
+		
+		public class Account
+		{
+			public void securityService()
+			{
+				 Authentication
+				 
+				 Authorization
+			}
+		
+			public void loggingAndTransactionService()
+			{
+				Logging 
+				 
+				Transaction
+			
+			}
+			
+			
+			public void deposit()
+			{
+				 securityService()
+				 
+					 Deposit Logic
+				
+				 loggingAndTransactionService()
+			}
+			
+			public void withdraw()
+			{
+				 securityService()
+				 
+					 Withdraw Logic
+					 
+				 loggingAndTransactionService()
+			}
+		}
+		
+		
+		Stage 3 : Reusable Across Business Classes
+		
+		public class Services
+		{
+			public void securityService()
+			{
+				 Authentication
+				 
+				 Authorization
+			}
+		
+			public void loggingAndTransactionService()
+			{
+				Logging 
+				 
+				Transaction
+			
+			}
+			
+		}
+		  
+		public class Account
+		{
+			Services servRef;
+			
+			public void deposit()
+			{
+				 servRef.securityService()
+				 
+					 Deposit Logic
+				
+				 servRef.loggingAndTransactionService()
+			}
+			
+			public void withdraw()
+			{
+				 servRef.securityService()
+				 
+					 Withdraw Logic
+					 
+				 servRef.loggingAndTransactionService()
+			}
+		}
+		
+		Stage 4 : Modularizing Services To More Granular
+		
+		public class Services
+		{
+			public void authenticationService()
+			{
+				 Authentication
+			}
+		
+			public void authorizationService()
+			{
+				 Authorization
+			}
+		
+			public void loggingService()
+			{
+				Logging 
+			}
+			
+			public void transactionService()
+			{
+				Transaction 
+			}
+		}
+		  
+		  public class Account
+		  {
+			Services servRef;
+			
+			public void deposit()
+			{
+				 servRef.authenticationService()
+
+				 servRef.authorizationService();
+				 
+					 Deposit Logic
+				
+				 servRef.transactionService()
+			}
+			
+			public void withdraw()
+			{
+				 servRef.authenticationService()
+				 
+					 Withdraw Logic
+					 
+				 servRef.loggingService();
+				 
+				 servRef.transactionService();
+			}
+		}
+		
+		
+		Stage 5 : CommandPattern Approach
+		
+		public class AuthenticationService
+		{
+			public void authenticate()
+			{
+				 Authentication
+			}
+		}
+		
+		public class AuthorizationService
+		{
+			public void authorize()
+			{
+				 Authorization
+			}
+		}
+		
+		public class LoggingService
+		{
+			public void logging()
+			{
+				Logging 
+			}
+		}
+		
+		public class TransactionService
+		{
+			public void transact()
+			{
+				Transaction 
+			}
+		}
+		  
+		  public class Account
+		  {
+			AuthenticationService authServRef;
+			AuthorizationService authorizeServRef;
+			TransactionService transactionServRef
+			
+			public void deposit()
+			{
+				 authServRef.authenticationService()
+
+				 authorizeServRef.authorizationService();
+				 
+					 Deposit Logic
+				
+				 transactionServRef.transactionService()
+			}
+			
+			public void withdraw()
+			{
+				 authServRef.authenticationService()
+				 
+					 Withdraw Logic
+					 
+				 servRef.loggingService();
+				 servRef.transactionService();
+			}
+		}
+		
+		
+		
+			
+			
+		

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Offence Types</title>
+        <link rel="stylesheet" type="text/css" href="images/styles1.css"/>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_ClerkDashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Offence Types</div>
+            <div class="form-row">
+              <h:outputLabel value="Designation ID" for="desigID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_ClerkDashboard.designationId}"
+                           id="desigID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+             <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_ClerkDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Raise Offence"
+                               action="#{backing_ClerkDashboard.raiseOffence_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Pending Offences"
+                               action="#{backing_ClerkDashboard.pendingOffences_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="View Owner"
+                               action="#{backing_ClerkDashboard.viewOwner_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Generate reports"
+                               action="#{backing_ClerkDashboard.generateReports_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types"
+                               action="#{backing_ClerkDashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <div class="center-content">
+          <!-- Message display -->
+          <h:panelGroup rendered="#{not empty backing_OwnerDetails.message}">
+            <div class="admin-msg">
+              <h:outputText value="#{backing_OwnerDetails.message}"/>
+            </div>
+          </h:panelGroup>
+           
+          <!-- Centered Offence Types Details card -->
+          <div class="raise-center-wrapper-owner">
+            <h:panelGroup rendered="#{backing_RaiseOffence.showCard}"
+                          layout="block">
+              <h:form id="ownerDetailsForm">
+                <h:dataTable value="#{backing_OffenceTypes.allOffenceTypesEO}"
+                             var="backing_OffenceTypes"
+                             binding="#{backing_OffenceTypes.dataTable1}"
+                             id="dataTable1" styleClass="offence-table">
+                  <!--oracle-jdev-comment:Faces.RI.DT.Class.Key:training.iqgateway.model.OffenceTypesEO-->
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence Id"
+                                    binding="#{backing_OffenceTypes.outputText1}"
+                                    id="outputText1"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_OffenceTypes.offenceId}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence Type"
+                                    binding="#{backing_OffenceTypes.outputText2}"
+                                    id="outputText2"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_OffenceTypes.offenceType}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Penalty Amt"
+                                    binding="#{backing_OffenceTypes.outputText3}"
+                                    id="outputText3"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_OffenceTypes.penaltyAmt}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Vehicle Type"
+                                    binding="#{backing_OffenceTypes.outputText4}"
+                                    id="outputText4"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_OffenceTypes.vehicleType}"/>
+                  </h:column>
+                </h:dataTable>
+              </h:form>
+            </h:panelGroup>
+          </div>
+        </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_OffenceTypes-->
+</jsp:root>

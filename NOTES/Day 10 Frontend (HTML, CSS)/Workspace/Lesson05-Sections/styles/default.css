@@ -1,0 +1,54 @@
+h3{
+    color: blanchedalmond;
+}
+
+h2, article{
+    text-transform: capitalize;
+}
+
+section article{
+    color: rgb(210, 29, 89);
+}
+
+section > p > article{
+    color: rgb(213, 122, 152);
+}
+
+.copyright{
+    font-family: cursive;
+    color: greenyellow;
+}
+
+#Speakers{
+    color: seagreen;
+}
+
+#workshops h3{
+    font-size: smaller;
+}
+
+input[required]{
+    background-color: rgb(163, 162, 162);
+}
+
+input[type="email"]{
+    border: 2px dotted greenyellow;
+}
+
+input[input=submit]:hover{
+    cursor: crosshair;
+}
+
+input[type="text"]:focus{
+    background-color:wheat;
+}
+
+a:active{
+    font-size: 150%;
+}
+
+#simpleDiv{
+    margin: 50px;
+    border: 10px solid springgreen;
+    padding: 30px;
+}

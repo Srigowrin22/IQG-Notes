@@ -1,0 +1,7 @@
+package training.iqgateway.aop;
+
+import org.springframework.aop.AfterReturningAdvice;
+
+public class LoggingAfterAdvice implements AfterReturningAdvice{
+
+}

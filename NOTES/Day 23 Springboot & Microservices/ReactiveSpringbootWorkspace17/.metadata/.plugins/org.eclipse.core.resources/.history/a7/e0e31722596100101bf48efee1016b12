@@ -1,0 +1,12 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import training.iqgateway.entities.VehicleEO; 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+public class VehicleOffenceRepository extends JpaRepository<VehicleEO, Long>{
+
+}

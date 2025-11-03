@@ -1,0 +1,52 @@
+package training.iqgateway.dto;
+
+public class OffenceTypesDTO {
+
+    private Long offenceId;
+    private String offenceType;
+    private String vehicleType;
+    private Long penaltyAmt;
+
+    public OffenceTypesDTO() {
+        // default constructor
+    }
+
+    public OffenceTypesDTO(Long offenceId, String offenceType, String vehicleType, Long penaltyAmt) {
+        this.offenceId = offenceId;
+        this.offenceType = offenceType;
+        this.vehicleType = vehicleType;
+        this.penaltyAmt = penaltyAmt;
+    }
+
+    public Long getOffenceId() {
+        return offenceId;
+    }
+
+    public void setOffenceId(Long offenceId) {
+        this.offenceId = offenceId;
+    }
+
+    public String getOffenceType() {
+        return offenceType;
+    }
+
+    public void setOffenceType(String offenceType) {
+        this.offenceType = offenceType;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public Long getPenaltyAmt() {
+        return penaltyAmt;
+    }
+
+    public void setPenaltyAmt(Long penaltyAmt) {
+        this.penaltyAmt = penaltyAmt;
+    }
+}

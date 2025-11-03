@@ -1,0 +1,9 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import training.iqgateway.entities.RoleEO;
+
+public interface RolesRepository extends CrudRepository<RoleEO, Integer>{
+
+}

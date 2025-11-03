@@ -1,0 +1,24 @@
+package training.iqgateway;
+
+import org.slf4j.Logger;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class SpringbootDemoLoggingController {
+	
+	Logger logRef = org.slf4j.LoggerFactory.getLogger(SpringbootDemoLoggingController.class);
+	
+	@GetMapping("/")
+	public String index(){
+		logRef.trace("A trace message");
+		logRef.debug("A debug message");
+		logRef.info("A Info message");
+		logRef.error("A error message");
+		logref.warn("A warning message");
+		return "Hey Man! Chock logs for the message!";
+	}
+	
+}

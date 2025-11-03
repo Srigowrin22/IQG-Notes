@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+ 
+    <script type="module">
+ 
+        import {h ,render } from 'https://esm.sh/preact';
+        import { html } from 'https://esm.sh/htm/preact/standalone';
+ 
+       
+        function HelloWoldComponent (props) {
+            return html`<h1>Welcome ${props.name} ! </h1>`;
+        }
+ 
+        render(html`<${HelloWoldComponent} name="Rahul Dravid" />`, document.body);
+       
+    </script>
+</body>
+</html>

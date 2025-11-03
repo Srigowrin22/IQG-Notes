@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <form action="">
+        <center>de
+            <table>
+                <tr>
+                    <td><label for="uname"></label>Username: </td>
+                    <td><input type="text" name="uname" id="uname" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td><label for="pass"></label>Password: </td>
+                    <td><input type="password" name="pass" id="pass" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td><label for="email"></label>Email: </td>
+                    <td><input type="email" name="email" id="email" pattern="" placeholder="user@iqgateway.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone:</label></td>
+                    <td><input type="tel" name="phone" id="phone" pattern="" placeholder="+91 XXXXX XXXXX"></td>
+                </tr>
+                <tr>
+                    <td><label for=""></label>Gender:</td>
+                    <td><label for="male">Male</label>
+                        <input type="radio" name="gender" id="male">
+
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Sports:</label></td>
+                    <td><input type="checkbox" name="sports" id="soccer">
+                        <label for="soccer">Soccer</label><br>
+                        <input type="checkbox" name="sports" id="cricket">
+                        <label for="cricket">Cricket</label><br>
+                        <input type="checkbox" name="sports" id="badminton">
+                        <label for="badminton">Badminton</label></td>
+                </tr>
+
+                <tr>
+                    <td><label for="visitedCity">Recently Visited City: </label></td>
+                    <td>
+                        <input name="visitedCity" id="visitedCity" list="suggestionList">
+                            <datalist id="suggestionList">
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Trivandrum">Trivandrum</option>
+                                <option value="Delhi">Delhi</option>
+                            </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="favcolor">Choose your favourite color: </label></td>
+                    <td><input type="color" name="favcolor" id="favcolor" value="#007766"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="date">DOB:</label></td>
+                    <td><input type="date" name="date" id="date" value="2024-12-22"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="time">DOBT:</label></td>
+                    <td><input type="time" name="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td><label for="month">Select your favourite month: </label></td>
+                    <td><input type="month" name="month" id="month"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="number">Enter a number: </label></td>
+                    <td><input type="number" name="number" id="number" min="1" max="10" step="0.5"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="range">Enter Price Range: </label></td>
+                    <td><input type="range" name="range" id="range" min="1" max="10" step="0.5"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="search">Search:</label></td>
+                    <td><input type="search" name="search" id="search"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="url">Website Url:</label></td>
+                    <td><input type="url" name="url" id="url"></td>
+                </tr>
+                <tr>
+                    <td><label for="file-select">Upload Document:</label></td>
+                    <td><input type="file" name="upload" id="file-select"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="abstract">Feedback: </label></td>
+                    <td><textarea rows="5" cols="40" name="abstract" id="abstract"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="login" id="submit"></td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</body>
+</html>

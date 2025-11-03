@@ -1,0 +1,376 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>BOOKS</name>
+    <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+    <schemaName>FOD</schemaName>
+    <type>TABLE</type>
+  </ID>
+  <name>BOOKS</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>BOOK_ID</name>
+        <identifier class="java.lang.String">7129f864-c9d7-4fe2-acc6-3c7715270a5a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>BOOKS</name>
+          <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>BOOK_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1fd28f3f-0093-444b-94f0-0614fcfacebd</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>BOOK_ID</name>
+            <identifier class="java.lang.String">7129f864-c9d7-4fe2-acc6-3c7715270a5a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>BOOKS</name>
+              <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>BOOK_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOKS</name>
+                  <identifier class="java.math.BigDecimal">15311</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOKS</name>
+              <identifier class="java.math.BigDecimal">15311</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>NAME</name>
+        <identifier class="java.lang.String">300ead79-615b-49fa-b2c5-020919e2e0b8</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>BOOKS</name>
+          <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>NAME</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">748c071a-18e0-407d-9fb1-259fdc992ab7</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>NAME</name>
+            <identifier class="java.lang.String">300ead79-615b-49fa-b2c5-020919e2e0b8</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>BOOKS</name>
+              <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NAME</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOKS</name>
+                  <identifier class="java.math.BigDecimal">15311</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOKS</name>
+              <identifier class="java.math.BigDecimal">15311</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>GENRE</name>
+        <identifier class="java.lang.String">61167e57-6f9a-4245-a208-b5bf532a112d</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>BOOKS</name>
+          <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>GENRE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">6ac33354-70c6-4169-ab10-17b7a919d3fd</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>GENRE</name>
+            <identifier class="java.lang.String">61167e57-6f9a-4245-a208-b5bf532a112d</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>BOOKS</name>
+              <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">4000</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>GENRE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOKS</name>
+                  <identifier class="java.math.BigDecimal">15311</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>GENRE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOKS</name>
+              <identifier class="java.math.BigDecimal">15311</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>BK_PK</name>
+        <identifier class="java.lang.String">d8e7ca36-1310-4d85-a1e8-7d5148e006ae</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>BOOKS</name>
+          <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>BK_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>BOOK_ID</name>
+          <identifier class="java.lang.String">7129f864-c9d7-4fe2-acc6-3c7715270a5a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>BOOKS</name>
+            <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BK_PK</name>
+            <childObjectNames>
+              <childObjectName>BOOK_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOKS</name>
+              <identifier class="java.math.BigDecimal">15311</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>BOOKS</name>
+        <identifier class="java.math.BigDecimal">15311</identifier>
+        <schemaName>FOD</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">cf6b6ed7-34a5-499d-85a7-012e997bbe5a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>BOOKS</name>
+            <identifier class="java.lang.String">7dc35a03-9ea1-45e0-b192-2eefe7d6b073</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>OracleStorageProperties</type>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <maxtrans>255</maxtrans>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>BOOKS</name>
+                <identifier class="java.math.BigDecimal">15311</identifier>
+                <schemaName>FOD</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespace>USERS</tablespace>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+    <entry>
+      <key>Timestamp</key>
+      <value class="java.lang.Long">1223288624000</value>
+    </entry>
+  </properties>
+  <schema>
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <name>FOD</name>
+      <identifier class="java.lang.String">0e39950d-4c40-49d8-9d34-8ece3925fded</identifier>
+      <schemaName>FOD</schemaName>
+      <type>SCHEMA</type>
+    </ID>
+    <name>FOD</name>
+  </schema>
+</table>

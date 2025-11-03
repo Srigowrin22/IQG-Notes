@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Transfer</title>
+        <link rel="stylesheet" type="text/css" href="images/styles2.css"/>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_RTODashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">RTO Panel</div>
+            <div class="form-row">
+              <h:outputLabel value="RTO Officer ID" for="rtoID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_RTODashboard.designationId}"
+                           id="rtoID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+            <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_RTODashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Vehicle Management"
+                               action="#{backing_RTODashboard.vehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types Management"
+                               action="#{backing_RTODashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>                       
+                 
+                <h:commandLink value="Registration"
+                               action="#{backing_RTODashboard.registration_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Transfer Vehicle"
+                               action="#{backing_RTODashboard.transferVehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <div class="center-content">
+            <h:form id="transferForm">
+              <!-- Show message if present -->
+              <h:panelGroup rendered="#{not empty backing_Transfer.message}">
+                <div class="offence-message-in-card">
+                  <h:outputText value="#{backing_Transfer.message}"/>
+                </div>
+              </h:panelGroup>
+              <!-- Search Controls -->
+              <div class="admin-card-actions" style="margin-bottom:18px;">
+                <div class="admin-card-row">
+                  <h:outputLabel value="Registration ID:"
+                                 for="searchTransferRegId"/>
+                   
+                  <h:inputText id="searchTransferRegId"
+                               value="#{backing_Transfer.searchRegistrationId}"
+                               styleClass="admin-card-row-input"/>
+                   
+                  <h:commandButton value="Search"
+                                   action="#{backing_Transfer.searchRegistration}"
+                                   styleClass="admin-card-actions-btn"/>
+                </div>
+              </div>
+              <!-- Registration/Vehicle/Owner Details Card -->
+              <h:panelGroup rendered="#{backing_Transfer.showCard}">
+                <div class="admin-card">
+                  <!-- Registration Details -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Registration ID:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.registrationId}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Registration Date:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistrationDateStr}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Location:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.location}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <!-- Vehicle Details -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle ID:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.vehicleEO.vehicleId}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle Model:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.vehicleEO.vehicleModel}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle Brand:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.vehicleEO.vehicleBrand}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Color:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.vehicleEO.color}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <!-- Owner Details -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Owner Name:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.ownerEO.ownerName}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Owner Aadhar:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.ownerEO.ownerAadhar}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Owner Phone:"/>
+                     
+                    <h:inputText value="#{backing_Transfer.currentRegistration.ownerEO.phone}"
+                                 readonly="true"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <!-- Offence List (status=0) -->
+                  <h:panelGroup rendered="#{not empty backing_Transfer.pendingOffenceList}">
+                    <div class="admin-card-row">
+                      <h3 class="admin-card-heading">
+                        <h:outputText value="Pending Offences:"/>
+                        <h:dataTable value="#{backing_Transfer.pendingOffenceList}"
+                                     var="off" styleClass="role-table">
+                          <h:column>
+                            <f:facet name="header">
+                              <h:outputText value="Offence ID"/>
+                            </f:facet>
+                            <h:outputText value="#{off.vehicleOffenceId}"/>
+                          </h:column>
+                          <h:column>
+                            <f:facet name="header">
+                              <h:outputText value="Type"/>
+                            </f:facet>
+                            <h:outputText value="#{off.offenceTypesEO.offenceType}"/>
+                          </h:column>
+                          <h:column>
+                            <f:facet name="header">
+                              <h:outputText value="Location"/>
+                            </f:facet>
+                            <h:outputText value="#{off.location}"/>
+                          </h:column>
+                          <h:column>
+                            <f:facet name="header">
+                              <h:outputText value="Date"/>
+                            </f:facet>
+                            <h:outputText value="#{off.offenceDate}">
+                              <f:convertDateTime pattern="yyyy-MM-dd"/>
+                            </h:outputText>
+                          </h:column>
+                          <h:column>
+                            <f:facet name="header">
+                              <h:outputText value="Time"/>
+                            </f:facet>
+                            <h:outputText value="#{off.time}"/>
+                          </h:column>
+                        </h:dataTable>
+                      </h3>
+                    </div>
+                  </h:panelGroup>
+                   
+                  <!-- Card Actions -->
+                  <div class="admin-card-actions">
+                    <!-- Show Clear Offence button only if offences exist -->
+                    <h:commandButton value="Clear Offence"
+                                     action="#{backing_Transfer.showClearOffenceCard}"
+                                     styleClass="admin-card-actions-btn"
+                                     rendered="#{not empty backing_Transfer.pendingOffenceList}"/>
+                     
+                    <!-- Show Transfer button only if NO offences exist -->
+                     
+                    <h:commandButton value="Transfer"
+                                     action="#{backing_Transfer.showTransferCard}"
+                                     styleClass="admin-card-actions-btn"
+                                     rendered="#{empty backing_Transfer.pendingOffenceList}"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_Transfer.cancelCard}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Clear Offence Card -->
+              <h:panelGroup rendered="#{backing_Transfer.clearOffenceMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h2 class="admin-card-heading">Clear Offence</h2>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Total Amount:"
+                                   styleClass="admin-card-label"/>
+                     
+                    <h:outputText value="#{backing_Transfer.totalOffenceAmount}"
+                                  styleClass="admin-card-value"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Pay"
+                                     action="#{backing_Transfer.payOffence}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_Transfer.cancelClearOffence}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Transfer Card (New Owner Details) -->
+              <h:panelGroup rendered="#{backing_Transfer.transferMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Select New Owner:"
+                                   for="newOwnerAadhar"/>
+                     
+                    <h:selectOneMenu id="newOwnerAadhar"
+                                     value="#{backing_Transfer.selectedOwnerAadhar}"
+                                     styleClass="admin-card-combo">
+                      <f:selectItems value="#{backing_Transfer.ownerSelectItems}"/>
+                    </h:selectOneMenu>
+                     
+                    <h:commandButton value="Create Owner"
+                                     action="#{backing_Transfer.showCreateOwnerCard}"
+                                     styleClass="admin-card-actions-btn"
+                                     immediate="true"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save Transfer"
+                                     action="#{backing_Transfer.saveTransfer}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_Transfer.cancelTransfer}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Owner Creation Card (reuse previous structure) -->
+              <h:panelGroup rendered="#{backing_Transfer.ownerCardMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Owner Name:" for="ownerName"/>
+                     
+                    <h:inputText id="ownerName"
+                                 value="#{backing_Transfer.newOwner.ownerName}"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Aadhar:" for="createOwnerAadhar"/>
+                     
+                    <h:inputText id="createOwnerAadhar"
+                                 value="#{backing_Transfer.newOwner.ownerAadhar}"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Phone:" for="ownerPhone"/>
+                     
+                    <h:inputText id="ownerPhone"
+                                 value="#{backing_Transfer.newOwner.phone}"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="PAN Card:" for="ownerPan"/>
+                     
+                    <h:inputText id="ownerPan"
+                                 value="#{backing_Transfer.newOwner.panCard}"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Gender:" for="ownerGender"/>
+                     
+                    <h:selectOneRadio id="ownerGender"
+                                      value="#{backing_Transfer.newOwner.gender}">
+                      <f:selectItem itemValue="M" itemLabel="Male"/>
+                      <f:selectItem itemValue="F" itemLabel="Female"/>
+                    </h:selectOneRadio>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Address:" for="ownerAddress"/>
+                     
+                    <h:inputText id="ownerAddress"
+                                 value="#{backing_Transfer.newOwner.address}"
+                                 styleClass="admin-card-row-input"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save"
+                                     action="#{backing_Transfer.saveNewOwner}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_Transfer.cancelOwnerAdd}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+            </h:form>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Transfer-->
+</jsp:root>

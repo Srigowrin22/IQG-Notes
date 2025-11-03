@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Offence Types</title>
+        <link rel="stylesheet" type="text/css" href="images/styles2.css"/>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_RTODashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">RTO Panel</div>
+            <div class="form-row">
+              <h:outputLabel value="RTO Officer ID" for="rtoID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_RTODashboard.designationId}"
+                           id="rtoID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+            <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_RTODashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Vehicle Management"
+                               action="#{backing_RTODashboard.vehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Offence Types Management"
+                               action="#{backing_RTODashboard.offenceTypes_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Registration"
+                               action="#{backing_RTODashboard.registration_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Transfer Vehicle"
+                               action="#{backing_RTODashboard.transferVehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <!-- Center content is now a sibling of sidebar, not a child -->
+          <div class="center-content">
+            <h:form id="offenceTypesTableForm">
+              <!-- Show message if present -->
+              <h:panelGroup rendered="#{not empty backing_OffenceTypesRTO.message}">
+                <div class="offence-message-in-card">
+                  <h:outputText value="#{backing_OffenceTypesRTO.message}"/>
+                </div>
+              </h:panelGroup>
+              <!-- Add Offence Type Button -->
+              <div class="admin-card-actions" style="margin-bottom:18px;"
+                   rendered="#{!backing_OffenceTypesRTO.addMode}">
+                <h:commandButton value="Add Offence Type"
+                                 action="#{backing_OffenceTypesRTO.showAddCard}"
+                                 styleClass="admin-card-actions-btn"/>
+              </div>
+              <!-- Add Offence Type Card -->
+              <h:panelGroup rendered="#{backing_OffenceTypesRTO.addMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Offence Type:" for="newOffenceType"/>
+                     
+                    <h:inputText id="newOffenceType"
+                                 value="#{backing_OffenceTypesRTO.newOffenceType}"
+                                 required="true"
+                                 requiredMessage="Offence type is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Penalty Amount:" for="newPenaltyAmt"/>
+                     
+                    <h:inputText id="newPenaltyAmt"
+                                 value="#{backing_OffenceTypesRTO.newPenaltyAmt}"
+                                 required="true"
+                                 requiredMessage="Penalty amount is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle Type:" for="newVehicleType"/>
+                     
+                    <h:inputText id="newVehicleType"
+                                 value="#{backing_OffenceTypesRTO.newVehicleType}"
+                                 required="true"
+                                 requiredMessage="Vehicle type is required"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save"
+                                     action="#{backing_OffenceTypesRTO.saveNewOffenceType}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_OffenceTypesRTO.cancelAdd}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Update Offence Type Card -->
+              <h:panelGroup rendered="#{backing_OffenceTypesRTO.updateMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Edit Offence Type:"
+                                   for="updateOffenceType"/>
+                     
+                    <h:inputText id="updateOffenceType"
+                                 value="#{backing_OffenceTypesRTO.updateOffenceType}"
+                                 required="true"
+                                 requiredMessage="Offence type is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Penalty Amount:"
+                                   for="updatePenaltyAmt"/>
+                     
+                    <h:inputText id="updatePenaltyAmt"
+                                 value="#{backing_OffenceTypesRTO.updatePenaltyAmt}"
+                                 required="true"
+                                 requiredMessage="Penalty amount is required"/>
+                  </div>
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Vehicle Type:"
+                                   for="updateVehicleType"/>
+                     
+                    <h:inputText id="updateVehicleType"
+                                 value="#{backing_OffenceTypesRTO.updateVehicleType}"
+                                 required="true"
+                                 requiredMessage="Vehicle type is required"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Save"
+                                     action="#{backing_OffenceTypesRTO.saveUpdate}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_OffenceTypesRTO.cancelUpdate}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Delete Confirmation Card -->
+              <h:panelGroup rendered="#{backing_OffenceTypesRTO.deleteMode}">
+                <div class="admin-card">
+                  <div class="admin-card-row">
+                    <h:outputText value="Are you sure you want to delete offence type '#{backing_OffenceTypesRTO.selectedOffenceType.offenceType}'?"/>
+                  </div>
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Delete"
+                                     action="#{backing_OffenceTypesRTO.delete}"
+                                     styleClass="admin-card-actions-btn admin-card-actions-delete"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_OffenceTypesRTO.cancelDelete}"
+                                     immediate="true"
+                                     styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                  </div>
+                </div>
+              </h:panelGroup>
+              <!-- Offence Types Table -->
+              <div class="admin-card admin-role-table">
+                <h:dataTable value="#{backing_OffenceTypesRTO.offenceTypeList}"
+                             var="offence" styleClass="role-table">
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence ID"/>
+                    </f:facet>
+                    <h:outputText value="#{offence.offenceId}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence Type"/>
+                    </f:facet>
+                    <h:outputText value="#{offence.offenceType}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Penalty Amount"/>
+                    </f:facet>
+                    <h:outputText value="#{offence.penaltyAmt}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Vehicle Type"/>
+                    </f:facet>
+                    <h:outputText value="#{offence.vehicleType}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Actions"/>
+                    </f:facet>
+                    <div class="role-table-action-group">
+                      <h:commandButton value="Update"
+                                       action="#{backing_OffenceTypesRTO.prepareUpdate}"
+                                       styleClass="admin-card-actions-btn">
+                        <f:setPropertyActionListener target="#{backing_OffenceTypesRTO.selectedOffenceType}"
+                                                     value="#{offence}"/>
+                      </h:commandButton>
+                       
+                      <h:commandButton value="Delete"
+                                       action="#{backing_OffenceTypesRTO.prepareDelete}"
+                                       styleClass="admin-card-actions-btn admin-card-actions-delete">
+                        <f:setPropertyActionListener target="#{backing_OffenceTypesRTO.selectedOffenceType}"
+                                                     value="#{offence}"/>
+                      </h:commandButton>
+                    </div>
+                  </h:column>
+                </h:dataTable>
+              </div>
+            </h:form>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_OffenceTypesRTO-->
+</jsp:root>

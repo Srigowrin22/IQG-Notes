@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee">
+  <application>
+    <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+  </application>
+  <managed-bean>
+    <managed-bean-name>backing_dummy</managed-bean-name>
+    <managed-bean-class>training.iqgateway.view.backing.Dummy</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1dummy.jspx-->
+  </managed-bean>
+</faces-config>

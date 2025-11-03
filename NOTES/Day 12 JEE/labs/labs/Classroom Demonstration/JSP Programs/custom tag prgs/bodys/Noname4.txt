@@ -1,0 +1,29 @@
+
+How to Access JavaBean in JSP
+
+
+	1.  Scriptlets
+
+		<%
+
+			LoginBean lb = new LoginBean();
+
+			lb.getter()
+
+			lb.setter()
+
+		%>
+
+	
+	2.  Action Tags
+
+		<jsp:useBean 
+			id    = ObjRefName
+			class = ClassName of the Class
+			scope = Life Time Of Bean >
+
+		<jsp:setProperty>
+
+		<jsp:getProperty>
+
+

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelHeader text="Add Product"
+                        binding="#{productBrowsingBean.ph1}" id="ph1">
+          <f:facet name="context"/>
+          <f:facet name="menuBar"/>
+          <f:facet name="toolbar"/>
+          <f:facet name="legend"/>
+          <f:facet name="info"/>
+          <af:panelFormLayout binding="#{productBrowsingBean.pfl1}" id="pfl1">
+            <f:facet name="footer">
+              <af:toolbar binding="#{productBrowsingBean.t1}" id="t1">
+                <af:commandToolbarButton text="Save"
+                                         binding="#{productBrowsingBean.ctb1}"
+                                         id="a"
+                                         action="#{productBrowsingBean.addProduct}"/>
+              </af:toolbar>
+            </f:facet>
+            <af:inputText label="Name"
+                          binding="#{productBrowsingBean.npName}"
+                          id="npName"/>
+            <af:inputText label="Description"
+                          binding="#{productBrowsingBean.npDescription}"
+                          id="npDescription"/>
+            <af:inputText label="Additional Information"
+                          binding="#{productBrowsingBean.npAdditionalInfo}"
+                          id="npAdditionalInfo"/>
+            <af:inputText label="List Price"
+                          binding="#{productBrowsingBean.npListPrice}"
+                          id="npListPrice"/>
+            <af:inputText label="Minimum Price"
+                          binding="#{productBrowsingBean.npMinPrice}"
+                          id="npMinPrice"/>
+            <af:inputText label="Cost Price"
+                          binding="#{productBrowsingBean.npCostPrice}"
+                          id="npCostPrice"/>
+          </af:panelFormLayout>
+        </af:panelHeader>
+      </af:form>
+    </af:document>
+  </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:productBrowsingBean-->
+
+</jsp:root>

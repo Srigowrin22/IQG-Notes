@@ -1,0 +1,20 @@
+package training.iqgateway;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="DEPARTMENTS")
+public class DepartmentEO {
+	private Integer DepartmentId;
+	
+	private String DepartmentName;
+	
+	private Integer ManagerId;
+	
+	private Integer LocationId;
+
+	public DepartmentEO() {
+		super();
+	}
+	
+	
+}

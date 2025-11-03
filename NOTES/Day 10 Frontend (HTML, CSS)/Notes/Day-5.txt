@@ -1,0 +1,137 @@
+Day 21 
+
+	Agenda :
+	
+		
+			
+		Module-9 : Front End Application Development Using HTML5 and CSS3
+		
+			Lesson 05 : HTML5 and CSS3 
+			
+			
+			
+			Lesson 05 : HTML5 and CSS3 
+			
+				Why CSS ?
+				
+					A Pure Separation of Concern Where We Separate Markup With Styling 
+					
+					Earlier to CSS 
+					
+						With Markup We Used to Have Style Factors Defined, But As Applications Became Complex, We Expected
+						
+							1.  Reusable
+							
+							2.  Separation 
+							
+						
+						How to Apply to Styles to the Markup 
+						
+						1.  Element Level Styling / Inline Style
+						
+							<h1 style="color: blue">
+						
+						2.  Page Level Styling / Embedded Style
+						
+							<style>
+								body {
+									font-family: Arial, Helvitica, Sans-serif;
+									background-color: #d9e7f2;
+									padding: 10px;
+									border: 0px;
+									margin: 30px;
+								}
+								
+								...
+							
+							</style>
+							
+						3.  Application Level Styling 
+							
+							Can Create a Separate CSS File Containing All the Style Defination , So that it Can Plugged into Any Page of the Application Using 
+							
+							a.  <link rel="stylesheet" href="default.css">
+							
+							b.  <style>
+							
+									@import(url="default.css")
+								
+								</style>
+								
+						
+						
+					What Does a Style Defination Contains
+						
+						1.  Rule 
+						
+							a.  Selector 
+							
+								i.  Declaration of Style
+								
+										Property : Value 
+										
+										
+							Eg :
+							
+								h1 { 
+								
+									background-color: crimson;
+									color: gold;
+									
+								}
+						
+						
+					Lengths and Measurements
+					
+					Two Kinds of Measurements
+					
+						1.  Relative
+						
+								Depends on the Environment in which they are Used.
+								Such as Systems Monitor's Screen Resolutions or the Size of the Font.
+								
+								em --- Length Relavant to the Nearest Font Size
+								
+								ex --- x-height of the Relavant font Form ( Height of Letter )
+						
+								px --- Pixels, Relative to the Viewing Devices 
+								
+								%  --- Percentage Measurements, Calculated Based on the % Measurements [ 12px = 100% ] [ 18px = 150% ]
+								
+						2.  Absolute 
+						
+								Not Dependent on Any Other Measurements, Absolute Measurements retain the Length Regardless of the Environment. ( Such as Systems Monitor's Screen Resolutions or the Size of the Font.
+								
+								
+									in --- Inches
+									
+									cm --- Centimeters
+									
+									mm --- Millimeters
+									
+									pt --- Points [ 1 Point = 1/72nd Inches ]
+									
+									pc --- Picas [ 1 Pica = 12 Points ]
+									
+				Selectors
+
+					1.  HTML Element Name
+					
+					2.  Class Level 
+					
+							Applying Style to Multiple HTML Elements Across 
+					
+					3.  ID Level [ Page Specific ]
+					
+							Applying Style Only to One Element Through out the Page 
+					
+					
+					BOX Model 
+					
+						Has 3 Main Parts
+						
+						1.  Margin 
+						
+						2.  Border 
+						
+						3.  Padding 

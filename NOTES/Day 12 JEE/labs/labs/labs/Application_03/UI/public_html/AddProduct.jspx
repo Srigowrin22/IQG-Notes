@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelHeader text="Add Product"
+                        binding="#{productBrowsingBean.panelHeader2}"
+                        id="panelHeader2">
+          <f:facet name="context"/>
+          <f:facet name="menuBar"/>
+          <f:facet name="toolbar"/>
+          <f:facet name="legend"/>
+          <f:facet name="info"/>
+          <af:panelFormLayout binding="#{productBrowsingBean.panelFormLayout1}"
+                              id="panelFormLayout1">
+            <f:facet name="footer">
+              <af:group binding="#{productBrowsingBean.group1}" id="group1">
+                <af:toolbar binding="#{productBrowsingBean.toolbar1}"
+                            id="toolbar1">
+                  <af:commandToolbarButton text="Save"
+                                           binding="#{productBrowsingBean.addProduct}"
+                                           id="addProduct"
+                                           action="#{productBrowsingBean.addProduct}"/>
+                  <af:commandToolbarButton text="Cancel"
+                                           binding="#{productBrowsingBean.cancelButton}"
+                                           id="cancelButton"
+                                           action="#{productBrowsingBean.cancelButton_action}"/>
+                </af:toolbar>
+              </af:group>
+            </f:facet>
+            <af:inputText label="Name"
+                          binding="#{productBrowsingBean.npName}"
+                          id="npName" required="true">
+              <af:validateLength minimum="5" maximum="30"
+                                 hintMinimum="Name is required"
+                                 hintMaximum="Must be less than 30"
+                                 messageDetailMinimum="Name is requiredand must be at least 5 characters"
+                                 messageDetailMaximum="Name must be 30 characters or less"/>
+            </af:inputText>
+            <af:inputText label="Description"
+                          binding="#{productBrowsingBean.npDescription}"
+                          id="npDescription" required="true">
+              <af:validateLength minimum="5" maximum="3000"
+                                 hintMinimum="Description is required"
+                                 hintMaximum="Description must be 3000 characters or less"
+                                 messageDetailMinimum="A Description is required"
+                                 messageDetailMaximum="A Description must be 3000 characters or less"/>
+              <p>
+                 
+              </p>
+            </af:inputText>
+            <af:inputText label="Additional Information"
+                          binding="#{productBrowsingBean.npAdditionalInfo}"
+                          id="npAdditionalInfo" required="true">
+              <af:validateLength minimum="5" maximum="3000"
+                                 hintMinimum="Additional Information is required"
+                                 hintMaximum="Addtional Information must be less than 3000 characters"
+                                 messageDetailMinimum="Additional Information is required"
+                                 messageDetailMaximum="Addtional Information must be less than 3000 characters"/>
+            </af:inputText>
+            <af:inputText label="List Price"
+                          binding="#{productBrowsingBean.npListPrice}"
+                          id="npListPrice" required="true"/>
+            <af:inputText label="Minimum Price"
+                          binding="#{productBrowsingBean.npMinPrice}"
+                          id="npMinPrice" required="true"/>
+            <af:inputText label="Cost Price"
+                          binding="#{productBrowsingBean.npCostPrice}"
+                          id="npCostPrice" required="true"/>
+          </af:panelFormLayout>
+        </af:panelHeader>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:productBrowsingBean-->  
+</jsp:root>

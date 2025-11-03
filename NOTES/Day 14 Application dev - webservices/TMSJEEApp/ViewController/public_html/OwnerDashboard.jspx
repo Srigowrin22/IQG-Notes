@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>OwnerDashboard</title>
+        <link rel="stylesheet" type="text/css" href="images/styles3.css"/>
+        <style type="text/css">
+            body {
+                background: url('../images/ownImg.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
+        </style>
+      </head>
+      <body>
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left">
+            <h:form style="margin:0; padding:0; display:inline;">
+              <h:commandButton value="Profile" styleClass="profile-btn"
+                               action="#{backing_OwnerDashboard.profile_action}"/>
+            </h:form>
+          </div>
+          <div class="header-title">VEHICLE OWNER DASHBOARD</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_OwnerDashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Owner Panel</div>
+            <div class="form-row">
+              <h:outputLabel value="Name" for="name"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_OwnerDashboard.loggedInOwner.ownerName}" id="name"
+                           readonly="true" styleClass="sidebar-input"/>
+            </div>
+            <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_OwnerDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="View Vehicle"
+                               action="#{backing_OwnerDashboard.viewVehicle_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Pay Offence"
+                               action="#{backing_OwnerDashboard.payOffence_action}"
+                               styleClass="sidebar-nav-link"/>
+                
+              </div>
+            </h:form>
+          </div>
+          
+          <!-- Centered welcome content -->          
+          <div class="center-content">
+            <div class="welcome-title">
+              <h:outputLabel value="Welcome, #{backing_OwnerDashboard.loggedInOwner.ownerName}!"/>
+            </div>
+            <div class="welcome-context">
+              View your vehicles and make payments easily.<br/>
+               Use the navigation bar to access your features.<br/>
+               Stay on top of your vehicle records and payments!
+            </div>
+            <div class="welcome-context">
+              <h:outputLabel value="#{backing_OwnerDashboard.quoteOfTheDay}"/>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_OwnerDashboard-->
+</jsp:root>

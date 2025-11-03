@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document binding="#{productBrowsingBean.document1}" id="document1">
+      <af:form binding="#{productBrowsingBean.form1}" id="form1">
+        <af:panelSplitter binding="#{productBrowsingBean.panelSplitter1}"
+                          id="panelSplitter1" splitterPosition="120"
+                          inlineStyle="width:100;">
+          <f:facet name="first">
+            <af:panelAccordion binding="#{productBrowsingBean.panelAccordion1}"
+                               id="panelAccordion1">
+              <af:showDetailItem text="showDetailItem 1"
+                                 binding="#{productBrowsingBean.showDetailItem1}"
+                                 id="showDetailItem1">
+                <af:tree id="categoryTree"
+                         value="#{productBrowsingBean.treeModel}" var="category"
+                         binding="#{productBrowsingBean.categoryTree}">
+                  <f:facet name="nodeStamp">
+                    <af:outputText value="#{category.categoryName}"
+                                   binding="#{productBrowsingBean.outputText1}"
+                                   id="outputText1"/>
+                  </f:facet>
+                </af:tree>
+              </af:showDetailItem>
+            </af:panelAccordion>
+          </f:facet>
+          <f:facet name="second">
+            <af:panelGroupLayout binding="#{productBrowsingBean.panelGroupLayout1}"
+                                 id="panelGroupLayout1" layout="horizontal"
+                                 inlineStyle="width:100%;">
+              <af:panelHeader text="Products"
+                              binding="#{productBrowsingBean.panelHeader1}"
+                              id="panelHeader1">
+                <f:facet name="context"/>
+                <f:facet name="menuBar"/>
+                <f:facet name="toolbar"/>
+                <f:facet name="legend"/>
+                <f:facet name="info"/>
+                <af:table value="#{productBrowsingBean.allProducts}" var="row"
+                          binding="#{productBrowsingBean.productsTable}"
+                          id="productsTable"
+                          inlineStyle="width:100%;" columnStretching="last">
+                  <af:column sortable="false" headerText="Product Name"
+                             align="start" id="c1">
+                    <af:outputText value="#{row.productName}" id="ot1"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="Description"
+                             align="start" id="c2">
+                    <af:outputText value="#{row.description}" id="ot2"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="List Price"
+                             align="start" id="c3">
+                    <af:outputText value="#{row.listPrice}" id="ot3"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="Additional Info"
+                             align="start" id="c4">
+                    <af:outputText value="#{row.additionalInfo}" id="ot4"/>
+                  </af:column>
+                </af:table>
+              </af:panelHeader>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelSplitter>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:productBrowsingBean-->
+</jsp:root>

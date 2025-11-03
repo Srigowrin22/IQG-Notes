@@ -1,0 +1,12 @@
+package training.iqgateway.business;
+
+public class ShapeMaker {
+	
+	public static Shape randomShape1(){
+		return (randomShape2(10));
+	}
+	
+	public static Shape randomShape2(double size){
+		
+	}
+}

@@ -1,0 +1,998 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<XMI xmi.version='1.1' xmlns:DI='http://xmlns.omg.org/DI/2.0'>
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Oracle JDeveloper</XMI.exporter>
+      <XMI.exporterVersion>11.1.1.0.0</XMI.exporterVersion>
+    </XMI.documentation>
+    <XMI.metamodel xmi.name='DiagramInterchange' xmi.version='2.0' href='http://xmlns.omg.org/DI/2.0'/>
+  </XMI.header>
+  <XMI.content>
+    <DI:Diagram xmi.id='a22f479c-0117-1000-8001-c0a80142f62a' zoom='0.0'>
+      <DI:Diagram.contained>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-8002-c0a80142f62a'>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cc2-011b-1000-8002-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-8003-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8004-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='14.890501022338867' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8005-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='27.781002044677734' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8006-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='150.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cc2-011b-1000-8003-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070cc2-011b-1000-8004-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070cc2-011b-1000-8005-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070cc2-011b-1000-8006-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-8007-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='150.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='66.0416259765625' y='34.7916259765625'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;OrderEntry' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='100.0' width='150.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-8007-c0a80142f62a'>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8008-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-8009-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-800a-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='53.56200408935547' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-800b-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='118.0145034790039' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-800c-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='230.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8009-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-800a-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-800b-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-800c-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-800d-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='230.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='-613.9583740234375' y='-805.2083740234375'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;OrderItem' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='230.0' width='200.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-800d-c0a80142f62a'>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-800e-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-800e-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-800f-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='14.890501022338867' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8010-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='105.12400817871094' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8011-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='170.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-800f-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-8010-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-8011-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-8012-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-8013-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='170.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='-173.9583740234375' y='-5.2083740234375'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;Util' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='170.0' width='200.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-8012-c0a80142f62a'>
+          <DI:GraphNode.anchorage>
+            <DI:GraphConnector xmi.id='a22f47ab-0117-1000-8013-c0a80142f62a' graphEdge='a22f47bb-0117-1000-8028-c0a80142f62a eb070c94-011b-1000-8001-c0a801421a76'/>
+          </DI:GraphNode.anchorage>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8014-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-8014-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8015-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='79.34300231933594' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8016-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='130.90501403808594' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8017-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='270.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8015-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-8016-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-8017-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-8018-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-8019-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='270.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='-333.9583740234375' y='-825.2083740234375'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;Customer' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='270.0' width='200.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-8018-c0a80142f62a'>
+          <DI:GraphNode.anchorage>
+            <DI:GraphConnector xmi.id='a22f47ab-0117-1000-8019-c0a80142f62a' graphEdge='eb070c94-011b-1000-8001-c0a801421a76'/>
+          </DI:GraphNode.anchorage>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-801a-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-801a-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-801b-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='66.45250701904297' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-801c-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='14.890501022338867' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-801d-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='140.0' width='130.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-801b-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-801c-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-801d-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070cd2-011b-1000-801e-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070cd2-011b-1000-801f-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='140.0' width='130.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='-283.9583740234375' y='-325.2083740234375'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;DataMan' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='140.0' width='130.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphNode xmi.id='a22f47ab-0117-1000-801e-c0a80142f62a'>
+          <DI:GraphNode.anchorage>
+            <DI:GraphConnector xmi.id='a22f47ab-0117-1000-801f-c0a80142f62a' graphEdge='a22f47bb-0117-1000-8028-c0a80142f62a'/>
+          </DI:GraphNode.anchorage>
+          <DI:GraphNode.contained>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8020-c0a801421a76'>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='COMPACT'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='100.0' width='100.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='a22f47ab-0117-1000-8020-c0a80142f62a'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8021-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='130.90501403808594' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47ab-0117-1000-8022-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='130.90501403808594' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='a22f47bb-0117-1000-8023-c0a80142f62a'>
+                  <DI:GraphNode.property>
+                    <DI:Property key='FirstVisibleIndex' value='0'/>
+                  </DI:GraphNode.property>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='InnerCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='0.0' width='0.0'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='SYMBOLIC'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='320.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070cd2-011b-1000-8021-c0a801421a76'>
+              <DI:GraphNode.contained>
+                <DI:GraphNode xmi.id='eb070ce2-011b-1000-8022-c0a801421a76'>
+                  <DI:GraphNode.contained>
+                    <DI:GraphNode xmi.id='eb070ce2-011b-1000-8023-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='FieldCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                    <DI:GraphNode xmi.id='eb070ce2-011b-1000-8024-c0a801421a76'>
+                      <DI:GraphNode.property>
+                        <DI:Property key='FirstVisibleIndex' value='0'/>
+                      </DI:GraphNode.property>
+                      <DI:GraphNode.semanticModel>
+                        <DI:SimpleSemanticModelBridge typeInfo='MethodCompartment'/>
+                      </DI:GraphNode.semanticModel>
+                      <DI:GraphNode.size>
+                        <DI:Dimension height='1.0' width='0.0'/>
+                      </DI:GraphNode.size>
+                    </DI:GraphNode>
+                  </DI:GraphNode.contained>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='Component'/>
+                  </DI:GraphNode.semanticModel>
+                  <DI:GraphNode.size>
+                    <DI:Dimension height='80.0' width='33.33333206176758'/>
+                  </DI:GraphNode.size>
+                </DI:GraphNode>
+                <DI:GraphNode xmi.id='eb070ce2-011b-1000-8025-c0a801421a76'>
+                  <DI:GraphNode.position>
+                    <DI:Point x='0.0' y='0.0'/>
+                  </DI:GraphNode.position>
+                  <DI:GraphNode.semanticModel>
+                    <DI:SimpleSemanticModelBridge typeInfo='BodyCompartment'/>
+                  </DI:GraphNode.semanticModel>
+                </DI:GraphNode>
+              </DI:GraphNode.contained>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='EXPANDED'/>
+              </DI:GraphNode.semanticModel>
+              <DI:GraphNode.size>
+                <DI:Dimension height='320.0' width='200.0'/>
+              </DI:GraphNode.size>
+            </DI:GraphNode>
+          </DI:GraphNode.contained>
+          <DI:GraphNode.position>
+            <DI:Point x='-553.9583740234375' y='-415.2083740234375'/>
+          </DI:GraphNode.position>
+          <DI:GraphNode.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,10'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='fillColor' value='#f7f7'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='excludeAttrFilter' value=''/>
+            <DI:Property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='showAttributeStatic' value='true'/>
+            <DI:Property key='showAttributeType' value='true'/>
+            <DI:Property key='showAttributeVisibility' value='true'/>
+            <DI:Property key='showAttributes' value='true'/>
+            <DI:Property key='excludeMethodFilter' value=''/>
+            <DI:Property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+            <DI:Property key='operationShowParameters' value='0'/>
+            <DI:Property key='showMethodType' value='true'/>
+            <DI:Property key='showMethodStatic' value='true'/>
+            <DI:Property key='showMethodVisibility' value='true'/>
+            <DI:Property key='showOperations' value='true'/>
+            <DI:Property key='showInnerClasses' value='false'/>
+            <DI:Property key='showPackage' value='true'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='sortMethodsAlpha' value='true'/>
+            <DI:Property key='sortAttributesAlpha' value='true'/>
+          </DI:GraphNode.property>
+          <DI:GraphNode.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDC;;oe;;###;;Order' presentation='SYMBOLIC'/>
+          </DI:GraphNode.semanticModel>
+          <DI:GraphNode.size>
+            <DI:Dimension height='320.0' width='200.0'/>
+          </DI:GraphNode.size>
+        </DI:GraphNode>
+        <DI:GraphEdge xmi.id='a22f47bb-0117-1000-8028-c0a80142f62a' anchor='a22f47ab-0117-1000-801f-c0a80142f62a a22f47ab-0117-1000-8013-c0a80142f62a'>
+          <DI:GraphEdge.contained>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-8026-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='0.0' y='-26.701171875'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='stereotype'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-8027-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='0.0' y='4.0'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='name'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-8028-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='4.0' y='4.0'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='destinationname'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-8029-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='-15.0' y='4.0'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='destinationmultiplicity'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+          </DI:GraphEdge.contained>
+          <DI:GraphEdge.property>
+            <DI:Property key='fontColor' value='#0'/>
+            <DI:Property key='font' value='SansSerif,plain,12'/>
+            <DI:Property key='lineColor' value='#0'/>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='EdgeType' value='1'/>
+            <DI:Property key='showAssocName' value='false'/>
+            <DI:Property key='showRoleNames' value='true'/>
+            <DI:Property key='showCardinality' value='true'/>
+          </DI:GraphEdge.property>
+          <DI:GraphEdge.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDA;;oe.Order;;###;;customer'/>
+          </DI:GraphEdge.semanticModel>
+          <DI:GraphEdge.waypoint>
+            <DI:Point x='-400.0' y='-415.2083740234375'/>
+            <DI:Point x='-400.0' y='-480.0'/>
+            <DI:Point x='-300.0' y='-480.0'/>
+            <DI:Point x='-300.0' y='-555.2083740234375'/>
+          </DI:GraphEdge.waypoint>
+        </DI:GraphEdge>
+        <DI:GraphEdge xmi.id='eb070c94-011b-1000-8001-c0a801421a76' anchor='a22f47ab-0117-1000-8019-c0a80142f62a a22f47ab-0117-1000-8013-c0a80142f62a'>
+          <DI:GraphEdge.contained>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-802a-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='-102.0' y='-21.47607421875'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='stereotype'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-802b-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='4.0' y='-21.47607421875'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='name'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-802c-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='4.0' y='4.0'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='destinationname'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+            <DI:GraphNode xmi.id='eb070ce2-011b-1000-802d-c0a801421a76'>
+              <DI:GraphNode.position>
+                <DI:Point x='-16.0' y='4.0'/>
+              </DI:GraphNode.position>
+              <DI:GraphNode.semanticModel>
+                <DI:SimpleSemanticModelBridge typeInfo='destinationmultiplicity'/>
+              </DI:GraphNode.semanticModel>
+            </DI:GraphNode>
+          </DI:GraphEdge.contained>
+          <DI:GraphEdge.property>
+            <DI:Property key='lineWidth' value='1.0'/>
+            <DI:Property key='showStereotype' value='true'/>
+            <DI:Property key='EdgeType' value='1'/>
+            <DI:Property key='showAssocName' value='false'/>
+            <DI:Property key='showRoleNames' value='true'/>
+            <DI:Property key='font' value='SansSerif,plain,11'/>
+            <DI:Property key='showCardinality' value='true'/>
+            <DI:Property key='lineColor' value='#646464'/>
+            <DI:Property key='fontColor' value='#0'/>
+          </DI:GraphEdge.property>
+          <DI:GraphEdge.semanticModel>
+            <DI:CoreSemanticModelBridge element='JAVA:JIDA;;oe;;DataMan;;customers'/>
+          </DI:GraphEdge.semanticModel>
+          <DI:GraphEdge.waypoint>
+            <DI:Point x='-168.7399444580078' y='-325.2083740234375'/>
+            <DI:Point x='-168.7399444580078' y='-555.2083740234375'/>
+          </DI:GraphEdge.waypoint>
+        </DI:GraphEdge>
+      </DI:Diagram.contained>
+      <DI:Diagram.property>
+        <DI:Property key='snapToGrid' value='true'/>
+        <DI:Property key='gridSize' value='10'/>
+        <DI:Property key='DiagramLayoutStyle' value='1'/>
+        <DI:Property key='maxEntriesInShape' value='10'/>
+        <DI:Property key='maxShapeWidth' value='200'/>
+        <DI:Property key='showGrid' value='false'/>
+        <DI:Property key='showPageBreaks' value='true'/>
+        <DI:Property key='PaperWidth' value='612.0'/>
+        <DI:Property key='PaperHeight' value='792.0'/>
+        <DI:Property key='PaperTopMargin' value='36.0'/>
+        <DI:Property key='PaperLeftMargin' value='36.0'/>
+        <DI:Property key='PaperBottomMargin' value='36.0'/>
+        <DI:Property key='PaperRightMargin' value='36.0'/>
+        <DI:Property key='PaperOrientation' value='Portrait'/>
+        <DI:Property key='EdgeCrossingType' value='0'/>
+        <DI:Property key='ForeignKeyNotation' value='0'/>
+        <DI:Property key='antialiasText' value='true'/>
+        <DI:Property key='ContainerLayoutStyle' value='1'/>
+        <DI:Property key='minLayoutDistance' value='40'/>
+        <DI:Property key='PageOrientation' value='1'/>
+        <DI:Property key='PrintAreaX' value='0'/>
+        <DI:Property key='PrintAreaY' value='0'/>
+        <DI:Property key='PrintAreaWidth' value='0'/>
+        <DI:Property key='PrintAreaHeight' value='0'/>
+      </DI:Diagram.property>
+      <DI:Diagram.semanticModel>
+        <DI:SimpleSemanticModelBridge typeInfo='java_diagram'/>
+      </DI:Diagram.semanticModel>
+    </DI:Diagram>
+  </XMI.content>
+</XMI>

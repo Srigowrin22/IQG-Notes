@@ -1,0 +1,109 @@
+Day 4 
+
+	Agenda :
+	
+		Lesson 07 : Developing Persistence Layer with JPA 
+		
+		Lesson 08 : Manipulating Data With JPA
+		
+		Lesson 09 : Java Server Faces 
+		
+		Lesson 10 : Planning Navigation 
+		
+		
+		
+		Lesson 07 : Developing Persistence Layer with JPA 
+		
+			ORM [ Object Relational Mapping ]
+			
+			A Java Class Points to a Table in DB
+			
+			Attributes in Java Class Points to Column in DB
+			
+			Java Object Instance Represents Record in the DB 
+			
+			
+			Whatever Problems we Have Faced in JDBC is Eradicated From Persistence Tier 
+			
+			JDBC is 
+			
+				a.  Database Dependent [ No Portability ]
+				
+				b.  Java Developer is Not a Full SQL Developer [ Developer needs to Write / Borrow Queries From DB Team ]
+				
+				c.  No Caching [ Database Calls will Costlier ]
+				
+				d.  No Lazy Loading [ SELECT * FROM TABLE ]
+			
+			
+			Frameworkz Supporting Persistence Layer 
+			
+			1.  Hibernate [ Now Managed By JBoss ]
+						
+			2.  IBatis    [ Managed By Apache ]
+
+			3.  Toplink   [ Managed By Oracle ]
+			
+			4.  JDO
+			
+			5.  EclipseLink 
+			
+			...
+			
+			Sun Provided the Specification for Persistence Layer [ JPA ]
+			
+			JPA Specification is Implemented By All the Persistence Frameworkz
+			
+			
+			Mapping Inheritance 
+			
+				1.  Single Table / Table Per Class Hierarchy 
+				
+						There Will Be Only One Table Mapping All the Attributes from the Inheritance Structure to A Single Table.
+						
+				
+				2.  Joined Table / Table Per Sub Class [ ( Abstract / Concrete ) ]
+				
+						There will Separate Table Mapping for Each Class [ Whether Class is Concrete / Abstract ( Doesn't Matter ) ]
+						
+						
+				3.  Table Per Class / Table Per Concrete Class [ Concrete ]
+				
+						There will Separate Table Mapping for Each Class [ IF and Only IF Class is Concrete  ]
+						
+						
+				Mapping Relationships
+				
+				1. One to One 
+				
+					public class Address {
+					
+						private int doorNo;
+						
+						private String street;
+						
+						private String city;
+						
+						private int pincode;
+						
+						...
+						
+					}
+				
+					public class Customer {
+						
+						private int id;
+						
+						private String name;
+						
+						@OneToOne
+						@PrimaryKeyJoinColumn(name="ADDRESS_ID)
+						private Address address; 
+						
+						...
+						
+					}
+					
+					
+				
+			

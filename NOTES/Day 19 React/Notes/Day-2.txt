@@ -1,0 +1,161 @@
+Day 2 : 
+
+	Module-15 : React JS 
+	
+		
+		What is a Component ?
+		
+			A Component is a full Functional Software Unit.
+			
+			Every Component has a Limited Duty to be Self Consistent.
+			
+			Real Time Eg : Building Blocks.
+			
+			Problems in Traditional Applications
+			
+				1.  Wastage of the Resources
+				
+				2.  No Resuablity 
+			
+			
+			Most of the Application Except Most of the Things to Happen on the Same Page
+			
+			[ SPA ] : Single Page Applications
+
+			Applications are Now Made Up Of Components 
+			
+			
+			In Server Side Application we Achieve the Same Using [ JSP/JSF ( Fragments / Segments ) ]
+			
+			
+			Components in React
+			
+			A Component has 2 Parts
+			
+			1.  View Part of the Application [ HTML  and CSS ]
+			
+			2.  ViewModel Part of the Application [ JS ( Data Events and Operations ) ]
+			
+			Interpolation = Binding Data on to the UI 
+			
+				{ } 
+			
+			
+			Components are UserDefined [ Remember Custom Tags in JSP ]
+			
+			
+			React JS is Completely Based On Component Based Development. 
+			
+			React JS Uses MVC 
+			
+			
+			Root Component [ App ]
+			
+				1.  View Part [ HTML & CSS ]
+				
+				2.  Model Part [ JS ]
+				
+			
+			In React component 
+			
+				1. View Part [ CSS ]
+				
+				2. ViewModel [ HTML and JS ] Together 
+			
+			
+			Component is Custom Tag 
+			
+				<ReactAppView id="" name="" style=""> 
+				
+				<ReactAppView/>
+				
+				
+			ChildComponent : Body Content of the Tag 
+			
+								Body Content Can Have [ Just Text / Sub Tags ]
+								
+								
+			Installation of React 
+			
+			1.  Using a Facebook Provided Template 
+			
+				npm install -g create-react-app
+				
+				a. Creating React Application Using Template
+				
+					npx create-react-app <appname> 
+					
+					[ Application name is Case Sensitive ( Always in Lower Case ) , Can Have Dash Styled { app-name }) ]
+					
+					
+			
+			2.  Using Yarn
+			
+				yarn create-react-app <appname>
+				
+			3.  Gatsby
+			
+			4.  Remix
+			
+			5.  Expo
+			
+			6.  Using CDN [ Content Developer Network ]
+			
+				<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+				<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+				<!-- Don't use this in production: -->
+				<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+						
+					
+					
+			Different Ways for Creating React App
+			
+			1. Using CDN 
+			
+				Without JSX
+				
+				With JSX
+				
+				
+			2.  Using the Template [ As a Component Based Development ]
+			
+				Create a Simple Component 
+				
+					import React from 'react';
+					
+					class HelloWorld extends React.Component {
+					
+						render() {
+							return <h1> Hello, World </h1>
+						}
+					}
+					export default Hello
+					
+					Using Dynamic Value
+					
+					import React from 'react';
+					
+					class HelloWorld extends React.Component {
+					
+						render() {
+							return <h1> Hello, {this.props.name} ! </h1>
+						}
+					}
+					export default Hello
+					
+					
+					How to Use This Reusable Component 
+					
+					Either in index.js 
+					
+					import Hello from './Hello'
+					
+					// Without Passing Props
+					ReactDOM.render(<Hello />, document.getElementById('helloDiv'));
+
+										// Without Passing Props
+					ReactDOM.render(<Hello name="Rahul" />, document.getElementById('helloDiv'));
+
+
+					

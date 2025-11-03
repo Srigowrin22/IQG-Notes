@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<weblogic-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-application.xsd" xmlns="http://www.bea.com/ns/weblogic/weblogic-application">
+  <module>
+    <name>fod</name>
+    <type>JDBC</type>
+    <path>META-INF/fod-jdbc.xml</path>
+  </module>
+</weblogic-application>

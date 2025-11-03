@@ -1,0 +1,13 @@
+package training.iqgateway;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ReactiveController {
+	
+	private final ReactiveService reactiveService;
+	
+	public ReactiveController(ReactiveService reactiveService) {
+		this.reactiveService = reactiveService;
+	}
+}

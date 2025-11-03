@@ -1,0 +1,163 @@
+package training.iqgateway.service.impl;
+
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import training.iqgateway.dto.VehicleOffenceDTO;
+import training.iqgateway.entities.VehicleOffenceEO;
+import training.iqgateway.entities.OffenceTypesEO;
+import training.iqgateway.entities.RegistrationEO;
+import training.iqgateway.repository.OffenceTypesRepository;
+import training.iqgateway.repository.RegistrationRepository;
+import training.iqgateway.repository.VehicleOffenceRepository;
+import training.iqgateway.service.VehicleOffenceService;
+
+@Service
+public class VehicleOffenceServiceImpl implements VehicleOffenceService {
+
+    @Autowired
+    private VehicleOffenceRepository vehicleOffenceRepository;
+    
+    @Autowired
+    private OffenceTypesRepository offenceTypesRepository;
+    
+    @Autowired
+    private RegistrationRepository registrationRepository;
+
+    // Converts EO to DTO, mapping related entity data
+    private VehicleOffenceDTO toDTO(VehicleOffenceEO eo) {
+        if (eo == null) return null;
+
+        Long offenceTypeId = eo.getOffenceType() != null ? eo.getOffenceType().getOffenceId() : null;
+        String offenceTypeName = eo.getOffenceType() != null ? eo.getOffenceType().getOffenceType() : null;
+        String registrationId = eo.getRegistration() != null ? eo.getRegistration().getRegistrationId() : null;
+
+        return new VehicleOffenceDTO(
+            eo.getVehicleOffenceId(),
+            offenceTypeId,
+            offenceTypeName,
+            registrationId,
+            eo.getLocation(),
+            eo.getOffenceDate(),
+            eo.getTime(),
+            eo.getStatus(),
+            eo.getReporter(),
+            eo.getProof1(),
+            eo.getProof2()
+        );
+    }
+
+    // Helper: fetch managed entities for associations
+    private void populateAssociations(VehicleOffenceEO eo) {
+        if (eo.getOffenceType() != null && eo.getOffenceType().getOffenceId() != null) {
+            OffenceTypesEO offenceType = offenceTypesRepository.findById(eo.getOffenceType().getOffenceId())
+                .orElseThrow(() -> new RuntimeException("OffenceType not found: " + eo.getOffenceType().getOffenceId()));
+            eo.setOffenceType(offenceType);
+        } else {
+            throw new IllegalArgumentException("OffenceType must be provided with valid offenceId");
+        }
+
+        if (eo.getRegistration() != null && eo.getRegistration().getRegistrationId() != null) {
+            RegistrationEO registration = registrationRepository.findById(eo.getRegistration().getRegistrationId())
+                .orElseThrow(() -> new RuntimeException("Registration not found: " + eo.getRegistration().getRegistrationId()));
+            eo.setRegistration(registration);
+        } else {
+            throw new IllegalArgumentException("Registration must be provided with valid registrationId");
+        }
+    }
+
+    @Override
+    public String persistVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+        if (vehicleOffenceEO == null) throw new IllegalArgumentException("VehicleOffence cannot be null");
+
+        populateAssociations(vehicleOffenceEO);
+        
+        // Assign ID: max + 1
+        Long maxId = vehicleOffenceRepository.findMaxVehicleOffenceId().orElse(0L);
+        vehicleOffenceEO.setVehicleOffenceId(maxId + 1);
+
+        vehicleOffenceRepository.save(vehicleOffenceEO);
+        return "Vehicle offence created with id: " + vehicleOffenceEO.getVehicleOffenceId();
+    }
+
+    @Override
+    public String mergeVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+        if (vehicleOffenceEO == null || vehicleOffenceEO.getVehicleOffenceId() == null)
+            throw new IllegalArgumentException("VehicleOffence and ID must not be null");
+
+        VehicleOffenceEO existing = vehicleOffenceRepository.findById(vehicleOffenceEO.getVehicleOffenceId())
+                .orElseThrow(() -> new RuntimeException("Vehicle offence not found: " + vehicleOffenceEO.getVehicleOffenceId()));
+
+        populateAssociations(vehicleOffenceEO);
+
+        existing.setOffenceType(vehicleOffenceEO.getOffenceType());
+        existing.setRegistration(vehicleOffenceEO.getRegistration());
+        existing.setLocation(vehicleOffenceEO.getLocation());
+        existing.setOffenceDate(vehicleOffenceEO.getOffenceDate());
+        existing.setTime(vehicleOffenceEO.getTime());
+        existing.setStatus(vehicleOffenceEO.getStatus());
+        existing.setReporter(vehicleOffenceEO.getReporter());
+        existing.setProof1(vehicleOffenceEO.getProof1());
+        existing.setProof2(vehicleOffenceEO.getProof2());
+
+        vehicleOffenceRepository.save(existing);
+        return "Vehicle offence updated successfully";
+    }
+
+    @Override
+    public String clearVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+        if (vehicleOffenceEO == null || vehicleOffenceEO.getVehicleOffenceId() == null)
+            throw new IllegalArgumentException("VehicleOffence and ID must not be null");
+
+        VehicleOffenceEO existing = vehicleOffenceRepository.findById(vehicleOffenceEO.getVehicleOffenceId())
+                .orElseThrow(() -> new RuntimeException("Vehicle offence not found: " + vehicleOffenceEO.getVehicleOffenceId()));
+
+        // Clearing means reset some fields - adjust per your business logic
+        existing.setStatus(0);
+        existing.setReporter(null);
+        existing.setProof1(null);
+        existing.setProof2(null);
+
+        vehicleOffenceRepository.save(existing);
+        return "Vehicle offence cleared successfully";
+    }
+
+    @Override
+    public Boolean removeVehicleOffenceEO(Integer vehicleOffenceID) {
+        if (vehicleOffenceID == null) return false;
+
+        if (!vehicleOffenceRepository.existsById(Long.valueOf(vehicleOffenceID))) return false;
+
+        vehicleOffenceRepository.deleteById(Long.valueOf(vehicleOffenceID));
+        return true;
+    }
+
+    @Override
+    public VehicleOffenceDTO findVehicleOffenceByID(Integer vehicleOffenceID) {
+        if (vehicleOffenceID == null) return null;
+
+        return vehicleOffenceRepository.findById(Long.valueOf(vehicleOffenceID))
+                .map(this::toDTO)
+                .orElse(null);
+    }
+
+    @Override
+    public List<VehicleOffenceDTO> findAllVehicleOffences() {
+        List<VehicleOffenceEO> list = vehicleOffenceRepository.findAll();
+        return list.stream().map(this::toDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<VehicleOffenceDTO> findVehicleOffenceByRegisID(String registrationID) {
+        List<VehicleOffenceEO> list = vehicleOffenceRepository.findByRegistrationRegistrationId(registrationID);
+        return list.stream().map(this::toDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<VehicleOffenceDTO> findVehicleOffenceByStatus(String registrationID, Integer status) {
+        List<VehicleOffenceEO> list = vehicleOffenceRepository.findByRegistrationRegistrationIdAndStatus(registrationID, status);
+        return list.stream().map(this::toDTO).collect(Collectors.toList());
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--  This Prefabricated Bean Provides the SessionFactory -->
+	<bean id="sessionFactoryBean" 
+		  class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		  <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+	</bean>
+
+	<bean id="departmentDAOBean" 
+		  class="training.iqgateway.dao.impl.DepartmentDAOImpl">
+		<property name="sessionFactoryRef" ref="sessionFactoryBean"/>
+	</bean>
+
+	<bean id="adminOperBean" 
+		  class="training.iqgateway.business.impl.AdminOperationsImpl">
+		<property name="departmentDAORef" ref="departmentDAOBean"/>	  
+	</bean>
+</beans>

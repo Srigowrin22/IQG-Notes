@@ -1,0 +1,23 @@
+package training.iqgateway.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.servicesimpl.AdminEOServiceImpl;
+
+public class AdminEOContoller {
+
+	@Autowired
+	private AdminEOServiceImpl adminEOServiceImpl;
+
+	@GetMapping
+	private List<AdminEO> fetchAllAdmin() {
+
+		return adminEOServiceImpl.getAll();
+
+	}
+
+}

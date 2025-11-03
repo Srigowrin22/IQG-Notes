@@ -1,0 +1,10 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import training.iqgateway.entities.RegistrationEO;
+
+public class RegistrationRepository implements JpaRepository<RegistrationEO, String> {
+
+}

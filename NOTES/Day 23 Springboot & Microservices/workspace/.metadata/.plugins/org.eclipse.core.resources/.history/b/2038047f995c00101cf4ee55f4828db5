@@ -1,0 +1,58 @@
+package training.iqgateway.entities;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ROLE")
+public class RoleEO {
+
+	@Id
+	@Column(name = "ROLE_ID", nullable = false)
+	private Long roleId;
+
+	@Column(name = "ROLE_NAME", nullable = false, length = 100)
+	private String roleName;
+
+	@OneToMany(mappedBy = "roleEO")
+	private List<AdminEO> adminEOList;
+
+	// Constructors
+	public RoleEO() {
+	}
+
+	// Getters and Setters
+	public Long getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(Long roleId) {
+		this.roleId = roleId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public List<AdminEO> getAdminEOList() {
+		return adminEOList;
+	}
+
+	public void setAdminEOList(List<AdminEO> adminEOList) {
+		this.adminEOList = adminEOList;
+	}
+
+	@Override
+	public String toString() {
+		return "RoleEO [roleId=" + roleId + ", roleName=" + roleName + ", adminEOList=" + adminEOList + "]";
+	}
+}

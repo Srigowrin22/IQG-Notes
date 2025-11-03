@@ -1,0 +1,12 @@
+package training.iqgateway;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api")
+public class DemoController {
+	public String sayHello() {
+		return "Welcome to the new era of developing applicatoin using Springboot with Interceptors";
+	}
+}

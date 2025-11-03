@@ -1,0 +1,47 @@
+package training.iqgateway.service.impl;
+
+import java.util.List;
+
+import training.iqgateway.dto.VehicleDTO;
+import training.iqgateway.entities.VehicleEO;
+import training.iqgateway.service.VehicleService;
+
+public class VehicleServiceImpl implements VehicleService {
+
+	@Override
+	public String persistVehicleEO(VehicleEO vehicleEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String mergeVehicleEO(VehicleEO vehicleEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean removeVehicleEO(Integer vehicleID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public VehicleEO findVehicleByID(Integer vehicleID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<VehicleDTO> findAllVehicles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<VehicleDTO> findVehicleByType(String vehicleType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

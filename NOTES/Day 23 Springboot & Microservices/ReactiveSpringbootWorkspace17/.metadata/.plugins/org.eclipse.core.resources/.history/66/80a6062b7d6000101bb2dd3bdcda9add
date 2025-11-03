@@ -1,0 +1,130 @@
+package training.iqgateway.entities;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ADMIN")
+public class AdminEO {
+
+    @Column(name = "ID", nullable = false)
+    private Long id;
+
+    @Column(name = "ROLE_ID", nullable = false)
+    private Long roleId;
+
+    @Column(name = "DESIGNATION_ID", nullable = false, length = 50)
+    private String designationId;
+
+    @Column(name = "NAME", nullable = false, length = 100)
+    private String name;
+
+    @Column(name = "GENDER", length = 2)
+    private String gender = "NA";
+
+    @Id
+    @Column(name = "AADHAR", nullable = false, length = 50)
+    private String aadhar;
+
+    @Column(name = "PHONE")
+    private Long phone;
+
+    @Column(name = "PASSWORD", length = 50)
+    private String password = "adm123";
+
+    @Column(name = "HIRE_DATE")
+    private Date hireDate;
+
+    @Column(name = "SIGNUP")
+    private Integer signup = 0;
+
+    // Default constructor
+    public AdminEO() {
+    }
+
+    // Getters and Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public String getDesignationId() {
+        return designationId;
+    }
+
+    public void setDesignationId(String designationId) {
+        this.designationId = designationId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAadhar() {
+        return aadhar;
+    }
+
+    public void setAadhar(String aadhar) {
+        this.aadhar = aadhar;
+    }
+
+    public Long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Date getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(Date hireDate) {
+        this.hireDate = hireDate;
+    }
+
+    public Integer getSignup() {
+        return signup;
+    }
+
+    public void setSignup(Integer signup) {
+        this.signup = signup;
+    }
+}

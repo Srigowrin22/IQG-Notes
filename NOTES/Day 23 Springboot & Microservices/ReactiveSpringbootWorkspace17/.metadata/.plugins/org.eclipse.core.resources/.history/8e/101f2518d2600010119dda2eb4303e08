@@ -1,0 +1,32 @@
+package training.iqgateway.service;
+
+import java.util.List;
+
+import training.iqgateway.dto.AdminDTO;
+import training.iqgateway.dto.RolesDTO;
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+
+public interface AdminService {
+
+	AdminEO persistAdminEO(AdminEO adminEO);
+
+	String mergeAdminEO(AdminEO adminEO);
+
+	Boolean removeAdminEO(AdminEO adminEO);
+
+	int authorizeAdmin(String designationId, String password, String newPassword);
+
+	List<AdminDTO> getAdminEOFindAll();
+
+	AdminEO findAdminByDesigID(String designationId);
+
+	AdminEO findAdminByAadhar(String aadhar);
+
+	List<AdminEO> findAdminByRoleID(Long roleId);
+
+	List<AdminEO> findAdminByName(String name);
+
+	Boolean login(AdminEO adminEO);
+
+}

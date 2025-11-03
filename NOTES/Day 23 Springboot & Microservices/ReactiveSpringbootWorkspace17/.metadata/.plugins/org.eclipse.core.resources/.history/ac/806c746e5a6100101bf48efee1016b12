@@ -1,0 +1,59 @@
+package training.iqgateway.service.impl;
+
+import java.util.List;
+
+import training.iqgateway.dto.VehicleOffenceDTO;
+import training.iqgateway.entities.VehicleOffenceEO;
+import training.iqgateway.service.VehicleOffenceService;
+
+public class VehicleOffenceServiceImpl implements VehicleOffenceService{
+
+	@Override
+	public String persistVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String mergeVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String clearVehicleOffenceEO(VehicleOffenceEO vehicleOffenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean removeVehicleOffenceEO(Integer vehicleOffenceID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public VehicleOffenceDTO findVehicleOffenceByID(Integer vehicleOffenceID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<VehicleOffenceDTO> findAllVehicleOffences() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<VehicleOffenceDTO> findVehicleOffenceByRegisID(String registrationID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<VehicleOffenceDTO> findVehicleOffenceByStatus(String registrationID, Integer status) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

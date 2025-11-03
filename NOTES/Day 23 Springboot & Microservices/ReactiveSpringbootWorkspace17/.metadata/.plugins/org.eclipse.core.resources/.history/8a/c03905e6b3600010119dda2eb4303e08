@@ -1,0 +1,58 @@
+package training.iqgateway.servicesimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.repository.AdminEORepository;
+import training.iqgateway.services.AdminEOService;
+
+@Service
+public class AdminEOServiceImpl implements AdminEOService {
+
+	
+	
+	@Autowired
+	private AdminEORepository  adminEORepository;
+	@Override
+	public List<AdminEO> getAll() {
+		return adminEORepository.findAll();
+	}
+
+	@Override
+	public AdminEO getById() {
+		
+		return  adminEORepository.findById(null) ;
+	}
+	
+	
+	
+	
+
+	@Override
+	public AdminEO updateAdmin(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdminEO addAdmin(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAdmin(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(AdminEO admin) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

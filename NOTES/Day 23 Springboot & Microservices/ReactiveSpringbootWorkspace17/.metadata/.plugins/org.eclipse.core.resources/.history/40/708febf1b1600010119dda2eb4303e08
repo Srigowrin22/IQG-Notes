@@ -1,0 +1,46 @@
+package training.iqgateway.servicesimpl;
+
+import java.util.List;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.services.AdminEOService;
+
+public class AdminEOServiceImpl implements AdminEOService {
+
+	@Override
+	public List<AdminEO> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdminEO getById() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdminEO updateAdmin(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdminEO addAdmin(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAdmin(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(AdminEO admin) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

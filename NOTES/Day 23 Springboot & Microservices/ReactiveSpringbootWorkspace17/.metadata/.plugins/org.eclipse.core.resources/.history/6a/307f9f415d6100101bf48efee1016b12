@@ -1,0 +1,52 @@
+package training.iqgateway.service.impl;
+
+import java.util.List;
+
+import training.iqgateway.entities.RegistrationEO;
+import training.iqgateway.service.RegistrationService;
+
+public class RegistrationServiceImpl implements RegistrationService{
+
+	@Override
+	public String persistRegistrationEO(RegistrationEO regisEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String mergeRegistrationEO(RegistrationEO regisEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean removeRegistrationEO(String regisID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RegistrationEO findRegistrationByID(String regisID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RegistrationEO findRegistrationByVehID(Integer vehID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RegistrationEO> findRegistrationByAadhar(String aadhar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RegistrationEO> findAllRegistrations() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

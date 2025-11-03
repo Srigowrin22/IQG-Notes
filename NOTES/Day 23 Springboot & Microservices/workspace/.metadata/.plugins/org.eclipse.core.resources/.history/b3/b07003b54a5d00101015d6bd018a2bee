@@ -1,0 +1,9 @@
+package training.iqgateway;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@requestMapping("/api")
+public class DemoController {
+
+}

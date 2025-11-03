@@ -1,0 +1,63 @@
+package training.iqgateway.dto;
+
+package training.iqgateway.dto;
+
+public class OwnerDTO {
+    private Long ownerId;
+    private String ownerName;
+    private String address;
+    private String phoneNumber;
+    private String email;
+
+    public OwnerDTO() {
+        // default constructor
+    }
+
+    public OwnerDTO(Long ownerId, String ownerName, String address, String phoneNumber, String email) {
+        this.ownerId = ownerId;
+        this.ownerName = ownerName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public Long getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}

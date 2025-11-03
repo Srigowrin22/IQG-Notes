@@ -1,0 +1,11 @@
+INDEX VERSION 1.3+C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 21 Spring\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2716831313.index
+1647366554.index
+515287924.index
+2532443411.index
+985503482.index
+750524203.index
+826032731.index
+3437560416.index
+2412403804.index
+2051035038.index

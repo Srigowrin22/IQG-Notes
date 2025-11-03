@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee">
+ <navigation-rule>
+    <from-view-id>/ListBooks.jsp</from-view-id>
+    <navigation-case>
+      <from-outcome>success</from-outcome>
+      <to-view-id>/ListBooks.jsp</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>refresh</from-outcome>
+      <to-view-id>/ListBooks.jsp</to-view-id>
+      <redirect/>
+    </navigation-case>
+  </navigation-rule>
+  <managed-bean>
+    <managed-bean-name>backing_ListBooks</managed-bean-name>
+    <managed-bean-class>org.demo.view.backing.ListBooks</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1ListBooks.jsp-->
+  </managed-bean>
+</faces-config>
+
+

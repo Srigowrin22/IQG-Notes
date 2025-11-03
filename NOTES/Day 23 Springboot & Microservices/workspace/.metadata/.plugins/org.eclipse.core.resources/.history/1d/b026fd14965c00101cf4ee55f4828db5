@@ -1,0 +1,101 @@
+package training.iqgateway.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.repository.RolesRepository;
+import training.iqgateway.service.AdminService;
+
+@Service
+
+public class AdminServiceImpl implements AdminService{
+
+	@Autowired
+	private RolesRepository rolesRepositoryRef;
+	
+	public AdminEO persistAdminEO(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public AdminEO mergeAdminEO(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean removeAdminEO(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int authorizeAdmin(String designationId, String password, String newPassword) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<AdminEO> getAdminEOFindAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public AdminEO findAdminByDesigID(String designationId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public AdminEO findAdminByAadhar(String aadhar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<AdminEO> findAdminByRoleID(Long roleId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<AdminEO> findAdminByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public RoleEO persistRoleEO(RoleEO roleEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public RoleEO mergeRoleEO(RoleEO roleEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean removeRoleEO(RoleEO roleEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<RoleEO> getRoleEOFindAll() {
+		List<RoleEO> roleEOList = new ArrayList<RoleEO>();
+		rolesRepositoryRef.findAll().forEach(roleEOList::add);
+		return roleEOList;
+	}
+
+	public RoleEO findRoleByRoleID(Long roleId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public RoleEO findRoleByRoleName(String roleName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean login(AdminEO adminEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="images/styles.css"/>
+      </head>
+      <body>
+        <!-- Top right nav bar -->
+        <!-- Header panel -->
+        <div class="header">
+          <div class="header-left"></div>
+          <div class="header-title">TRAFFIC OFFENCE MANAGEMENT SYSTEM</div>
+          <div class="header-right">
+            <h:form style="margin:0; padding:0;">
+              <h:commandButton value="Logout" styleClass="logout-btn"
+                               action="#{backing_AdminDashboard.logout_action}"/>
+            </h:form>
+          </div>
+        </div>
+        <!-- Side panel -->
+        <div class="main-layout">
+          <div class="sidebar">
+            <div class="sidebar-title">Admin Management</div>
+            <div class="form-row">
+              <h:outputLabel value="Admin Designation ID" for="desigID"
+                             styleClass="sidebar-label"/>
+               
+              <h:inputText value="#{backing_AdminDashboard.designationId}"
+                           id="desigID" readonly="true"
+                           styleClass="sidebar-input"/>
+            </div>
+            <h:form id="sidebarNavForm">
+              <div class="sidebar-nav">
+                <h:commandLink value="Home"
+                               action="#{backing_AdminDashboard.home_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Admin Management"
+                               action="#{backing_AdminDashboard.admin_action}"
+                               styleClass="sidebar-nav-link"/>
+                 
+                <h:commandLink value="Role Management"
+                               action="#{backing_AdminDashboard.role_action}"
+                               styleClass="sidebar-nav-link"/>
+              </div>
+            </h:form>
+          </div>
+          <!-- Centered content -->
+          <div class="center-content">
+            <!-- Show message if present -->
+            <h:panelGroup rendered="#{not empty backing_AdminManagement.message}">
+              <div class="admin-msg message">
+                <h:outputText value="#{backing_AdminManagement.message}"/>
+              </div>
+            </h:panelGroup>
+             
+            <!-- Search and Add Bar -->
+             
+            <h:form id="searchForm">
+              <div class="admin-search-bar">
+                <h:outputLabel value="Designation ID:" for="designationID"/>
+                 
+                <h:inputText id="designationID"
+                             value="#{backing_AdminManagement.desigId}"/>
+                 
+                <h:commandButton value="Search"
+                                 action="#{backing_AdminManagement.search}"/>
+                 
+                <h:commandButton value="Add"
+                                 action="#{backing_AdminManagement.add}"/>
+              </div>
+            </h:form>
+             
+            <!-- Admin Details Card -->
+             
+            <h:panelGroup rendered="#{backing_AdminManagement.showCard}">
+              <h:form id="adminForm">
+                <div class="admin-card">
+                  <!-- Designation ID (Read-only) -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Designation ID:"
+                                   for="desigIdDisplay"/>
+                     
+                    <h:inputText id="desigIdDisplay"
+                                 value="#{backing_AdminManagement.desigId}"
+                                 readonly="true" styleClass="readonly"/>
+                  </div>
+                  <!-- Role (Combo Box/Read-only) -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Role:" for="roleCombo"/>
+                     
+                    <!-- Combo box for ADD mode -->
+                     
+                    <h:selectOneMenu id="roleCombo"
+                                     value="#{backing_AdminManagement.selectedRoleID}">
+                      <f:selectItem itemLabel="-- Select Role --" itemValue=""/>
+                      <f:selectItems value="#{backing_AdminManagement.roleItems}"/>
+                    </h:selectOneMenu>
+                     
+                    <!-- Read-only text for role in view/edit mode -->
+                     
+                    <h:inputText id="roleText"
+                                 value="#{backing_AdminManagement.selectedRoleName}"
+                                 readonly="true"
+                                 rendered="#{!backing_AdminManagement.addMode}"
+                                 styleClass="readonly"/>
+                  </div>
+                  <!-- Name -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Name:" for="adminName"/>
+                     
+                    <h:inputText id="adminName"
+                                 value="#{backing_AdminManagement.name}"
+                                 readonly="#{!(backing_AdminManagement.editMode or backing_AdminManagement.addMode)}"
+                                 required="true"
+                                 requiredMessage="Name is required"/>
+                  </div>
+                  <!-- Phone -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Phone:" for="adminPhone"/>
+                     
+                    <h:inputText id="adminPhone"
+                                 value="#{backing_AdminManagement.phone}"
+                                 readonly="#{!(backing_AdminManagement.editMode or backing_AdminManagement.addMode)}"
+                                 required="true"
+                                 requiredMessage="Phone is required"/>
+                  </div>
+                  <!-- Gender Radio Buttons -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Gender:"/>
+                     
+                    <h:selectOneRadio value="#{backing_AdminManagement.gender}"
+                                      layout="lineDirection"
+                                      disabled="#{!(backing_AdminManagement.editMode or backing_AdminManagement.addMode)}">
+                      <f:selectItem itemLabel="Male" itemValue="M"/>
+                      <f:selectItem itemLabel="Female" itemValue="F"/>
+                      <f:selectItem itemLabel="NA" itemValue="NA"/>
+                    </h:selectOneRadio>
+                  </div>
+                  <!-- Aadhar -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Aadhar:" for="aadhar"/>
+                     
+                    <h:inputText id="aadhar"
+                                 value="#{backing_AdminManagement.aadhar}"
+                                 readonly="#{!(backing_AdminManagement.editMode or backing_AdminManagement.addMode)}"/>
+                  </div>
+                  <!-- Hire Date -->
+                  <div class="admin-card-row">
+                    <h:outputLabel value="Hire Date:" for="hiredate"/>
+                     
+                    <h:inputText id="hiredate"
+                                 value="#{backing_AdminManagement.hiredate}"
+                                 readonly="#{!(backing_AdminManagement.editMode or backing_AdminManagement.addMode)}"/>
+                  </div>
+                  <!-- Action Buttons -->
+                  <div class="admin-card-actions">
+                    <h:commandButton value="Edit"
+                                     action="#{backing_AdminManagement.enableEdit}"
+                                     rendered="#{!backing_AdminManagement.editMode and !backing_AdminManagement.addMode}"/>
+                     
+                    <h:commandButton value="Update"
+                                     action="#{backing_AdminManagement.update}"
+                                     rendered="#{backing_AdminManagement.editMode and !backing_AdminManagement.addMode}"/>
+                     
+                    <h:commandButton value="Delete"
+                                     action="#{backing_AdminManagement.delete}"
+                                     rendered="#{!backing_AdminManagement.addMode}"/>
+                     
+                    <h:commandButton value="Save"
+                                     action="#{backing_AdminManagement.save}"
+                                     rendered="#{backing_AdminManagement.addMode}"/>
+                     
+                    <h:commandButton value="Cancel"
+                                     action="#{backing_AdminManagement.cancel}"
+                                     immediate="true"/>
+                  </div>
+                  <h:messages globalOnly="true" styleClass="message"/>
+                </div>
+              </h:form>
+            </h:panelGroup>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_AdminDashboard-->
+</jsp:root>

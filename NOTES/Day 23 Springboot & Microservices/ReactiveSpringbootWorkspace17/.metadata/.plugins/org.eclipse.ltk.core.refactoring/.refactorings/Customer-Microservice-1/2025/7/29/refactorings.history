@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;iqgateway&apos;&#x0D;&#x0A;- Original project: &apos;Customer-Microservice-1&apos;&#x0D;&#x0A;- Destination element: &apos;iqgateway&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     serviceImpl&#x0D;&#x0A;     service" description="Copy folders" element1="src/main/java/training/iqgateway/serviceImpl" element2="src/main/java/training/iqgateway/service" files="0" flags="589830" folders="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1752647826922" target="/Customer-Microservice/src/main/java/training/iqgateway" units="0" version="1.0"/>
+</session>

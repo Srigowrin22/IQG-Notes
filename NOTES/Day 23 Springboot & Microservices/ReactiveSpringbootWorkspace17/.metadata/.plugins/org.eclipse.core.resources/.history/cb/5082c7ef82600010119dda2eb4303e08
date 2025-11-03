@@ -1,0 +1,8 @@
+package training.iqgateway.moviecatalogservice.model;
+
+public class CatalogItems {
+	private String name;
+	private String desc;
+	private int rating;
+	
+}

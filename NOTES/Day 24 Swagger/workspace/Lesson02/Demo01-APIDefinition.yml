@@ -1,0 +1,11 @@
+/reviews:
+  get:
+    description: Get list of reviews
+    parameters: 
+    - name: maxRating
+      in: query
+      schema:
+        type: number
+    responses:
+      200:
+        description: A list of reviews

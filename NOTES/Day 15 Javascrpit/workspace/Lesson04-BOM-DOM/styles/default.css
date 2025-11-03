@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    margin: 0px;
+    border: 0px;
+    padding: auto;
+}
+
+h1{
+    color: blueviolet;
+}
+
+#nameSpan{
+    font-weight: bold;
+}

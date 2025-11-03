@@ -1,0 +1,5 @@
+package training.iqgateway.business.Impl;
+
+public class AdminOperationImpl {
+
+}

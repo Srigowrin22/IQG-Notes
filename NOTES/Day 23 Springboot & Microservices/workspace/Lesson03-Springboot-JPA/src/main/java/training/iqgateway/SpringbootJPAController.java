@@ -1,0 +1,26 @@
+package training.iqgateway;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SpringbootJPAController {
+
+	@Autowired
+	private DepartmentService departmentServiceRef;
+
+	@RequestMapping("/showDepartments")
+	public List<DepartmentEO> fetchAllDepartments() {
+		return departmentServiceRef.getAllDepartments();
+	}
+
+	@RequestMapping(value = "/add-dept", method = RequestMethod.POST)
+	public void addDept(@RequestBody DepartmentEO deptEORef) {
+		departmentServiceRef.addDepartment(deptEORef);
+	}
+}

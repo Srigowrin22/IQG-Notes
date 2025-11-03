@@ -1,0 +1,46 @@
+package training.iqgateway.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+
+public interface AdminService {
+
+    AdminEO persistAdminEO(AdminEO adminEO);
+
+    AdminEO mergeAdminEO(AdminEO adminEO);
+
+    Boolean removeAdminEO(AdminEO adminEO);
+
+    int authorizeAdmin(String designationId, String password,
+                       String newPassword);
+
+    List<AdminEO> getAdminEOFindAll();
+
+    AdminEO findAdminByDesigID(String designationId);
+
+    AdminEO findAdminByAadhar(String aadhar);
+
+    List<AdminEO> findAdminByRoleID(Long roleId);
+
+    List<AdminEO> findAdminByName(String name);
+
+    // RoleEO CRUD
+
+    String persistRoleEO(RoleEO roleEO);
+
+    RoleEO mergeRoleEO(RoleEO roleEO);
+
+    Boolean removeRoleEO(RoleEO roleEO);
+
+    List<RoleEO> getRoleEOFindAll();
+
+    RoleEO findRoleByRoleID(Long roleId);
+
+    RoleEO findRoleByRoleName(String roleName);
+
+    Boolean login(AdminEO adminEO);
+}

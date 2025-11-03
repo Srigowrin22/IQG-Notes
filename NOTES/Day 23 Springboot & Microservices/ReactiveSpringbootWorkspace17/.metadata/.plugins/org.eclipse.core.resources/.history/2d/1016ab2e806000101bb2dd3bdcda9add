@@ -1,0 +1,2 @@
+spring.application.name=Movie-Catalog-Application-1
+server.port=9091

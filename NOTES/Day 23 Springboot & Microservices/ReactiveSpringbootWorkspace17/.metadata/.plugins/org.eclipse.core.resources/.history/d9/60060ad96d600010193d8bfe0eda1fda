@@ -1,0 +1,12 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import training.iqgateway.entities.RoleEO;
+
+@Repository
+public interface RolesRepository extends CrudRepository<RoleEO, Long>{
+
+	RoleEO findByroleName(String roleName);
+
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.129+C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 22 Maven\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+1042163798.index
+2409734419.index
+2528028425.index
+2488834149.index

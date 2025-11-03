@@ -1,0 +1,239 @@
+Day 1
+
+	Agenda :
+	
+			
+		Module 10 : Front End Application Development Using HTML5 and CSS3 
+		
+			Lesson 01 : Web Application Essentials
+			
+		
+		
+		Lesson 01 : Web Application Essentials
+		
+			Multi Tier [ Multiple Layers ] 
+			
+				Client Tier
+				
+					Can Contain Presentation Logic
+				
+				Middleware 	
+				
+					Can Contain Presentation Logic
+				
+					Business Logic
+				
+				EIS  
+				
+					Persistence Logic 
+					
+					
+				What is a Middleware ?
+					
+						A Middleware is a Software Which Provides Lot of Services
+						
+						Types : 
+						
+							Web Server 
+							
+								[ Web Tier ( Supports Only Web Components ) ]
+							
+								Eg : Apache Tomcat, JWS
+							
+							Application Server 
+							
+								[ Web Tier ( Supports Web Components ) ]
+								
+												+
+												
+								[ Business Tier ( Supports Business Components ) ]
+							
+								Eg : Oracle Weblogic , Oracle Glassfish, Oracle Application Server, IBM WebShphere, JBoss JBoss, 
+								Wildfly, James ... 
+								
+						
+				Services Provided By Middleware
+						
+						1. Instance Pooling
+						
+						2. Instance Passivation
+						
+						3. Database Connection Pooling
+						
+						4. Pre Cached Instances [ Load on Startup ]
+						
+						5. Life Cycle Management
+						
+						6. Security Management
+						
+						7. Transaction Management 
+						
+						8. Low Level Services 
+						
+							a. Exception Handling
+							
+							b. Multi Threading
+							
+							c. IO Interaction
+							
+						9.  Naming Services
+						
+						10. Timer Services
+						
+						11. Messaging Services
+						
+						12. Remoting Services
+						
+						13. Logging Services
+						
+						14. Request Response Delegation 
+						
+							...
+			
+			
+			HTTP [ Hyper Text Transfer Protocol ]
+			
+			In Web Applications Clients and Server Usually Communicate Using HTTP Protocol 
+			
+			
+			1.  Client Details 
+			
+				Machine / Browser Which Invoked the Request 
+				
+				
+			2.  User Details
+					
+				Details Pertaining to the User [ User = WE ]
+			
+			Request Response Architecture 
+			
+			1.  Encapsulation of Client Details
+			
+					Gathering the Details About the Client. 
+			
+			2.  Request Processing Phase
+			
+					Middleware then Delegates the Request to the Respective Component Who Can intake the Request, Process the Request
+			
+			3.  Response Generation Phase 
+			
+					Component After Processing the Request, Generation of Response and it Hands Over to the Server, Server Inturn Hands it Back to the Client
+			
+			
+			HTTP Protocol is Stateless Protocol 
+			
+			How do We Make HTTP Protocol as a Statefull Protocol
+			
+				1.  URL Rewriting
+
+						www.abc.com 
+						
+						www.abc.com?jsessionid=dsfkjasdkj4545kdsfjksl
+				
+				2.  Cookies
+				
+						Is a Small Text File Containing Client Information, Sent To and Fro From Client to the Server and Server to the Client interms of Request's and Response's
+				
+				3.  Hidden Form Fields
+				
+						An Input component In HTML Form Fields 
+				
+				4.  HttpSession 
+				
+						Session : Period of Time [During which Client and Server Communicates With Each Other in terms of Request's and Response's ]
+				
+						Is a Session Object which is Created and Maintained on the Middleware 
+						
+							a.  Client Information 
+							
+							b.  User Information 
+			
+				
+				HTTP Methods 
+				
+				1.  GET
+				
+				2.  POST
+				
+				3.  PUT
+				
+				4.  DELETE
+				
+				5.  HEAD
+				
+				6.  TRACE
+				
+				7.  OPTION 
+				
+				
+				URL is Composed of 
+				
+				< Protocol > : // < IP Address > : < Port No > / AppName / ResName 
+				
+				http://localhost:9090/BankingApp/CustomerDetails.jsp
+				
+				
+				Accession Application Using IP Address of the Server on Which Application is Deployed is lil Difficult to Remember 
+				
+				DNS [ Domain Naming Service ]
+				
+				www.iqgateway.com 
+				
+				[ IP Address : Port / AppName ]
+				
+				
+				Tags / Elements 
+				1.  Tag With Body With Attributes
+				
+					<body bgcolor="pink">
+						Welcome to Web Application 
+					</body>
+				
+				2.  Tag Without Body With Attributes
+				
+					<img src="c:/myProfile.jpg" />
+				
+				3.  Tag With Body Without Attributes
+					
+					<p> This a Paragraph </p>
+									
+				4.  Tag Without Body Without Attributes
+				
+					<br> 
+					
+				http://127.0.0.1:5500/index.html
+				
+				
+				Tag / Element 
+				
+					Is Like a Functionality to Perform 
+					
+					<h1> Title </h1>
+					
+				
+				Markup Languages 
+				
+				
+					Pre Defined Tags
+					
+						html 
+					
+					User Defined Tags 
+					
+						xml 
+				
+				
+				Java Script is MIX of ALL 
+				
+				Sometimes it is 
+				
+					1.  Traditional Language [ Contains Just the Statements ]
+					
+					2.  Procedural [ Made up of Methods / Functions ]
+					
+					3.  Object Based [ Made Up of Classes and Objects ]
+					
+					
+					
+						
+				

@@ -1,0 +1,7 @@
+package training.iqgateway.service.impl;
+
+import training.iqgateway.service.VehicleOffenceService;
+
+public class VehicleOffenceServiceImpl implements VehicleOffenceService{
+
+}

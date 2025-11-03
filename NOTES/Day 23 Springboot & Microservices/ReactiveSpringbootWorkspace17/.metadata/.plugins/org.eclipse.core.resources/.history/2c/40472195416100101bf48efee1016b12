@@ -1,0 +1,7 @@
+package training.iqgateway.service.impl;
+
+import training.iqgateway.service.OwnerService;
+
+public class OwnerServiceImpl implements OwnerService{
+
+}

@@ -1,0 +1,16 @@
+package training.iqgateway.business;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DriverApp {
+	public static void main(String[] args) {
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("/beans.xml");
+
+//		Shapes circleBean = (Shapes) appContext.getBean("circleBean");
+//		circleBean.printInfo();
+
+		Shapes shapeBean = (Shapes) appContext.getBean("ShapeMakerBean");
+		shapeBean.printInfo();
+	}
+}

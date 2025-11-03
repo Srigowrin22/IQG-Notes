@@ -1,0 +1,18 @@
+Day 2 
+
+	Agenda :
+	
+		Module-9 : Java Design Patterns 
+		
+			Lesson 03 : Structural Design Patterns
+			
+				Adapter Pattern 
+				
+					Types of Adapter Pattern 
+					
+					1.  Class Adapter [ Inheritance ]
+					
+					2.  Object Adapter [ Composition ]
+			
+			
+			

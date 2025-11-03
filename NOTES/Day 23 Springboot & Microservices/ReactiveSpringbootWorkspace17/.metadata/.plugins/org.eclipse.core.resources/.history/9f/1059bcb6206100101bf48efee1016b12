@@ -1,0 +1,53 @@
+package training.iqgateway.service.impl;
+
+import java.util.List;
+
+import training.iqgateway.dto.OffenceTypesDTO;
+import training.iqgateway.entities.OffenceTypesEO;
+import training.iqgateway.service.OffenceTypesService;
+
+public class OffenceTypesServiceImpl implements OffenceTypesService{
+
+	@Override
+	public String persistOffenceTypeEO(OffenceTypesEO offenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String mergeOffenceTypeEO(OffenceTypesEO offenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean removeOffenceTypeEO(OffenceTypesEO offenceEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OffenceTypesDTO> getOffenceTypeEOFindAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public OffenceTypesEO findOffenceTypeByID(Integer offenceID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OffenceTypesDTO> findOffenceByVehicleType(String vehicleType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OffenceTypesDTO> findOffenceByOffenceType(String offenceType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

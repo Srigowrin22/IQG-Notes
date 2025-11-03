@@ -1,0 +1,18 @@
+package training.iqgateway.services;
+
+import java.util.List;
+
+import training.iqgateway.entities.AdminEO;
+
+public interface AdminEOService {
+	
+	List<AdminEO>  getAll();
+	AdminEO getByIdd(String designationId);
+	AdminEO updateAdmin(AdminEO adminEO);
+	AdminEO addAdmin(AdminEO adminEO);
+	void deleteAdmin(String id);
+	void delete(AdminEO admin);
+
+	
+
+}

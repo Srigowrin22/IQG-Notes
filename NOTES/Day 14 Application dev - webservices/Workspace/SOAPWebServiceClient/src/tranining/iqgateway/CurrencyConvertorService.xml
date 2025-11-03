@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname localpart="CurrencyConvertorService"
+                     namespaceURI="http://iqgateway.training/"/>
+      <port-info>
+         <wsdl-port localpart="CurrencyConvertorPort"
+                    namespaceURI="http://iqgateway.training/"/>
+         <runtime/>
+         <operations>
+            <operation name="dollarsToRs"/>
+            <operation name="poundsToRs"/>
+            <operation name="riyalsToRs"/>
+            <operation name="yensToRs"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

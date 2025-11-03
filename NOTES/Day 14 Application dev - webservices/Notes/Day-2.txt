@@ -1,0 +1,40 @@
+Day 2 :
+
+	Module 13 : Application Development Using Web Services [ SOAP and REST ]
+	
+		Lesson 02 : XML Document Structure
+		
+		
+		
+			Lesson 02 : XML Document Structure
+			
+				XML is Meant of Describing Data [ What Data to Provide ]
+				
+				Processing 
+				
+					XSLT [ eXtensible Stylesheet Language Transformation ]
+					
+					XSL FO [ eXtensible Stylesheet Language Formating Objects ]
+		
+				Search 
+				
+					XPath 
+					
+				Communication With Database
+				
+					XSQL Framework [ Transformation of Data From Database into XML Documents ]
+					
+					
+				XML Structuring Can Be Done 
+				
+				1.  DTD [ Document Type Defination ] ( Text Based )
+				
+				2.  XML Schema ( XML Based ) 
+				
+						Structure Validation 
+						
+						Data Validation 
+		
+		
+			
+						

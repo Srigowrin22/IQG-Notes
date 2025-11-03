@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <html>
+            <head>
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+                <title>Registration</title>
+                <link rel="stylesheet" type="text/css" href="images/styles2.css"/>
+            </head>
+            <body>
+                <!-- Header panel -->
+                <div class="header">
+                    <div class="header-left"></div>
+                    <div class="header-title">VEHICLE OFFENCE MANAGEMENT SYSTEM</div>
+                    <div class="header-right">
+                        <h:form style="margin:0; padding:0;">
+                            <h:commandButton value="Logout"
+                                             styleClass="logout-btn"
+                                             action="#{backing_RTODashboard.logout_action}"/>
+                        </h:form>
+                    </div>
+                </div>
+                <!-- Side panel -->
+                <div class="main-layout">
+                    <div class="sidebar">
+                        <div class="sidebar-title">RTO Panel</div>
+                        <div class="form-row">
+                            <h:outputLabel value="RTO Officer ID" for="rtoID"
+                                           styleClass="sidebar-label"/>
+                             
+                            <h:inputText value="#{backing_RTODashboard.designationId}"
+                                         id="rtoID" readonly="true"
+                                         styleClass="sidebar-input"/>
+                        </div>
+                        <h:form id="sidebarNavForm">
+                            <div class="sidebar-nav">
+                                <h:commandLink value="Home"
+                                               action="#{backing_RTODashboard.home_action}"
+                                               styleClass="sidebar-nav-link"/>
+                                 
+                                <h:commandLink value="Vehicle Management"
+                                               action="#{backing_RTODashboard.vehicle_action}"
+                                               styleClass="sidebar-nav-link"/>
+                                 
+                                <h:commandLink value="Offence Types Management"
+                                               action="#{backing_RTODashboard.offenceTypes_action}"
+                                               styleClass="sidebar-nav-link"/>
+                                 
+                                <h:commandLink value="Registration"
+                                               action="#{backing_RTODashboard.registration_action}"
+                                               styleClass="sidebar-nav-link"/>
+                                 
+                                <h:commandLink value="Transfer Vehicle"
+                                               action="#{backing_RTODashboard.transferVehicle_action}"
+                                               styleClass="sidebar-nav-link"/>
+                            </div>
+                        </h:form>
+                    </div>
+                    <div class="center-content">
+                        <h:form id="registrationForm">
+                            <!-- Show message if present -->
+                            <h:panelGroup rendered="#{not empty backing_Registration.message}">
+                                <div class="offence-message-in-card">
+                                    <h:outputText value="#{backing_Registration.message}"/>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Search Controls -->
+                            <div class="admin-card-actions"
+                                 style="margin-bottom:18px;">
+                                <div class="admin-card-row">
+                                    <h:outputLabel value="Registration ID:"
+                                                   for="searchRegistrationId"/>
+                                     
+                                    <h:inputText id="searchRegistrationId"
+                                                 value="#{backing_Registration.searchRegistrationId}"
+                                                 styleClass="admin-card-row-input"/>
+                                     
+                                    <h:commandButton value="Search"
+                                                     action="#{backing_Registration.searchRegistration}"
+                                                     styleClass="admin-card-actions-btn"/>
+                                     
+                                    <h:commandButton value="Add"
+                                                     action="#{backing_Registration.showAddCard}"
+                                                     styleClass="admin-card-actions-btn"
+                                                     disabled="#{!backing_Registration.addEnabled}"/>
+                                     
+                                    <h:commandButton value="View All"
+                                                     action="#{backing_Registration.showAllRegistrations}"
+                                                     styleClass="admin-card-actions-btn"/>
+                                </div>
+                            </div>
+                            <!-- ADD CARD -->
+                            <h:panelGroup rendered="#{backing_Registration.addMode}">
+                                <div class="admin-card">
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registration ID:"
+                                                       for="addRegistrationId"/>
+                                         
+                                        <h:inputText id="addRegistrationId"
+                                                     value="#{backing_Registration.newRegistration.registrationId}"
+                                                     readonly="true"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Vehicle:"
+                                                       for="addVehicleId"/>
+                                         
+                                        <h:selectOneMenu id="addVehicleId"
+                                                         value="#{backing_Registration.selectedVehicleId}"
+                                                         styleClass="admin-card-combo">
+                                            <f:selectItems value="#{backing_Registration.vehicleSelectItems}"/>
+                                        </h:selectOneMenu>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Owner:"
+                                                       for="addOwnerAadhar"/>
+                                         
+                                        <h:selectOneMenu id="addOwnerAadhar"
+                                                         value="#{backing_Registration.selectedOwnerAadhar}"
+                                                         styleClass="admin-card-combo">
+                                            <f:selectItems value="#{backing_Registration.ownerSelectItems}"/>
+                                        </h:selectOneMenu>
+                                         
+                                        <h:commandButton value="Create Owner"
+                                                         action="#{backing_Registration.showCreateOwnerCard}"
+                                                         styleClass="admin-card-actions-btn"
+                                                         immediate="true"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Location:"
+                                                       for="addLocation"/>
+                                         
+                                        <h:inputText id="addLocation"
+                                                     value="#{backing_Registration.newRegistration.location}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registrar:"
+                                                       for="addRegistrar"/>
+                                         
+                                        <h:outputText id="addRegistrar"
+                                                     value="#{backing_RTODashboard.loggedInAdmin.designationId}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registration Date:"
+                                                       for="addRegistrationDate"/>
+                                         
+                                        <h:inputText id="addRegistrationDate"
+                                                     value="#{backing_Registration.newRegistrationDateStr}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-actions">
+                                        <h:commandButton value="Save"
+                                                         action="#{backing_Registration.saveNewRegistration}"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                                         
+                                        <h:commandButton value="Cancel"
+                                                         action="#{backing_Registration.cancelAdd}"
+                                                         immediate="true"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                                    </div>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Owner Creation Card -->
+                            <h:panelGroup rendered="#{backing_Registration.ownerCardMode}">
+                                <div class="admin-card">
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Owner Name:"
+                                                       for="ownerName"/>
+                                         
+                                        <h:inputText id="ownerName"
+                                                     value="#{backing_Registration.newOwner.ownerName}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Aadhar:"
+                                                       for="ownerAadhar"/>
+                                         
+                                        <h:inputText id="ownerAadhar"
+                                                     value="#{backing_Registration.newOwner.ownerAadhar}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Phone:"
+                                                       for="ownerPhone"/>
+                                         
+                                        <h:inputText id="ownerPhone"
+                                                     value="#{backing_Registration.newOwner.phone}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="PAN Card:"
+                                                       for="ownerPan"/>
+                                         
+                                        <h:inputText id="ownerPan"
+                                                     value="#{backing_Registration.newOwner.panCard}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Gender:"
+                                                       for="ownerGender"/>
+                                         
+                                        <h:selectOneRadio id="ownerGender"
+                                                          value="#{backing_Registration.newOwner.gender}">
+                                            <f:selectItem itemValue="M"
+                                                          itemLabel="Male"/>
+                                            <f:selectItem itemValue="F"
+                                                          itemLabel="Female"/>
+                                        </h:selectOneRadio>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Address:"
+                                                       for="ownerAddress"/>
+                                         
+                                        <h:inputText id="ownerAddress"
+                                                     value="#{backing_Registration.newOwner.address}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-actions">
+                                        <h:commandButton value="Save"
+                                                         action="#{backing_Registration.saveNewOwner}"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                                         
+                                        <h:commandButton value="Cancel"
+                                                         action="#{backing_Registration.cancelOwnerAdd}"
+                                                         immediate="true"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                                    </div>
+                                </div>
+                            </h:panelGroup>
+                            <!-- SEARCH / UPDATE / EDIT CARD -->
+                            <h:panelGroup rendered="#{backing_Registration.searchMode or backing_Registration.updateMode or backing_Registration.editMode}">
+                                <div class="admin-card">
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registration ID:"
+                                                       for="registrationId"/>
+                                         
+                                        <h:inputText id="registrationId"
+                                                     value="#{backing_Registration.currentRegistration.registrationId}"
+                                                     readonly="true"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Vehicle ID:"
+                                                       for="vehicleId"/>
+                                         
+                                        <h:inputText id="vehicleId"
+                                                     value="#{backing_Registration.currentRegistration.vehicleEO.vehicleId}"
+                                                     readonly="true"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Owner Aadhar:"
+                                                       for="ownerAadhar"/>
+                                         
+                                        <h:inputText id="viewOwnerAadhar"
+                                                     value="#{backing_Registration.currentRegistration.ownerEO.ownerAadhar}"
+                                                     readonly="true"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Location:"
+                                                       for="location"/>
+                                         
+                                        <h:inputText id="location"
+                                                     value="#{backing_Registration.currentRegistration.location}"
+                                                     readonly="#{!backing_Registration.editMode}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registrar:"
+                                                       for="registrar"/>
+                                         
+                                        <h:inputText id="registrar"
+                                                     value="#{backing_Registration.currentRegistration.registrar}"
+                                                     readonly="#{!backing_Registration.editMode}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-row">
+                                        <h:outputLabel value="Registration Date:"
+                                                       for="registrationDate"/>
+                                         
+                                        <h:inputText id="registrationDate"
+                                                     value="#{backing_Registration.currentRegistrationDateStr}"
+                                                     readonly="#{!backing_Registration.editMode}"
+                                                     styleClass="admin-card-row-input"/>
+                                    </div>
+                                    <div class="admin-card-actions">
+                                        <h:commandButton value="Update"
+                                                         action="#{backing_Registration.enableEditMode}"
+                                                         rendered="#{!backing_Registration.editMode}"
+                                                         styleClass="admin-card-actions-btn"/>
+                                         
+                                        <h:commandButton value="Cancel"
+                                                         action="#{backing_Registration.cancelCard}"
+                                                         immediate="true"
+                                                         rendered="#{!backing_Registration.editMode}"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                                         
+                                        <h:commandButton value="Save"
+                                                         action="#{backing_Registration.saveUpdate}"
+                                                         rendered="#{backing_Registration.editMode}"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-save"/>
+                                         
+                                        <h:commandButton value="Cancel"
+                                                         action="#{backing_Registration.cancelEdit}"
+                                                         immediate="true"
+                                                         rendered="#{backing_Registration.editMode}"
+                                                         styleClass="admin-card-actions-btn admin-card-actions-cancel"/>
+                                    </div>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Registrations Table -->
+                            <h:panelGroup rendered="#{backing_Registration.viewAllMode}">
+                                <div class="admin-card admin-role-table"
+                                     style="overflow-x:auto;">
+                                    <h:dataTable value="#{backing_Registration.registrationList}"
+                                                 var="reg"
+                                                 styleClass="role-table">
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Registration ID"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.registrationId}"/>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Vehicle ID"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.vehicleEO.vehicleId}"/>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Owner Aadhar"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.ownerEO.ownerAadhar}"/>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Location"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.location}"/>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Registrar"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.registrar}"/>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Registration Date"/>
+                                            </f:facet>
+                                            <h:outputText value="#{reg.registrationDate}">
+                                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                            </h:outputText>
+                                        </h:column>
+                                        <h:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Actions"/>
+                                            </f:facet>
+                                            <h:commandButton value="Update"
+                                                             action="#{backing_Registration.prepareUpdateFromTable}"
+                                                             styleClass="admin-card-actions-btn">
+                                                <f:setPropertyActionListener target="#{backing_Registration.currentRegistration}"
+                                                                             value="#{reg}"/>
+                                            </h:commandButton>
+                                        </h:column>
+                                    </h:dataTable>
+                                </div>
+                            </h:panelGroup>
+                        </h:form>
+                    </div>
+                </div>
+            </body>
+        </html>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Registration-->
+</jsp:root>

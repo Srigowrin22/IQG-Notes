@@ -1,0 +1,11 @@
+package training.iqgateway.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public class RolesDTO {
+    private Long roleId;
+    private String roleName;
+
+}
+

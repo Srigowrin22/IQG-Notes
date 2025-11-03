@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<h2>Please Provide the Details to Convert</h2>
+		<form method="POST" action="CurrencyConvertorServlet">
+			<table>
+				<tr>
+					<td>Enter the Dollar Value</td>
+					<td><input type="text" name="dollarInput" /></td>
+				</tr>
+
+				<tr>
+					<td><input type="submit" value="Calculate" /></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>

@@ -1,0 +1,7 @@
+127.0.0.1 - - [04/Jul/2025:11:49:32 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [04/Jul/2025:11:49:34 +0530] "GET /Lesson07-SpringWEB/CurrencyConvertorInput.html HTTP/1.1" 200 491
+0:0:0:0:0:0:0:1 - - [04/Jul/2025:11:49:40 +0530] "POST /Lesson07-SpringWEB/CurrencyConvertorServlet HTTP/1.1" 404 799
+127.0.0.1 - - [04/Jul/2025:11:50:47 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [04/Jul/2025:11:50:51 +0530] "POST /Lesson07-SpringWEB/CurrencyConvertorServlet HTTP/1.1" 404 799
+127.0.0.1 - - [04/Jul/2025:11:52:57 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [04/Jul/2025:11:53:03 +0530] "POST /Lesson07-SpringWEB/CurrencyConvertorServlet HTTP/1.1" 404 799

@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <Page
+      id="Page2">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">163.44824</property>
+      <property
+         name="x">198.5</property>
+      <property
+         name="jspName">/index.jspx</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase3"
+      from="Page2"
+      to="Page4">
+      <property
+         name="fromOutcome">stayHere</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">R50,239.5,163.09766,413.6787,248.79883,L50</property>
+   </NavigationCase>
+   <Page
+      id="Page4">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">249.14941</property>
+      <property
+         name="x">454.6787</property>
+      <property
+         name="jspName">/welcome.jspx</property>
+   </Page>
+</SDM>

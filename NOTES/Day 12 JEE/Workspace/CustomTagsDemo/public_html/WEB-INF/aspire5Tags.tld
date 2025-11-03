@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<taglib xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+  <display-name>aspire5Tags</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>aspire5Tags</short-name>
+  <uri>/webapp/aspire5Tags</uri>
+  <tag>
+    <name>Hello</name>
+    <tag-class>training.iqgateway.SayHelloTag</tag-class>
+    
+    <body-content> EMPTY </body-content>    
+  </tag>
+  
+</taglib>

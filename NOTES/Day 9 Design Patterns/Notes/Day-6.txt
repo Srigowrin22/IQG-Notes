@@ -1,0 +1,48 @@
+Day 23
+
+	Agenda : 
+	
+		Module-8: Java Design Patterns 
+		
+			Lesson 04: Behavioural Design Patterns - Part I
+	
+	
+			MVC 
+			
+				M --- Model [ Temp Data Store ]
+				
+				V --- View  [ UI of the Application ]
+				
+				C --- Controller 
+				
+						a.  Interpreting the Client Request
+						
+						b.  Delegation of Control to Business Unit
+						
+						c.  Navigation 
+						
+						
+				MVC Type I
+				
+					View + Controller 
+					
+					Model 
+				
+				MVC Type II 
+				
+					Model
+					
+					View
+					
+					Controller
+				
+						
+						
+						
+						
+						
+		
+			
+			
+			
+			

@@ -1,0 +1,8 @@
+package training.iqgateway;
+
+public interface DepartmentService {
+	
+	public List<DepartmentEO> getAllDepartments();
+	
+	public void addDepartment(DepartmentEO deptEORef);
+}

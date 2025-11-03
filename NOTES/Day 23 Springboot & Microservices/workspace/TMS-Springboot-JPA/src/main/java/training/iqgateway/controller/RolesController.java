@@ -1,0 +1,83 @@
+package training.iqgateway.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import training.iqgateway.dto.RolesDTO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.service.RolesService;
+
+@RestController
+@RequestMapping("/roles")
+//@CrossOrigin(origins = "url")
+public class RolesController {
+
+	@Autowired
+	private RolesService rolesServiceRef;
+
+
+	@GetMapping("/showRoles")
+	public ResponseEntity<List<RolesDTO>> fetchAllRoles() {
+		List<RolesDTO> roles = rolesServiceRef.getRoleEOFindAll();
+		return ResponseEntity.ok(roles);
+	}
+
+	@PostMapping("/addRole")
+	public ResponseEntity<String> addRole(@RequestBody RoleEO roleEO) {
+		try {
+			String res = rolesServiceRef.persistRoleEO(roleEO);
+			return ResponseEntity.status(HttpStatus.CREATED).body(res);
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to add role: " + e.getMessage());
+		}
+	}
+
+	@PutMapping("/updateRole")
+	public ResponseEntity<String> updateRole(@RequestBody RoleEO roleEO) {
+		try {
+			String res = rolesServiceRef.mergeRoleEO(roleEO);
+			return ResponseEntity.ok(res);
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to update role: " + e.getMessage());
+		}
+	}
+
+	@DeleteMapping("/deleteRole")
+	public ResponseEntity<Boolean> deleteRole(@RequestBody RoleEO roleEO) {
+		try {
+			Boolean deleted = rolesServiceRef.removeRoleEO(roleEO);
+			return ResponseEntity.ok(deleted);
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(false);
+		}
+	}
+
+	@GetMapping("/findByRoleID/{roleId}")
+	public ResponseEntity<RoleEO> findByRoleID(@PathVariable Long roleId) {
+		RoleEO role = rolesServiceRef.findRoleByRoleID(roleId);
+		if (role != null) {
+			return ResponseEntity.ok(role);
+		}
+		return ResponseEntity.notFound().build();
+	}
+
+	@GetMapping("/findByRoleName/{roleName}")
+	public ResponseEntity<RoleEO> findByRoleName(@PathVariable String roleName) {
+		RoleEO role = rolesServiceRef.findRoleByRoleName(roleName);
+		if (role != null) {
+			return ResponseEntity.ok(role);
+		}
+		return ResponseEntity.notFound().build();
+	}
+}

@@ -1,0 +1,11 @@
+package training.iqgateway;
+
+import lomboc
+@Data
+public class Employee {
+	
+	private Integer empId;
+	private String empName;
+	private Double empSalary;
+	private Integer departmentId;
+}

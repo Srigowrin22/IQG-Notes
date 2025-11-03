@@ -1,0 +1,19 @@
+package training.iqgateway.driver;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DriverApp {
+	public static void main(String[] args) {
+		
+//		Instatiate IOC Container
+		Beanfactory beanfactory = new ClassPathXmlApplicationContext("/beans.xml");
+		
+		ConfigurableApplicationContext configureContextRef = (ConfigurableApplicationContext) banFactory;
+		
+		configureContextRef.start();
+		configureContextRef.stop();
+		configureContextRef.close();
+	}
+
+}

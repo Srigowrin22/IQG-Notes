@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <title>Clerk Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="images/styles1.css"/>
+      </head>
+      <body>
+        <!-- Top right nav bar -->
+        <div class="topbar">
+          <h:form id="navbarForm">
+            <h:commandButton value="HOME" id="home" styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.home_action}"/>
+            <h:commandButton value="RAISE OFFENCE" id="raiseOffence"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.raiseOffence_action}"/>
+            <h:commandButton value="CLEAR OFFENCE" id="clearOffence"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.clearOffence_action}"/>
+            <h:commandButton value="VIEW OWNER" id="viewOwner"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.viewOwner_action}"/>
+            <h:commandButton value="PENDING" id="pendingOffences"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.pendingOffences_action}"/>
+            <h:commandButton value="OFFENCE TYPES" id="offenceTypes"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.offenceTypes_action}"/>
+            <h:commandButton value="LOGOUT" id="logout"
+                             styleClass="dashboard-btn"
+                             action="#{backing_ClerkDashboard.logout_action}"/>
+          </h:form>
+        </div>
+        <div class="main-layout">
+          <!-- Sidebar left -->
+          <div class="sidebar">
+            <div class="sidebar-title">Clear Offence</div>
+            <h:form id="form1">
+              <div class="form-row">
+                <h:outputLabel value="Designation ID:" for="desigID"
+                               styleClass="sidebar-label"/>
+                 
+                <h:inputText value="#{backing_ClerkDashboard.designationId}"
+                             id="desigID" readonly="true"
+                             styleClass="sidebar-input"/>
+              </div>
+            </h:form>
+            <div class="sidebar-quote">
+              <h:outputLabel value="#{backing_ClerkDashboard.outsourceQuote}"
+                             styleClass="sidebar-quote-text"/>
+            </div>
+          </div>
+          <!-- Message display -->
+          <h:panelGroup rendered="#{not empty backing_ClearOffence.message}">
+            <div class="admin-msg">
+              <h:outputText value="#{backing_ClearOffence.message}"/>
+            </div>
+          </h:panelGroup>
+           
+          <!-- Clear Details Card -->
+           
+          <!-- Centered raise offence content -->
+          <div class="raise-center-wrapper-clear">
+            <h:panelGroup rendered="#{backing_ClearOffence.showCard}"
+                          layout="block">
+              <h:form id="clearoffenceForm">
+                <div class="card search-card">
+                  <h:outputLabel for="searchRegId" value="Registration ID:"
+                                 styleClass="sidebar-label"
+                                 style="min-width: 140px;"/>
+                   
+                  <h:inputText id="searchRegId"
+                               value="#{backing_ClearOffence.searchRegistrationID}"
+                               styleClass="sidebar-input" style="flex: 1;"/>
+                   
+                  <h:commandButton value="Search"
+                                   action="#{backing_ClearOffence.searchOffences}"
+                                   styleClass="dashboard-btn"
+                                   style="margin-left: 12px;"/>
+                   
+                  <h:commandButton value="Cancel"
+                                   action="#{backing_ClearOffence.cancel}"
+                                   immediate="true" styleClass="dashboard-btn"
+                                   style="margin-left: 8px;"/>
+                </div>
+                <h:dataTable value="#{backing_ClearOffence.offenceList}"
+                             var="backing_ClearOffence"
+                             binding="#{backing_ClerkDashboard.dataTable1}"
+                             id="dataTable1">
+                  <!--oracle-jdev-comment:Faces.RI.DT.Class.Key:training.iqgateway.model.VehicleOffenceEO-->
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence Types E O"
+                                    binding="#{backing_ClerkDashboard.outputText1}"
+                                    id="outputText1"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.offenceTypesEO}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Location"
+                                    binding="#{backing_ClerkDashboard.outputText2}"
+                                    id="outputText2"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.location}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Offence Date"
+                                    binding="#{backing_ClerkDashboard.outputText3}"
+                                    id="outputText3"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.offenceDate}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Time"
+                                    binding="#{backing_ClerkDashboard.outputText4}"
+                                    id="outputText4"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.time}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Proof1"
+                                    binding="#{backing_ClerkDashboard.outputText5}"
+                                    id="outputText5"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.proof1}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Proof2"
+                                    binding="#{backing_ClerkDashboard.outputText6}"
+                                    id="outputText6"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.proof2}"/>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">
+                      <h:outputText value="Reporter"
+                                    binding="#{backing_ClerkDashboard.outputText7}"
+                                    id="outputText7"/>
+                    </f:facet>
+                    <h:outputText value="#{backing_ClearOffence.reporter}"/>
+                  </h:column>
+                </h:dataTable>
+              </h:form>
+            </h:panelGroup>
+          </div>
+        </div>
+      </body>
+    </html>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_ClerkDashboard-->
+</jsp:root>

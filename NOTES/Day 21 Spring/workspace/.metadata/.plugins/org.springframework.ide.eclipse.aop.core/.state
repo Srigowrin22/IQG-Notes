@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Lesson04-Spring-AOP"/>
+<aop-project name="Lesson03-Autowiring"/>
+<aop-project name="Lesson02-ShapesWithSpring"/>
+<aop-project name="Lesson08-SpringMVC-HelloWeb"/>
+<aop-project name="Lesson08-SpringMVC-FormHandling"/>
+<aop-project name="Lesson02-WithSpring"/>
+<aop-project name="Lesson05-SpringDAOWith JDBC"/>
+<aop-project name="Lesson06-Spring ORM"/>
+<aop-project name="Lesson03-SpringCore2"/>
+<aop-project name="Lesson08-SpringMVC-Validation"/>
+</aop-reference-model>

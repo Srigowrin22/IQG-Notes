@@ -1,0 +1,76 @@
+Custom Tags
+
+Requriments
+
+	1.	JSP page which uses Custom Tags
+	
+	2.	Tag Library Descriptor File (.tld)
+
+	3.	Tag Handler
+
+
+
+Keep the jsp-api.jar file in classpath 
+
+
+Create a context
+
+			Context
+				|
+				|
+				-------WEB-INF
+				|		|
+				|		|
+			(Jsp 	files		------classes
+			tld files		|	|
+			html files)	|	|
+						|	-----  Java Tag handler file
+						|		with other java files
+						|
+						|-----lib
+						|	|
+						|	|
+						|	----	jar files
+						|
+						|
+						|
+						-------web.xml
+					
+										
+Compile the Java Tag Handler
+
+
+
+
+Tag Handler
+
+	The functionality which defines the properties of that tag
+
+
+	Tag interface 
+
+		doStartTag()
+
+			Return Types
+
+				SKIP_BODY
+
+				EVAL_BODY_INCLUDE
+
+		doEndTag()
+
+			Return Types
+
+				EVAL_PAGE
+
+				SKIP_PAGE
+
+
+		release()
+
+	BodyTag Interface
+
+
+After Completing the logic for the tag and Tag Handler..
+
+Register it in TLD File.

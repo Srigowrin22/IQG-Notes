@@ -1,0 +1,14 @@
+package training.iqgateway.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+
+public interface AdminRepository extends CrudRepository<AdminEO, Long>{
+
+    List<AdminEO> findByRoleId(Long roleId);
+
+}

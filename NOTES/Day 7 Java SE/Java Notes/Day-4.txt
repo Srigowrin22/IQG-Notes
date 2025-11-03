@@ -1,0 +1,202 @@
+Day 4 
+
+	
+		Lesson 08 : Object Life Cycle and Inner Classes 
+			
+		Lesson 09 : Exploration of Predefined Packages and Classes [ String, StringBuffer , String Builder, Wrapper Classes, Formating, Regex ]
+			
+		Lesson 10 : Reusing the Code Using Inheritance
+			
+			
+			Lesson 08 : Object Life Cycle and Inner Classes 
+			
+			void anyMethod() {
+				Movie mov1 = new Movie();
+   			    Movie mov2 = new Movie();
+				mov1.setRating(“Good”);
+				
+				// Behind the Scenes [ this = mov1; ]
+				...
+				
+				mov2.setRating("Average");
+				// Behind the Scenes [ this = mov2; ]
+			
+			
+			Constructors
+				
+				Primary Usage is to Initialize Instance Variables 
+				
+				Types
+				
+					a.  Default / No Arg 
+					
+					b.  Parameterized 
+					
+					c.  Copy Constructors 
+					
+				Final     ( Variable, Method & Class )	
+					
+						Final on Variable is a Constant 
+						
+						Final on Method Overriding is Not Possible
+						
+						Final on Class Inheritance is Not Possible 
+						
+						
+						
+				Static ( Variable, Method, Block & Class )	
+				
+				Static Entites [ Variable or Method ]
+				
+				1.  Can Be Accessed Directly Via Class Name 
+				
+				2.  Can Even Be Accessed Via Object Reference 
+				
+				3.  Static Entities Can Only Access Other Static Entities [ It Cant Access Instance Variables or Instance Methods ]
+				
+				4.  Instance Method Not Only Can Access Instance Variables and Other Instance Methods, Apart from this, It Can Even Access Static Variables and Static Methods [ How is Possible ( THIS ) ]
+					
+				
+					
+					
+			
+				Inner Classes 
+				
+					Class Defination With in an Another Class
+					
+					Inner Classes can Defined 
+					
+					1.  With in a Class
+							
+						a. Member Level Inner Class
+						
+						b. Static Inner Class
+						
+					2.  With in a Method
+					
+						a. Local Inner Class
+						
+						b. Anonymous Inner Class 
+						
+				Without Inner Classes
+				
+								
+					Why ?
+					
+						To Enforce Strong Relationship Between Classes 
+						
+						[ The Existence of One Class Will Be Only With that Class ]
+						
+						class Customer 
+						{
+						
+							id 
+							name
+							phone 
+							
+							...
+							
+							class Address
+							{
+								doorNo
+								street
+								city
+								pincode
+							}
+							
+						}
+						
+						
+						class Address // Independent Class
+						{
+								doorNo
+								street
+								city
+								pincode
+						}
+						
+						class Customer
+						{
+							int id;
+							String name;
+							Address addressRef;
+							String phone;
+							
+							...
+							
+						}
+						
+						// Composition [ Has a Kind of ]
+						
+						The Existence of Address Can Be Without Customer.
+						
+			
+					What are its Characteristics ?
+					
+						a.  Inner Classes Can Access the Attributes and Operations of Outer Classes DIRECTLY [ Not Even Needing an Instance of the Outer Class ]
+						
+						b. Where as Vice Versa in Not True. Outer Class CAN'T Access the Attributes and Operations of the Inner Class Directly. If it as to Access it Should Access Via Object Reference of the Inner Class
+						
+						
+					1.  With in a Class
+							
+						a. Member Level Inner Class
+						
+							[ Assume Like Member Variable / Instance Variable / Member Function / Instance Functions ]
+						
+						b. Static Inner Class
+					
+							[ Assume Like Static Variable / Class Variable / Static Function / Class Functions ]
+							
+							
+					2.  With in a Method
+					
+						a. Local Inner Class
+						
+							Class Defined Within a Method, So the Existence of Inner Class is Only Within the Method, Beyond the Method it Can't Exist.
+							It Can Only Access Local Variables of the Methods, Arguments Passed to the Method
+							
+							Final Variables With in the Method, Final Variables With Parameter List, Final and Instance Variables of the Outer Class
+						
+						b. Anonymous Inner Class 
+							
+							Class Defined As a Parameter to the Method, When You are Calling a Method, At that Moment, We Create a Class, and Life Time of the Class is Only to that Method Call.
+							
+							objRef.someMethod(Class Defined);
+							
+			Lesson 09 : Exploration of Predefined Packages and Classes [ String, StringBuffer , String Builder, Wrapper Classes, Formating And Regex ]
+
+				String is the Only Class Which is a User Defined Datatype But Works Like Primitive 
+				
+				int ageLimit = 21;
+				
+				String name = "Rahul"; 
+				// String name = new String("Rahul");
+				
+				...
+				
+				String newName = "Rahul";
+				
+				
+				String Concatenation is Done 
+				
+				1.  + Operator S1 + S2;
+				
+				2.  concat Method
+				
+					s1.concat(s2);
+				
+				String str = "ComedyComedyComedy"
+				
+				training.iqgateway.Movie@f72617
+				
+				Movie Details [ ID : 1001	 Title : KGF Chapter-1	 Rating : Awesome ]
+
+				
+				
+
+				
+				
+				
+							
+							

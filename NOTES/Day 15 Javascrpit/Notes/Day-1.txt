@@ -1,0 +1,219 @@
+Day 1 :
+
+	Agenda : 
+	
+		Module-14 : JavaScript Essentails
+		
+		
+			Lesson 01 : Web Application Essentials [ Recap ] 
+			
+			Lesson 02 : JavaScript Fundamentals 
+			
+			
+				Softwares 
+				
+					IDE :  Visual Studio Code 
+					
+						https://code.visualstudio.com/download
+						
+						
+					
+					Platform : Node JS 
+					
+						https://nodejs.org/en/download 
+						
+							Need to Download [ 18.16.0 LTS ]
+							
+						Previous Releases
+						
+							https://nodejs.org/en/download/releases
+							
+							
+					HTTP is a Stateless Protocol 
+					
+					Request Response Architecture
+					
+						1.  Encapsulation of Client Details
+						
+						2.  Request Processing Phase
+						
+						3.  Delivering the Response 
+						
+						
+						
+				Lesson 02 : JavaScript Fundamentals 
+				
+					JavaScript is MIX Of All 
+					
+					Sometimes it is 
+					
+						a.  Traditional [ Containing Statements to Execute ]
+						
+						b.  Procedural  [ Based on Functions or Methods ]
+						
+						c.  OO          [ Object Oriented ]
+						
+						
+					Scripting 
+					
+						Peice of Code 
+						
+						
+						Types 
+						
+						1.  Server Side Scripting
+						
+							a. CGI 
+							
+							b. MOD Perl
+							
+							c. Servlets
+							
+							d. ASP
+							
+							e. PHP
+							
+							f. JSP
+							
+							g. JSF
+							
+							h. ASP.Net 
+							
+								...
+						
+						2.  Client Side Scripting 
+						
+							a.  VB Script
+							
+							b.  JavaScript 
+							
+				
+				Scopes of Variables in JS
+				
+					a.  Global Variable 
+					
+					b.  Instance Variable 
+					
+					c.  Method Variable 
+					
+						** In Traditional JS there is NO Block Variable Scope.
+						
+						
+						
+				What is an Array in Other Languages ?
+				
+					Are Homogenous Elements Fixed in Size 
+					
+				Where as Arrays in JS, is Lil Different
+				
+					a.  Hetergenous Elements 
+					
+					b.  Dynamic in Size [ Not Fixed in Size ( Can Grow Dynamically ) ]
+					
+					
+					
+				DELETE Operator
+				
+					delete Operator Can Be Used on 
+					
+						a. Object [ Associated Attribute is Deleted ]
+						
+						b. Array  [ Element Value is Deleted ] 
+						
+						
+				Usage of With 
+				
+				class DBMSOperations
+				{ 
+				
+					function connectToDB() {
+						Connects to Oracle DB
+					}
+					
+					function executeOnDB() {
+						SELECT
+					}
+					
+					function disConnectFromDB() {
+						Disconnects From Oracle DB
+					}
+					
+				}
+				
+				// Creating an Object
+				var dbmsObjRef = new DBMSOperations();
+				
+				// Invoking Methods 
+				dbmsObjRef.connectToDB();
+				dbmsObjRef.executeOnDB();
+				dbmsObjRef.disConnectFromDB();
+				
+				
+				Usage of With 
+				
+				with(dbmsObjRef) {
+				
+					connectToDB();
+					executeOnDB();
+					disConnectFromDB();
+					
+				}
+				
+				
+				Objects in JavaScript Can Be Created 
+				
+				1.  Empty Object 
+				
+					var emptyObjRef = {
+					
+					}
+					
+					
+					var emptyObjRef1 = new Object();
+					
+					var emptyObjRef2 = Object.create(null);
+					
+				
+				2.  Singleton Object 
+				
+				
+				3.  Objects Can Be Constructed using Constructor Look and Feel 
+				
+				
+				Anonymous Function 
+				
+					Function Without a Name 
+					
+					Used For 
+						
+						On the Go Execution 
+						
+						Lambda Expressions
+						
+						
+						
+						
+				Prototype 
+				
+					Every Object Contains a Property Called as Prototype
+					
+						Used for 
+						
+							1.  To Dynamically Add Attributes and Methods 
+							
+							2.  To Use Inheritance 
+							
+				
+				Self Invoking Function 
+				
+				function findPrice(givenProductId) {
+					...
+				}
+				
+				// Invoking
+				findPrice(101);
+				
+				
+				findPrice(function () { ... });
+				
+							

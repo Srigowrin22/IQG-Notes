@@ -1,0 +1,5 @@
+var personJSON = "{\"name\":\"Rahul\"\",\"age\":46}";
+
+var personObject = JSON.parse(personJSON);
+
+console.log(personObject);

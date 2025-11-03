@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://localhost:7101/Lesson04-WebServiceApp-SOAPWebService-context-root/CurrencyConvertorPort/#%7Bhttp%3A%2F%2Fiqgateway.training%2F%7DCurrencyConvertorService?wsdl"
+          uri="../tranining/iqgateway/CurrencyConvertorService.wsdl"/>
+</catalog>

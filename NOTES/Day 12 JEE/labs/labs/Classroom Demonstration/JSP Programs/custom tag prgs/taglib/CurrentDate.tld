@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib SYSTEM "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd"> 
+<taglib> 
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>dt</shortname>
+<info>Gets the current System date</info> 
+<tag> 
+<name>today</name>
+<tagclass>DateClass</tagclass>
+</tag> 
+</taglib> 

@@ -1,0 +1,40 @@
+Day 3 :
+
+	Module 13 : Application Development Using Web Services [ SOAP and REST ]
+
+		Lesson 03 : XML Parsing using JAXB
+			
+				JAXB [ Java API For XML Binding ]
+				
+				Why ?
+				
+					To and Fro Conversion From Java to XML and XML to Java 
+					
+					
+				Lesson 04 : SOAP Web Services Overview 
+				
+					Webservices 
+					
+						a.  SOAP Based
+						
+						b.  REST Based 
+						
+				
+						Meant For Defining Business Logic of the Application 
+						
+						
+						A WSDL [ Web Service Description Language ]
+						
+						
+						<types>: Defines the data types used by the Web service
+						
+						<message>: Describes the messages used by the Web service; defines the data elements of an operation
+												
+						
+						<portType>: Describes a Web service, the operations that can be performed, and 	the messages that are involved
+						
+						
+						<binding>: Defines the communication protocols used by the Web service
+						
+						
+						<service>: Describes the name and location of the Web service and the context with which it can be accessed

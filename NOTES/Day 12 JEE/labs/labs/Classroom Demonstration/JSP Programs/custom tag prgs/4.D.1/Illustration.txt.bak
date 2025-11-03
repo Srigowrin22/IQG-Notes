@@ -1,0 +1,112 @@
+Custom Tags
+
+	javax.servlet.jsp.tagext.*;
+
+
+Custom Tags are nothing but User Defined Tags which are typically XML Based Tags
+
+	Idea
+
+		1. Abstraction
+
+		2. Seperation of Concern
+
+		3. Easy Management
+
+		4. Reusable
+
+Tag
+
+	1.  Predefined
+
+	2.  User Defined
+
+		a. Tag with Body with Attributes
+			<BODY BGCOLOR>
+		
+		b. Tag with Body without Attributes
+			<p>
+		
+		c. Tag withOut Body with Attributes
+			<hr>
+		
+		d. Tag Without Body without Attributes
+			<br>
+
+
+Custom Tags
+
+Requriments
+
+	1.	Tag Handler  ( Java Class )
+			
+	2.	Tag Library Descriptor File (.tld)
+
+	3.	JSP page which uses Custom Tags
+
+
+
+Keep the jsp-api.jar file in classpath 
+
+
+Create a context
+
+			Context
+				|
+				|
+				-------WEB-INF
+				|		|
+				|		|
+			(Jsp 	files		------classes
+			tld files		|	|
+			html files)	|	|
+						|	-----  Java Tag handler file
+						|		with other java files
+						|
+						|-----lib
+						|	|
+						|	|
+						|	----	jar files
+						|
+						|
+						|
+						-------web.xml,.tld
+					
+										
+Compile the Java Tag Handler
+
+
+
+
+Tag Handler
+
+	The functionality which defines the properties of that tag
+
+
+	Tag interface ( Bodyless Tag )
+
+		doStartTag()
+
+			Return Types
+
+				SKIP_BODY
+
+				EVAL_BODY_INCLUDE
+
+		doEndTag()
+
+			Return Types
+
+				EVAL_PAGE
+
+				SKIP_PAGE
+
+
+		release()
+
+	BodyTag Interface
+
+
+After Completing the logic for the tag and Tag Handler..
+
+Register it in TLD File.

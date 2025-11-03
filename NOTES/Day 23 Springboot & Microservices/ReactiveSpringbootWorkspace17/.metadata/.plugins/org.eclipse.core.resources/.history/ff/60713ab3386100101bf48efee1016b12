@@ -1,0 +1,107 @@
+package training.iqgateway.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import training.iqgateway.dto.OffenceTypesDTO;
+import training.iqgateway.entities.OffenceTypesEO;
+import training.iqgateway.repository.OffenceTypesRepository;
+import training.iqgateway.service.OffenceTypesService;
+
+
+@Service
+public class OffenceTypesServiceImpl implements OffenceTypesService {
+
+    @Autowired
+    private OffenceTypesRepository offenceTypesRepository;
+
+    // Utility method to convert entity to DTO
+    private OffenceTypesDTO toDTO(OffenceTypesEO eo) {
+        if (eo == null) return null;
+        return new OffenceTypesDTO(
+            eo.getOffenceId(),
+            eo.getOffenceType(),
+            eo.getVehicleType(),
+            eo.getPenaltyAmt()
+        );
+    }
+
+    @Override
+    public String persistOffenceTypeEO(OffenceTypesEO offenceEO) {
+        // Check if ID is manually provided and exists (to avoid duplicates)
+        if (offenceEO.getOffenceId() != null && offenceTypesRepository.existsById(offenceEO.getOffenceId())) {
+            throw new RuntimeException("Offence type already exists with ID: " + offenceEO.getOffenceId());
+        }
+        
+        // Calculate max ID manually and assign new ID = max + 1
+        Long maxId = offenceTypesRepository.findMaxId(); // safely get max ID, or 0 if none
+        Long newId = maxId + 1;
+        offenceEO.setOffenceId(newId);
+        
+        offenceTypesRepository.save(offenceEO);
+        return "Offence type created successfully with ID " + newId;
+    }
+
+    @Override
+    public String mergeOffenceTypeEO(OffenceTypesEO offenceEO) {
+        // Check if offence exists
+        OffenceTypesEO existing = offenceTypesRepository.findById(offenceEO.getOffenceId())
+            .orElseThrow(() -> new RuntimeException("Offence type not found: " + offenceEO.getOffenceId()));
+
+        // Update fields
+        existing.setOffenceType(offenceEO.getOffenceType());
+        existing.setVehicleType(offenceEO.getVehicleType());
+        existing.setPenaltyAmt(offenceEO.getPenaltyAmt());
+
+        offenceTypesRepository.save(existing);
+        return "Offence type updated successfully";
+    }
+
+    @Override
+    public Boolean removeOffenceTypeEO(OffenceTypesEO offenceEO) {
+        if (offenceEO == null || offenceEO.getOffenceId() == null) {
+            throw new IllegalArgumentException("Offence or Offence ID must not be null");
+        }
+        offenceTypesRepository.deleteById(offenceEO.getOffenceId());
+        return true;
+    }
+
+    @Override
+    public List<OffenceTypesDTO> getOffenceTypeEOFindAll() {
+        List<OffenceTypesEO> offenceList = offenceTypesRepository.findAll();
+        List<OffenceTypesDTO> dtoList = new ArrayList<>();
+        for (OffenceTypesEO eo : offenceList) {
+            dtoList.add(toDTO(eo));
+        }
+        return dtoList;
+    }
+
+    @Override
+    public OffenceTypesEO findOffenceTypeByID(Integer offenceID) {
+        return offenceTypesRepository.findById(offenceID.longValue()).orElse(null);
+    }
+
+    @Override
+    public List<OffenceTypesDTO> findOffenceByVehicleType(String vehicleType) {
+        List<OffenceTypesEO> offenceList = offenceTypesRepository.findByVehicleType(vehicleType);
+        List<OffenceTypesDTO> dtoList = new ArrayList<>();
+        for (OffenceTypesEO eo : offenceList) {
+            dtoList.add(toDTO(eo));
+        }
+        return dtoList;
+    }
+
+    @Override
+    public List<OffenceTypesDTO> findOffenceByOffenceType(String offenceType) {
+        List<OffenceTypesEO> offenceList = offenceTypesRepository.findByOffenceType(offenceType);
+        List<OffenceTypesDTO> dtoList = new ArrayList<>();
+        for (OffenceTypesEO eo : offenceList) {
+            dtoList.add(toDTO(eo));
+        }
+        return dtoList;
+    }
+}

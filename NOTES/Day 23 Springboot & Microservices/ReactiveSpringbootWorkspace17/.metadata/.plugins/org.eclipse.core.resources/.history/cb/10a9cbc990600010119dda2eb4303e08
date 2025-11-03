@@ -1,0 +1,94 @@
+package training.iqgateway.entities;
+
+@Entity
+@Table(name = "OwnerEO")
+public class OwnerEO {
+
+    @Id
+    @Column(name = "OWNER_ID")
+    private Long ownerId;
+
+    @Column(name = "OWNER_NAME", length = 100, nullable = false)
+    private String ownerName;
+
+    @Column(name = "GENDER", length = 2)
+    private String gender = "NA";
+
+    @Column(name = "OWNER_AADHAR", length = 50, nullable = false, unique = true)
+    private String ownerAadhar;
+
+    @Column(name = "PAN_CARD", length = 20)
+    private String panCard;
+
+    @Column(name = "PHONE", nullable = false)
+    private Long phone;
+
+    @Column(name = "ADDRESS", length = 200, nullable = false)
+    private String address;
+
+    @Column(name = "PASSWORD", length = 50, nullable = false)
+    private String password;
+
+    // One owner can have many registrations
+    @OneToMany(mappedBy = "owner")
+    private Set<RegistrationEO> registrations;
+
+    // Constructors, getters, setters
+
+    public OwnerEO() {}
+
+    public Long getOwnerId() {
+        return ownerId;
+    }
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+    }
+    public String getOwnerName() {
+        return ownerName;
+    }
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+    public String getGender() {
+        return gender;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    public String getOwnerAadhar() {
+        return ownerAadhar;
+    }
+    public void setOwnerAadhar(String ownerAadhar) {
+        this.ownerAadhar = ownerAadhar;
+    }
+    public String getPanCard() {
+        return panCard;
+    }
+    public void setPanCard(String panCard) {
+        this.panCard = panCard;
+    }
+    public Long getPhone() {
+        return phone;
+    }
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public Set<RegistrationEO> getRegistrations() {
+        return registrations;
+    }
+    public void setRegistrations(Set<RegistrationEO> registrations) {
+        this.registrations = registrations;
+    }
+}

@@ -1,0 +1,56 @@
+package training.iqgateway.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import training.iqgateway.entities.AdminEO;
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.repository.RoleEORepository;
+
+@RestController
+@RequestMapping("/roles")
+public class RoleEOContoller {
+	
+	@Autowired
+	private RoleEORepository rolesRepositoryRef;
+	
+	
+	public String persistRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.save(roleEO);
+		return "Success";
+	}
+
+	public String mergeRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.save(roleEO);
+		return "Updated";
+	}
+
+	public Boolean removeRoleEO(RoleEO roleEO) {
+		rolesRepositoryRef.delete(roleEO);
+		return true;
+	}
+    
+	@GetMapping
+	public List<RoleEO> getRoleEOFindAll() {
+		return  rolesRepositoryRef.findAll();
+		
+	}
+
+	public RoleEO findRoleByRoleID(Long roleId) {
+		return rolesRepositoryRef.findById(roleId).orElse(null);
+	}
+
+	public RoleEO findRoleByRoleName(String roleName) {
+		return rolesRepositoryRef.findByroleName(roleName);
+	}
+
+	public Boolean login(AdminEO adminEO) {
+		return null;
+		}
+
+	}
+

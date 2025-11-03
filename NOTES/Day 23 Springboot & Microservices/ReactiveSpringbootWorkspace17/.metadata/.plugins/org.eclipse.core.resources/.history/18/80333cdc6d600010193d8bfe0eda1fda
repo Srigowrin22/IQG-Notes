@@ -1,0 +1,13 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import training.iqgateway.entities.RoleEO;
+
+@Repository
+public interface RolesRepository extends JpaRepository<RoleEO, Long>{
+
+	RoleEO findByroleName(String roleName);
+
+}

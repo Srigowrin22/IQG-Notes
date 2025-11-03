@@ -1,0 +1,33 @@
+
+Where to Store Data in Servlets
+
+	Variables --- To Store 
+
+
+	ServletRequest ( Local )
+
+		setAttribute(Name, Value)
+
+		getAttribute(Name)
+
+		removeAttribute(Name)
+	
+
+	HttpSession ( Instance )
+		
+		setAttribute(Name, Value)
+
+		getAttribute(Name)
+
+		removeAttribute(Name)
+	
+
+	ServletContext ( Static )
+
+		setAttribute(Name, Value)
+
+		getAttribute(Name)
+
+		removeAttribute(Name)
+	
+		

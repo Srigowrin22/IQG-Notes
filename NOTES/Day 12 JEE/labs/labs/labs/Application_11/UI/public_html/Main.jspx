@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1" binding="#{productBrowsingBean.d1}">
+      <af:form id="f1" binding="#{productBrowsingBean.f1}">
+        <af:tree id="categoryTree" value="#{productBrowsingBean.treeModel}"
+                 var="Category" binding="#{productBrowsingBean.categoryTree}"/>
+        <af:panelSplitter id="ps1" splitterPosition="120"
+                          inlineStyle="width:100%;">
+          <f:facet name="first">
+            <af:panelAccordion id="pa1">
+              <af:showDetailItem text="Categories" id="sdi1"/>
+            </af:panelAccordion>
+          </f:facet>
+          <f:facet name="second">
+            <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                 inlineStyle="width:100%;">
+              <af:panelHeader text="Products" id="ph1">
+                <f:facet name="context"/>
+                <f:facet name="menuBar"/>
+                <f:facet name="toolbar"/>
+                <f:facet name="legend"/>
+                <f:facet name="info"/>
+                <af:table value="#{productBrowsingBean.allProducts}" var="row"
+                          rowBandingInterval="0" id="productsTable"
+                          columnStretching="last" inlineStyle="width:100%;">
+                  <af:column sortable="false" headerText="Product Name"
+                             align="start" id="c4">
+                    <af:outputText value="#{row.productName}" id="ot4"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="Description"
+                             align="start" id="c3">
+                    <af:outputText value="#{row.description}" id="ot3"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="List Price"
+                             align="start" id="c1">
+                    <af:outputText value="#{row.listPrice}" id="ot5"/>
+                  </af:column>
+                  <af:column sortable="false" headerText="Additional Info"
+                             align="start" id="c2">
+                    <af:outputText value="#{row.additionalInfo}" id="ot2"/>
+                  </af:column>
+                </af:table>
+              </af:panelHeader>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelSplitter>
+        <af:outputText value="#{category.categoryName}" binding="#{productBrowsingBean.ot1}"
+                       id="ot1"/>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:productBrowsingBean-->
+</jsp:root>

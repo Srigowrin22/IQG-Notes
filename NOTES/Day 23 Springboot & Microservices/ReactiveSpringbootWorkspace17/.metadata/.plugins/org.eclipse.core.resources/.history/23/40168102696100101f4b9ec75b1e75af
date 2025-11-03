@@ -1,0 +1,22 @@
+package training.iqgateway.service;
+
+import java.util.List;
+
+import training.iqgateway.entities.RegistrationEO;
+
+public interface RegistrationService {
+
+    String persistRegistrationEO(RegistrationEO regisEO);
+
+    String mergeRegistrationEO(RegistrationEO regisEO);
+
+    Boolean removeRegistrationEO(String regisID);
+
+    RegistrationEO findRegistrationByID(String regisID);
+
+    RegistrationEO findRegistrationByVehID(Integer vehID);
+
+    List<RegistrationEO> findRegistrationByAadhar(String aadhar);
+
+    List<RegistrationEO> findAllRegistrations();
+}

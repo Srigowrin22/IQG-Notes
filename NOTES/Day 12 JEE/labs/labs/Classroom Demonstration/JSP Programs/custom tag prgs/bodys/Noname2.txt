@@ -1,0 +1,15 @@
+
+JSP Phases
+
+	1.  Translation Phase
+
+		Phase where Requested JSP is Converted into Servlet
+		
+		PageCompileServlet --- Person 
+	
+	2.  Request Processing Phase
+
+		Asking Generated Servlet to Take Client Request and  Process the request and Generate Response
+
+
+	

@@ -1,0 +1,39 @@
+// -------- Arrays in Javascript -----------
+var courses = ["Java", "Javascript", "Webservices"];
+var students = [12, 12, 12];
+
+// -------- Singleton Object ----------
+var course = {
+    name: "Javascript Fundamentals",
+    students: 5,
+    frequency: "Daily"
+}
+
+//  Creating Arrays using predefined Array Class
+var students_new = new Array();
+var students_new_init = new Array(12, 5, 7);
+
+// Composition in singleton Object
+var myObj = {
+    name: "Ring",
+    diameter: 12,
+    specs: {
+        material: "Wood",
+        waterProof: false
+    }
+}
+console.log(myObj); // Does not work
+
+// Accessing Object Attributes using DOT Operator
+console.log("Name: " + myObj.name + " Diameter: " + myObj.diameter + " Specs: " + myObj.specs.material + " " + myObj.specs.waterProof);
+
+// Accessing the Object using OFF Operator
+//  variable name has invalid characters like : "first-name" : "Buzz" 
+//  now access name using OFFoperator -> console.log(person["first-name"]);
+console.log("Name: " + myObj["name"] + " Diameter: " + myObj["diameter"] + " Specs: " + myObj["specs"]["material"] + " " + myObj["specs"]["waterProof"]);
+
+// In Javascrpit Arrays are Heterogeneous and its Dynamic [Cannot strink]
+var myArray = ["One", 2, "Three", 4, "Five", 6, "Seven"];
+
+// Accessing the array elements
+console.log(myArray[0] + "\t" + myArray[23]);

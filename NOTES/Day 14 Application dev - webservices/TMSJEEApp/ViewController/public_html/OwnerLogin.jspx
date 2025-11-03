@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <html>
+            <head>
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+                <title>OwnerLogin</title>
+                <link rel="stylesheet" type="text/css"
+                      href="images/styles5.css"/>
+            </head>
+            <body>
+                <div class="main-container">
+                    <div class="left-img"></div>
+                    <div class="right-content">
+                        <div class="system-title">Traffic Offence Management</div>
+                        <h:messages globalOnly="true" layout="list"
+                                    styleClass="global-messages"/>
+                         
+                        <h:form id="mainForm">
+                            <!-- Signup Card -->
+                            <h:panelGroup rendered="#{!backing_OwnerLogin.loginMode}"
+                                          styleClass="card">
+                                <div class="card-header">Signup</div>
+                                <h:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             cellpadding="5">
+                                    <h:outputLabel for="ownerName"
+                                                   value="Name:"/>
+                                    <h:inputText id="ownerName"
+                                                 binding="#{backing_OwnerLogin.ownerNameFLD}"
+                                                 required="true"
+                                                 requiredMessage="Name is required."/>
+                                    <h:outputLabel for="ownerAadhar"
+                                                   value="Aadhar Number:"/>
+                                    <h:inputText id="ownerAadhar"
+                                                 binding="#{backing_OwnerLogin.ownerAadharFLD}"
+                                                 required="true"
+                                                 requiredMessage="Aadhar is required."/>
+                                    <h:outputLabel for="phone" value="Phone:"/>
+                                    <h:inputText id="phone"
+                                                 binding="#{backing_OwnerLogin.phoneFLD}"
+                                                 required="true"
+                                                 requiredMessage="Phone is required."/>
+                                    <h:outputLabel for="address"
+                                                   value="Address:"/>
+                                    <h:inputText id="address"
+                                                 binding="#{backing_OwnerLogin.addressFLD}"
+                                                 required="true"
+                                                 requiredMessage="Address is required."/>
+                                    <h:outputLabel for="gender"
+                                                   value="Gender:"/>
+                                    <h:selectOneMenu id="gender"
+                                                     binding="#{backing_OwnerLogin.genderFLD}"
+                                                     required="true"
+                                                     requiredMessage="Gender is required.">
+                                        <f:selectItem itemLabel="Select Gender"
+                                                      itemValue=""/>
+                                        <f:selectItem itemLabel="Male"
+                                                      itemValue="M"/>
+                                        <f:selectItem itemLabel="Female"
+                                                      itemValue="F"/>
+                                        <f:selectItem itemLabel="Other"
+                                                      itemValue="O"/>
+                                    </h:selectOneMenu>
+                                    <h:outputLabel for="panCard"
+                                                   value="PAN Card:"/>
+                                    <h:inputText id="panCard"
+                                                 binding="#{backing_OwnerLogin.panCardFLD}"/>
+                                    <h:outputLabel for="password"
+                                                   value="Password:"/>
+                                    <h:inputSecret id="password"
+                                                   binding="#{backing_OwnerLogin.passwordFLD}"
+                                                   required="true"
+                                                   requiredMessage="Password is required."/>
+                                    <h:outputLabel for="confirmPassword"
+                                                   value="Confirm Password:"/>
+                                    <h:inputSecret id="confirmPassword"
+                                                   binding="#{backing_OwnerLogin.confirmPasswordFLD}"
+                                                   required="true"
+                                                   requiredMessage="Confirm Password is required."/>
+                                </h:panelGrid>
+                                <div class="btn-row">
+                                    <h:commandButton value="Signup"
+                                                     action="#{backing_OwnerLogin.signupAction}"
+                                                     styleClass="btn-primary"/>
+                                     
+                                    <h:commandButton value="Login"
+                                                     action="#{backing_OwnerLogin.switchToLogin}"
+                                                     immediate="true"
+                                                     styleClass="btn-secondary"/>
+                                </div>
+                            </h:panelGroup>
+                            <!-- Login Card -->
+                            <h:panelGroup rendered="#{backing_OwnerLogin.loginMode}"
+                                          styleClass="card">
+                                <div class="card-header">Login</div>
+                                <h:panelGrid columns="2"
+                                             columnClasses="label,value"
+                                             cellpadding="5">
+                                    <h:outputLabel for="loginAadhar"
+                                                   value="Aadhar Number:"/>
+                                    <h:inputText id="loginAadhar"
+                                                 binding="#{backing_OwnerLogin.loginAadharFLD}"
+                                                 required="true"
+                                                 requiredMessage="Aadhar is required."/>
+                                    <h:outputLabel for="loginName"
+                                                   value="Name:"/>
+                                    <h:inputText id="loginName"
+                                                 binding="#{backing_OwnerLogin.loginNameFLD}"
+                                                 required="true"
+                                                 requiredMessage="Name is required."/>
+                                    <h:outputLabel for="loginPassword"
+                                                   value="Password:"/>
+                                    <h:inputSecret id="loginPassword"
+                                                   binding="#{backing_OwnerLogin.loginPasswordFLD}"
+                                                   required="true"
+                                                   requiredMessage="Password is required."/>
+                                </h:panelGrid>
+                                <div class="btn-row">
+                                    <h:commandButton value="Login"
+                                                     action="#{backing_OwnerLogin.loginAction}"
+                                                     styleClass="btn-primary"/>
+                                     
+                                    <h:commandButton value="Signup"
+                                                     action="#{backing_OwnerLogin.switchToSignup}"
+                                                     immediate="true"
+                                                     styleClass="btn-secondary"/>
+                                </div>
+                            </h:panelGroup>
+                        </h:form>
+                    </div>
+                </div>
+            </body>
+        </html>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_OwnerLogin-->
+</jsp:root>

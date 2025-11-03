@@ -1,0 +1,201 @@
+Day 2 
+
+	Agenda :
+	
+		Module-14 : JavaScript Essentials
+		
+			Lesson 04 : BOM and DOM 
+			
+			Lesson 05 : JavaScript Events 
+			
+			
+			
+			
+			Lesson 04 : BOM and DOM 
+			
+				BOM [ Browser Object Model ]
+				
+				Window
+				
+					Is the Root of All the Browser Objects 
+				
+				History
+				
+					Keeps Track of Every Page the user Visits. This Includes [ Forward and Back ]
+				
+				Location
+				
+					Contains the URL of the Page, User Can Use the HREF to Point Out the URL 
+					
+				Navigator
+				
+					Contains the Details of the Browser 
+				
+				Screen 
+				
+					Provides the Information About the Display Properties 
+				
+				Document 
+				
+					MOST VVIO 
+					
+					Document Does Represent the Whole HTML Document Display Content 
+				
+			
+				Window
+				
+					Is the Root of All the Browser Objects 
+					
+					The Window Object is a Convenient Place for the DOM.
+					
+						Dcoument [ Display Area ]
+						
+						Scrollbars
+						
+						Tool Bars
+						
+						Navigation Bars
+						
+						Status Bar 
+						
+						Menu Bar 
+						
+						History and Bookmarks
+						
+						...
+						
+						
+						To Access a Window Object 
+						
+							window.propertyName
+							
+							window.methodName(Parameters)
+							
+						There is an Alias [ self ]
+						
+						
+					Attributes 
+					
+						closed
+						document
+						history
+						location
+						name
+						navigator
+						innerWidth
+						innerHeight
+						outerWidth
+						outerHeight
+						self
+						...
+					
+					
+					Operations 
+					
+						alert()
+						close()
+						confirm()
+						open()
+						prompt()
+						
+						...
+						
+						
+				Location Object 
+				
+					Represents URL Loaded into the Window. 
+					
+					Properties
+					
+						host 
+						hostName
+						pathName
+						protocol
+						href [ Represents a URL ]
+					
+					Operations
+					
+						assign
+						reload
+						replace
+						toString
+						
+						
+				Navigator Object 
+				
+					The Navigator Object get the Details About the Browser 
+					
+					
+				History Object 
+				
+					Maintains the Browser History
+					
+					
+					Methods
+					
+						back() - Takes Negative Value
+						
+						forward() - Takes Positive Value 
+						
+						go() -- Method Loads a Specific Page in From the History List
+						
+						
+				Screen Object 
+				
+					Properties 
+					
+						availHeight
+						
+						availWidth
+						
+						availLeft
+						
+						availRight
+						
+						colorDepth
+						
+						height
+						
+						width 
+						
+						
+		Lesson 05 : JavaScript Events
+				
+			Events 
+			
+				1.  Diretly Via HTML
+			
+				2.  Through DOM 
+						
+						What is an Event ? 
+			
+							An Event is an Interaction Between Client and the Application 
+						
+							Any GUI Application Without Events is Incomplete
+						
+							What all Components are Part of the Event ?
+					
+								a. UI Component 
+								
+								b. Event Listener  
+								
+								c. Event Handler 
+								
+							Firstly We need to Add Event Listener on the UI Component, So its Constantly Listening for a Particular Type of Event.
+						
+							When an Event is fired/Triggered, the Next Moment Event Object is Constructed and Passed on to the Event Handler 
+						
+							Contents of Event Object 
+						
+							1.  Source Component which has raised the Event
+							
+							2.  Category of the Event 
+							
+							3.  Time/Sequence of the Event 
+							
+							Thirdly the Event Handler Receives the Event Object as Parameter, Event Handler is the Place, Where What is Needs to Be Done is Defined [ Action ]
+							
+							4.  Data 
+						
+					
+				

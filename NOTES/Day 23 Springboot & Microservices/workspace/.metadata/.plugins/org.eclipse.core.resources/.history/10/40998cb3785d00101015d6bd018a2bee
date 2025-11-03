@@ -1,0 +1,9 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import training.iqgateway.entities.AdminEO;
+
+public interface AdminRepository extends CrudRepository<AdminEO, Long>{
+
+}

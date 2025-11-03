@@ -1,0 +1,7 @@
+package training.iqgatewa.rowmapper;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class DepartmentRowMapper implements RowMapper<T> {
+
+}

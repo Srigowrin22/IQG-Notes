@@ -1,0 +1,415 @@
+Module-7 : Java SE
+
+Day 1
+
+	Agenda : 
+	
+		Lesson 01 : Introduction to Java
+		
+		Lesson 02 : Object Oriented Programming Principles
+		
+		Lesson 03 : Basic Syntax and Coding Conventions
+		
+		
+		Lesson 01 : Introduction to Java
+	
+		Softwares 
+	
+		1.  JDK
+			[ 8 and 17 ]
+			
+			a.  JDE [ Java Development Environment ]
+			
+			b.  JRE [ Java Runtime Environment ]
+		
+		2.  Editor [ Notepad++ , EditPlus, ... ]
+		
+		3.  Best Friend [ Java Documentation ]
+		
+		
+		What is a JAR File ?
+		
+			A Jar File is Compressed File [ Just Like .zip, .rar  ... ]
+			
+				Usally it contains Class Files [ Compiled Form of Java Source Files ]
+		
+		
+		After JDK Installation it Becomes our Duty to Configure JDK
+		
+		Why Should we Configure ?
+		
+			To use the Right Version of Java
+			
+			
+		JAVA_HOME : To the Dir Where Java is Installed
+
+		Value	  : C:\Program Files\Java\jdk1.8.0_202
+
+
+		PATH	  : To the Dir Where Executables are available
+
+		Value     : C:\Program Files\Java\jdk1.8.0_202\bin;.;
+
+
+		CLASSPATH : To the Dir Where Jar's are available [ Represent's Libs ]
+
+		Value     : C:\Program Files\Java\jdk1.8.0_121\lib\tools.jar;.;D:\downloads\ojdbc14.jar;
+
+
+			Priniciples of Object Oriented 
+			
+			1.  Classes and Objects 
+			
+			2.  Inheritance
+			
+			3.  Polymorphism
+			
+			4.  Abstraction
+			
+			5.  Encapsulation
+			
+			6.  Dynamic Binding 
+			
+			
+			Java Application Architecture
+			
+			1.  Java Source Files  [ HelloWorld.java ]
+			
+			2.  Java Class Files   [ HelloWorld.class ]
+			
+			3.  Java API [ Application Programming Interface ] [ System, String, ... ]
+			
+			4.  Java Virtual Machine [ Execution Takes Place ]
+			
+					Stages in VM 
+					
+					a.  Class Loading Architecture
+					
+						In Which Programmer Provided Classes and Classes From API on Which Programmer Provided Class Was Dependent ON is LOADED
+						
+					
+					b.  Execution Engine
+					
+						These Bytecodes are Interpreted By VM 
+						
+						
+			
+			
+			Lesson 02 : Object Oriented Programming
+			
+				Composition 
+				
+					One Object is Composed of Another Object 
+					
+					Types 
+					
+					a.  Weak 
+					
+						Dependency is not Mandatory 
+						
+						When One Object is Not Completely Dependent on Another
+						
+						Eg : Car is Composed of Infotainment System 
+						
+					
+					b.  Strong 
+			
+						Dependency is Mandatory
+						
+						When One Object is Completely Dependent on Another
+						
+						Eg: Car Body is Composed With Engine 
+						
+			
+				Guided Practice 
+				
+				1. Eraser 
+				
+						Attributes :
+							
+							String color
+							double dimension
+							String type
+							String shape
+							...
+							
+						Operations :
+						
+							erase()
+							changeColor()
+							changeType()
+							changeShape()
+							getColor()
+							getType()
+							getShape()
+							...
+							
+				2. Pencil 
+				
+						Attributes :
+						
+							String foreColor
+							String ledColor
+							double dimension
+							float price
+							String brand
+							String materialType
+							String type
+							String ledType
+							boolean containsEraser
+							Eraser eraserRef
+							...
+							
+							
+						Operations :
+						
+							write()
+							sharpen()
+							
+							Setters
+							Getters
+			
+				2. Pen
+				
+						Attributes :
+						
+							String foreColor
+							String inkColor
+							double dimension
+							float price
+							String brand
+							String materialUsed
+							String type
+							float pointTip
+							int inkAmount
+							...
+							
+						Operations :
+						
+							write()
+							refill()
+							
+							Setters
+							Getters
+			
+			
+				3.  Fish
+				
+						Attributes :
+						
+						
+						Operations :
+						
+						
+			Priniciples of Object Oriented 
+		
+			1.  Classes and Objects 
+			
+			2.  Inheritance
+			
+			3.  Polymorphism
+			
+			4.  Abstraction
+			
+			5.  Encapsulation
+			
+			6.  Dynamic Binding 
+			
+			
+		Lesson 03 : Basic Syntax and Coding Conventions 
+		
+			What is a Comment ? 
+			
+				Comments are Non Executable Statements Which are Used For Better Understanding and Readability
+				
+			How do We Give Comments in Java ?
+			
+				a.  Single Line Comment [ // ]
+				
+				b.  Multi Line Comment  [ /*    */ ]
+				
+				c.  Documentation Comment [ 
+											/**
+				                             *
+											 *
+											 */
+										  ]
+										  
+				
+				Comments are Information Given by a Developer to End User or Another Developer making them Understand About the Class/Component
+				
+				Annotations are Information Given By a Developer to a Tool [ Compiler / Interpreter ] to Do Something.
+				
+				Annotations Always Start With @
+				
+					@Override
+					
+					Why is this Required ?
+					
+					class DbmsOperations 
+					{
+						public void connectToDB() {
+							sop("Connects to Oracle DB");
+						}
+						
+						public void executeOnDB() {
+							sop("SELECT");
+						}
+						
+						public void disconnectFromDB(){
+							sop("Disconnects From Oracle DB");
+						}
+						
+					}
+					
+					class InsertOperations extends DbmsOperations 
+					{
+						@Override
+						public void executeOnDB() {
+							sop("INSERT");
+						}
+					
+					}
+					
+					@SupressWarning
+			
+			Structure of Java Program
+
+			1. Comment Section  [ Optional ]
+				
+				// Single Line
+
+				/*
+				   Multi Line 
+				*/
+
+			   /**
+				*
+				*  Documentation 
+				*
+				*/  
+
+			2. Package Section  [ Optional ]
+				
+				package <Package Name>;
+
+			3. Import Section   [ Optional ]
+
+				imports a set of packages.
+				
+				import java.sql.*;
+				import java.sql.Driver;
+				import java.sql.Connection;
+				import java.awt.*;
+				import java.awt.event.*;
+				
+				[ By Default there is one package which Available java.lang.* ]
+				
+			4. Interface Section [ Optional ]
+
+				In this Section we define a set of 
+
+				Interfaces.
+
+
+			5. Abstract Class Section [ Optional ]
+
+				In this Section we define a set of 
+
+				Abstract Classes
+
+
+			6. Contrete Class Defination Section [ Optional ]
+
+				We Can define a set of Classes
+
+				
+		Class Syntax : 
+		
+		
+			< Access Modifiers > class < Class Name >
+			{
+
+				// Member Variable Section / Instance Variables / Attributes / Properties
+
+				< Access Modifiers > < Data Type > variableName;
+				.
+
+				.
+
+				//  Class Variables Section / Global Variables / Static Variables
+
+				< Access Modifiers > static < Data Type> variableName;
+
+				.
+
+				.
+
+				.
+
+				
+
+				// Member Function Section / Instance Methods / Operations / Functions / Procedures / Behaviour
+				
+				< Access Modifiers > < Return Type > < Function Name >( Parameter List ) 
+				{
+					Body
+				}
+
+
+				// Static Function Section / Global Methods
+				
+				<Access Modifiers > static <Return Type> <Function Name>(Parameter List) 
+				{
+					Body
+				}
+				
+				// Is Used to Initailize Static Variables
+				static
+				{
+				
+				
+				}
+
+				// Special Functions ( Constructors )
+
+				<Access Modifier> < Function Name with same name is Class >(Para)
+				{
+
+				}
+
+
+			}
+				
+			
+			Variable Scopes
+			
+			1.  Block Variable
+			
+					Declared within a Block of Code [ If , for ... ]
+					Availibity of Such Variables are Only Within the Block 
+			
+			2.  Method Variable
+			
+					Declared within a Method [ getCustomerDetails() ... ]
+					Availibity of Such Variables are AnyWhere Within the Method 
+			
+					
+			3.  Instance Variable
+			
+					Declared within a Class 
+					
+					They are Non Static Variables 
+					
+					Availibity of Such Variables are Within the Class and Object Context
+			
+			
+			4.  Class Variable
+					
+					Declared within a Class 
+					
+					They are Declared With Static
+					
+					Availibity of Such Variables are Throughout the Class 
+					
+					No Need of Object to Access Class Variables Becoz They are Shared Among All the Objects [ Shared Entity ]

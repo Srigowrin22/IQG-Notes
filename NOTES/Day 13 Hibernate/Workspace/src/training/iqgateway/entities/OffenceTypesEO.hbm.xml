@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 23, 2025 11:43:37 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="training.iqgateway.entities.OffenceTypesEO" table="OFFENCE_TYPES">
+        <id name="offenceID" type="java.lang.Integer">
+            <column name="OFFENCE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="offenceType" type="java.lang.String">
+            <column name="OFFENCE_TYPE" />
+        </property>
+        <property name="penaltyAmt" type="java.lang.Integer">
+            <column name="PENALTY_AMT" />
+        </property>
+        <property name="vehicleType" type="java.lang.String">
+            <column name="VEHICLE_TYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

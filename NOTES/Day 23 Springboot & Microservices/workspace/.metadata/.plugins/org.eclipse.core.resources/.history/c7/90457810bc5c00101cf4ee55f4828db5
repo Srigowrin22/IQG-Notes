@@ -1,0 +1,22 @@
+package training.iqgateway;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
+
+@Document(collection = "DEPARTMENTS")
+public class DepartmentEO {
+
+	@Id
+	private Integer DepartmentId;
+
+	private String DepartmentName;
+
+	private Integer ManagerId;
+
+	private Integer LocationId;
+
+	public DepartmentEO() {
+		super();
+	}
+
+}

@@ -1,0 +1,6 @@
+package training.iqgateway;
+
+@Controller
+public class HomeController {
+
+}

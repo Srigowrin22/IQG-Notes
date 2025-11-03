@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Online Banking with Earnest </title>
+</head>
+<body bgcolor=pink>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function valid(form) {
+  var field1 = form.firstname;  
+  var field2= form.lastname;
+  var field3= form.address;
+  var field4 = form.account;  
+  var field6= form.phonenumber;
+  var field7= form.file;
+  
+  firstname=field1.value;
+  lastname=field2.value;
+  address=field3.value;
+  account=field4.value;
+  phonenumber=field6.value;
+  file=field7.value;
+   alert(file);
+	
+  if (firstname.length==0)
+ {
+    alert("The first name cannot be left blank");
+    field1.focus();
+    field1.select();
+    return false;
+ }
+ else if (lastname.length==0)
+ {
+   alert("The lastname field cannot be left blank");
+   field2.focus();
+   field2.select();
+   return false;
+ }
+ else if (address.length==0)
+ {
+   alert("The address field cannot be left blank");
+   field3.focus();
+   field3.select();
+   return false;
+ }
+ else if (account.length==0)
+ {
+   alert("The account number cannot be left blank");
+   field4.focus();
+   field4.select();
+   return false;
+ }
+ else if (phonenumber.length==0)
+ {
+   alert("The phone number cannot be left blank");
+   field6.focus();
+   field6.select();
+   return false;
+ }
+}
+// -->
+</SCRIPT>
+
+
+<br>
+<br>
+<center>
+<form  onSubmit="return valid(this)" method=post action="http://127.0.0.1:8080/SGTDeploy/DBServlet">
+<table>
+<tr>
+<td>
+First Name:
+</td>
+<td>
+ <input type=text name="firstname">
+</td>
+</tr>
+<tr>
+<td>Last Name:
+</td>
+<td>
+<input type=text name="lastname">
+</td>
+</tr>
+<tr>
+<td>Address:
+</td>
+<td>
+<input type=text name="address">
+</td>
+</tr>  
+<tr>
+<td>Account Type:
+</td>
+<td>
+<input type=text name="account">
+</td>
+</tr>  
+<tr>
+<td>Annual Income:
+</td>
+<td>
+<input type=text name="income">
+</td>
+</tr>  
+<tr>
+<td>Phone Number:
+</td>
+<td>
+<input type=text name="phonenumber">
+</td>
+</tr>  
+
+<tr>
+<td>Browse:
+</td>
+<td>
+<input type=file name="file">
+</td>
+</tr>  
+
+
+</table>
+<center><input type=SUBMIT value=SUBMIT></center>
+</form>
+</center>
+</table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 8 elements from project &apos;Lesson04-Spring-AOP&apos;&#x0D;&#x0A;- Original project: &apos;Lesson04-Spring-AOP&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Lesson04-Spring-AOP/src/business&#x0D;&#x0A;     business.CurrencyConveter.java&#x0D;&#x0A;     Lesson04-Spring-AOP/src/business.impl&#x0D;&#x0A;     business.impl.CurrencyConverterImpl.java&#x0D;&#x0A;     business.impl.Customer.java&#x0D;&#x0A;     Lesson04-Spring-AOP/src/driver&#x0D;&#x0A;     driver.DiverApp.java&#x0D;&#x0A;     Bean.xml" description="Delete elements" element1="src/Bean.xml" element2="/src&lt;driver" element3="/src&lt;business.impl" element4="/src&lt;business" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1751527443128" subPackages="false" version="1.0"/>
+</session>

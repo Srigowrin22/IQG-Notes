@@ -1,0 +1,116 @@
+package training.iqgateway.dto;
+
+import java.sql.Date;
+
+public class AdminDTO {
+	private Long id;
+	private String role;
+	private String designationId;
+	private String name;
+	private String gender;
+	private String aadhar;
+	private Long phone;
+	private String password;
+	private Date hireDate;
+	private Integer signup;
+
+	public AdminDTO() {
+		// default constructor
+	}
+
+	public AdminDTO(Long id, String role, String designationId, String name, String gender, String aadhar, Long phone,
+			String password, java.util.Date date, Integer signup) {
+		this.id = id;
+		this.role = role;
+		this.designationId = designationId;
+		this.name = name;
+		this.gender = gender;
+		this.aadhar = aadhar;
+		this.phone = phone;
+		this.password = password;
+		this.hireDate = date;
+		this.signup = signup;
+	}
+
+	// Getters and setters
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public RolesDTO getRole() {
+		return role;
+	}
+
+	public void setRole(RolesDTO role) {
+		this.role = role;
+	}
+
+	public String getDesignationId() {
+		return designationId;
+	}
+
+	public void setDesignationId(String designationId) {
+		this.designationId = designationId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getAadhar() {
+		return aadhar;
+	}
+
+	public void setAadhar(String aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public Long getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Long phone) {
+		this.phone = phone;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Date getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
+	}
+
+	public Integer getSignup() {
+		return signup;
+	}
+
+	public void setSignup(Integer signup) {
+		this.signup = signup;
+	}
+}

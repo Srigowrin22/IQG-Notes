@@ -1,0 +1,11 @@
+package training.iqgateway.business;
+
+public interface AdminOperations {
+	
+	public Integer addDepartment(DepartmentEO deptEO);
+
+	public List<DepartmentEO> fetchAllDepartments();
+
+	public List<DepartmentEO> fetchDepartmentsBasedonLocation(Integer locationId);
+
+}

@@ -1,0 +1,61 @@
+package training.iqgateway.MovieCatalog.resources;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestTemplate;
+
+import training.iqgateway.moviecatalogservice.model.CatalogItems;
+import training.iqgateway.moviecatalogservice.model.Movie;
+import training.iqgateway.moviecatalogservice.model.Rating;
+
+@RestController
+@RequestMapping("/catalog")
+public class MovieCatalogResource {
+
+	@RequestMapping("/{userId}")
+	public List<CatalogItems> getCatalog(@PathVariable("userId") String userId) {
+
+		// Creation of RestTemplate Instance to Make an API Calls
+		RestTemplate restTemplate = new RestTemplate();
+
+		// Get All the Rated movies Ids [As of now We are hard coding]
+		// Later we will Make API Call Even to Rating MS
+
+		List<Rating> ratings = Arrays.asList(new Rating("1001", 5), new Rating("1002", 4));
+
+		return ratings.stream().map(rating -> {
+			Movie movie = null;
+			try {
+				movie = restTemplate.getForObject(new URI("http://localhost:9092/movies/" + rating.getMovieId()),
+						Movie.class);
+			} catch (RestClientException | URISyntaxException e) {
+				e.printStackTrace();
+			}
+			return new CatalogItems(movie.getMovieId(), "Awesome", rating.getRating());
+		}).collect(Collectors.toList());
+
+//		return ratings.stream().map(rating->new CatalogItem("KGF Chapter-1","Awesome", 5))
+//				.collect(Collectors.toList());
+
+//		return Collections.singletonList(
+//				new CatalogItem("Chaava","Awesome", 5)
+//		);
+
+		// For each Movie ID Call Movie Info Service and Get the Movie Description
+
+		// Curating All The Data For the Response
+
+	}
+//		return Collections.singletonList(new CatalogItem("Chennai Express", "Superbbb", 5));
+}

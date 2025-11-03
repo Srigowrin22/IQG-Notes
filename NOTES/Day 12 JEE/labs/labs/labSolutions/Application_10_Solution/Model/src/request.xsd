@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://www.example.org"
+            targetNamespace="http://www.example.org"
+            elementFormDefault="qualified">
+    <xsd:complexType name="input">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:string"/>
+            <xsd:element name="arg1" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="request" type="tns:input"/>
+</xsd:schema>

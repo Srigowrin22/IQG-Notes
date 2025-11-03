@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeLeaf.org>
+<table>
+	<tr>
+		<td>
+			<h4>Username:</h4>
+		</td>
+		<td>
+			<h4 th:text="${user.name}"></h4>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<h4>Email:</h4>
+		</td>
+		<td>
+			<h4 th:text="${user.email}"></h4>
+		</td>
+	</tr>
+</table>
+</html>

@@ -1,0 +1,5 @@
+EJB/JSF connection:
+
+port no: 7101
+password: weblogic123
+listen address: localhost or 

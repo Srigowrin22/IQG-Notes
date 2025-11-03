@@ -1,0 +1,70 @@
+package training.iqgateway.entities;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity
+@Table(name = "OFFENCE_TYPES")
+public class OffenceTypesEO {
+
+    @Id
+    @Column(name = "OFFENCE_ID")
+    private Long offenceId;
+
+    @Column(name = "OFFENCE_TYPE", length = 200, nullable = false)
+    private String offenceType;
+
+    @Column(name = "VEHICLE_TYPE", length = 50, nullable = false)
+    private String vehicleType;
+
+    @Column(name = "PENALTY_AMT")
+    private Long penaltyAmt = 100L;
+
+    // One offence type can have many vehicle offences
+    @OneToMany(mappedBy = "offenceType")
+    @JsonManagedReference
+    private Set<VehicleOffenceEO> vehicleOffences;
+
+    // Constructors, getters, setters
+
+    public OffenceTypesEO() {}
+
+    public Long getOffenceId() {
+        return offenceId;
+    }
+    public void setOffenceId(Long offenceId) {
+        this.offenceId = offenceId;
+    }
+    public String getOffenceType() {
+        return offenceType;
+    }
+    public void setOffenceType(String offenceType) {
+        this.offenceType = offenceType;
+    }
+    public String getVehicleType() {
+        return vehicleType;
+    }
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+    public Long getPenaltyAmt() {
+        return penaltyAmt;
+    }
+    public void setPenaltyAmt(Long penaltyAmt) {
+        this.penaltyAmt = penaltyAmt;
+    }
+    public Set<VehicleOffenceEO> getVehicleOffences() {
+        return vehicleOffences;
+    }
+    public void setVehicleOffences(Set<VehicleOffenceEO> vehicleOffences) {
+        this.vehicleOffences = vehicleOffences;
+    }
+}
+

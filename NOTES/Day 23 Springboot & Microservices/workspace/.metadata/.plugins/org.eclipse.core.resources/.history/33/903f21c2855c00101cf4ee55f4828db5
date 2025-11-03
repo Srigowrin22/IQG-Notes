@@ -1,0 +1,7 @@
+spring.application.name=Lesson03-Springboot-JPA
+
+#OracleDB Setting
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.username=HR
+spring.datasource.password=HR
+spring.datasource.driver.class=jdbc:oracle:thin:@localhost:1521:XE

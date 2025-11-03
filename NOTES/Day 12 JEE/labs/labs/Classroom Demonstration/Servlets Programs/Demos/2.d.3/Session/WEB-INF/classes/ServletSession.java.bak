@@ -1,0 +1,8 @@
+
+	http://127.0.0.1:7101/Session/lifecycle
+
+
+	http://127.0.0.1:7101/Session/lifecycle?action=invalidate
+
+
+	http://127.0.0.1:7101/Session/lifecycle?action=newSession

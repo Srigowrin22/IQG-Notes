@@ -1,0 +1,6 @@
+package training.iqgateway.entities;
+
+public interface DepartmentDAO {
+
+	public int insertDepartment(DepartmentEO )
+}

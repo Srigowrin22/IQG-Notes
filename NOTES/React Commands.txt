@@ -1,0 +1,63 @@
+-------------------------REACT-------------------------
+1) Using creat react
+	npx create-react-app myapp
+	cd myapp
+  	npm start
+
+2) Using Vite + React
+	npm create vite@latest my-app -- --template react
+	cd my-app
+ 	npm install
+  	npm run dev
+
+Notes: 
+
+1) Node-modules - contains all the libraries
+2) src - contain the whole work
+
+
+Build - npm run build
+https://create-react-app.dev/docs/deployment/
+
+
+3) package.json - contains all the dependencies
+4) packagelock.json - contains info abt all libraries
+
+
+
+New Commands:
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @mui/styled-engine-sc styled-components
+npm install @fontsource/roboto
+npm install @mui/icons-material
+
+npx create-toolpad-app@latest
+npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
+
+-------------------------PREACT-------------------------
+	npm create vite@latest my-app -- --template preact
+ 	cd my-app
+  	npm install
+ 	npm run dev
+
+
+---------------------------React Routing------------------
+
+npm install react-router-dom@6
+
+npm install react-router-dom
+
+---------------------------Mockserver------------------------
+Way 1: Host on jsonplaceholder
+1. Create database
+2. Borrow and upload on api service provided (jsonplaceholder.typicode.com )
+3. Using axios borrow and render
+
+Way 2: Mock server
+1. npm install -g mockserver
+2. API folder = cd API
+3. mockserver -m=mocks -p=9090
+
+-----------------JSON Server--------------------
+npm install -g json-server
+json-server --watch db.json --port 9090

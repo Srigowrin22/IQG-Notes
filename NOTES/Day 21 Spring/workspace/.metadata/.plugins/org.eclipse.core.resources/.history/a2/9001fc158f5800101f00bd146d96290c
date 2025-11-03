@@ -1,0 +1,5 @@
+package training.iqgateway.DAO;
+
+public class DepartmentDAO {
+
+}

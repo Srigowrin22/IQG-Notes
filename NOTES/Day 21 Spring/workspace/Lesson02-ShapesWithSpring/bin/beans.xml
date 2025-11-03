@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="rectangleBean" class="training.iqgateway.business.Rectangle">
+		<property name="length" value="10" />
+		<property name="width" value="20" />
+	</bean>
+
+	<bean id="circleBean" class="training.iqgateway.business.Circle">
+		<constructor-arg value="10" />
+	</bean>
+
+	<bean id="rightAngledTriangle" class="training.iqgateway.business.RightAngledTriangle">
+		<property name="sideA" value="10" />
+		<property name="sideB" value="20" />
+	</bean>
+
+	<bean id="ShapeMakerBean" class="training.iqgateway.business.ShapeMaker"
+		factory-method="randomShape1">
+	</bean>
+
+	<bean id="rectangle1" class="training.iqgateway.business.Rectangle">
+		<constructor-arg value="10" index="0" type="double"></constructor-arg>
+		<constructor-arg value="20" index="1" type="double"></constructor-arg>
+
+	</bean>
+
+	<bean id="rectangle2" class="training.iqgateway.business.Rectangle"
+		scope="prototype">
+		<constructor-arg value="10" index="0" type="double"></constructor-arg>
+		<constructor-arg value="100" index="1" type="double"></constructor-arg>
+
+	</bean>
+
+</beans>

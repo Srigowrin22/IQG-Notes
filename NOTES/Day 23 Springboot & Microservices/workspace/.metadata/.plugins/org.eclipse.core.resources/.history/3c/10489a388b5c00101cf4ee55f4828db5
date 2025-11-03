@@ -1,0 +1,97 @@
+package training.iqgateway;
+
+
+import java.util.Iterator;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.boot.CommandLineRunner;
+
+import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+ 
+@SpringBootApplication
+
+public class SpringbootJPAController implements CommandLineRunner {
+ 
+	@Autowired(required=true)
+
+	DepartmentService departmentServiceRef;
+
+	public static void main(String[] args) {
+
+		SpringApplication.run(Lesson03SpringBootJpaApplication.class, args);
+
+	}
+ 
+	@Override
+
+	public void run(String... args) throws Exception {
+
+		// TODO Auto-generated method stub
+
+		DepartmentEO deptEORef = new DepartmentEO(360,"IT Infrastructure", 100, 1700);
+
+		departmentServiceRef.addDepartment(deptEORef);
+
+		List<DepartmentEO> deptList = departmentServiceRef.getAllDepartments();
+
+		for (Iterator iterator = deptList.iterator(); iterator.hasNext();) {
+
+			DepartmentEO departmentEO = (DepartmentEO) iterator.next();
+
+			System.out.println(departmentEO);
+
+		}
+
+	}
+ 
+}
+
+ 
+package training.iqgateway;
+ 
+import java.util.List;
+ 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.web.bind.annotation.RequestBody;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import org.springframework.web.bind.annotation.RestController;
+ 
+@RestController
+
+public class DepartmentController {
+ 
+	
+
+	@Autowired
+
+	private DepartmentService departmentServiceRef;
+
+	@RequestMapping
+
+	public List<DepartmentEO> fetchAllDepartments() {
+
+		return departmentServiceRef.getAllDepartments();
+
+	}
+
+	@RequestMapping(value="/add-dept", method=RequestMethod.POST)
+
+	public void addDept(@RequestBody DepartmentEO deptEORef) {
+
+		departmentServiceRef.addDepartment(deptEORef);
+
+	}
+
+}
+
+ 

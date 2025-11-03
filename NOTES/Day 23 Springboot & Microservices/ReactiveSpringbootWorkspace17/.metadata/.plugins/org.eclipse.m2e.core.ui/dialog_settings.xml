@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 23 Springboot &amp; Microservices\ReactiveSpringbootWorkspace17\rety\src\main\java"/>
+			<item value="C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 23 Springboot &amp; Microservices\workspace\TMS-Springboot-JPA\src\main\java\training\iqgateway\service\impl\VehicleServiceImpl.java"/>
+			<item value="C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 23 Springboot &amp; Microservices\ReactiveSpringbootWorkspace17\producer\pom.xml"/>
+			<item value="C:\Users\srigowri.n\OneDrive - iqgateway pvt ltd\Desktop\NOTES\Day 23 Springboot &amp; Microservices\workspace\TMS-Springboot-JPA\src\main\java\training\iqgateway\repository\VehicleRepository.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.iqgateway"/>
+			<item value="erety"/>
+			<item value="training.iqgateway"/>
+		</list>
+		<list key="name">
+			<item value="Customer-Microservice-App-1"/>
+			<item value="ytu"/>
+			<item value="Rabbit MQ Subscriber"/>
+			<item value="Rabbit MQ Publisher"/>
+			<item value="Rabbit MQ Consumer"/>
+			<item value="Rabbit MQ Producer"/>
+		</list>
+		<list key="artifactId">
+			<item value="Customer-Microservice-1"/>
+			<item value="rety"/>
+			<item value="Subscriber"/>
+			<item value="Publisher"/>
+			<item value="Consumer"/>
+			<item value="producer"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="533"/>
+		<item key="x" value="400"/>
+		<item key="y" value="21"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenPropertyDialog">
+		<item key="DIALOG_X_ORIGIN" value="453"/>
+		<item key="DIALOG_Y_ORIGIN" value="280"/>
+		<item key="DIALOG_WIDTH" value="388"/>
+		<item key="DIALOG_HEIGHT" value="155"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

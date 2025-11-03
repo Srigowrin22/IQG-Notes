@@ -1,0 +1,48 @@
+package training.iqgateway.business.Impl;
+
+import java.util.List;
+
+import training.iqgateway.DAO.DepartmentDAO;
+import training.iqgateway.business.AdminOperations;
+import training.iqgateway.entity.DepartmentEO;
+
+public class AdminOperationImpl implements AdminOperations {
+
+	private DepartmentDAO departmentDAORef; // Persistence Layer Entry point
+
+	public AdminOperationImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public AdminOperationImpl(DepartmentDAO departmentDAORef) {
+		super();
+		this.departmentDAORef = departmentDAORef;
+	}
+
+	public DepartmentDAO getDepartmentDAORef() {
+		return departmentDAORef;
+	}
+
+	public void setDepartmentDAORef(DepartmentDAO departmentDAORef) {
+		this.departmentDAORef = departmentDAORef;
+	}
+
+	@Override
+	public Integer addDepartment(DepartmentEO deptEO) {
+		// TODO Auto-generated method stub
+		return departmentDAORef.insertDepartment(deptEO);
+	}
+
+	@Override
+	public List<DepartmentEO> fetchAllDepartments() {
+		// TODO Auto-generated method stub
+		return departmentDAORef.findAll();
+	}
+
+	@Override
+	public List<DepartmentEO> fetchDepartmentsBasedonLocation(Integer locationId) {
+		// TODO Auto-generated method stub
+		return departmentDAORef.findAllDepartmentsByLocation(locationId);
+	}
+
+}

@@ -1,0 +1,17 @@
+package training.iqgateway;
+
+import org.slf4j.Logger;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class SpringbootDemoLoggingController {
+	
+	Logger logRef = org.slf4j.LoggerFactory.getLogger(SpringbootDemoLoggingController.class);
+	
+	@GetMapping("/")
+	public String 
+	
+}

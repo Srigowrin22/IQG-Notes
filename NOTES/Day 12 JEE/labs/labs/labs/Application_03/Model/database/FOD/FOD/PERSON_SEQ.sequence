@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>PERSON_SEQ</name>
+    <identifier class="java.lang.String">bb69c03f-341f-42bd-9981-2aad8916c118</identifier>
+    <schemaName>FOD</schemaName>
+    <type>SEQUENCE</type>
+  </ID>
+  <name>PERSON_SEQ</name>
+  <cacheFlag>true</cacheFlag>
+  <cacheSize>10</cacheSize>
+  <cycleFlag>false</cycleFlag>
+  <incrementBy>1</incrementBy>
+  <lastNumber>300</lastNumber>
+  <maxValue>999999999999999999999999999</maxValue>
+  <minValue>1</minValue>
+  <orderFlag>false</orderFlag>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">fod</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>PERSON_SEQ</name>
+        <identifier class="java.math.BigDecimal">30493</identifier>
+        <schemaName>FOD</schemaName>
+        <type>SEQUENCE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>Timestamp</key>
+      <value class="java.lang.Long">1217888317000</value>
+    </entry>
+  </properties>
+  <schema>
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <name>FOD</name>
+      <identifier class="java.lang.String">5bd21afc-68c4-48be-be8a-ab0848711f74</identifier>
+      <schemaName>FOD</schemaName>
+      <type>SCHEMA</type>
+    </ID>
+    <name>FOD</name>
+  </schema>
+</sequence>

@@ -1,0 +1,146 @@
+Day 5 :
+
+	Agenda 
+		
+		Lesson 10 : Java IO 
+			
+		Lesson 11 : Inheritance
+			
+			
+			Lesson 10 : Java IO 
+			
+				So When we Operate on Files 
+			
+				1.  File
+						
+						An abstract representation of file and directory pathnames.
+				
+				2.  FileDescriptor
+				
+				3.  FileInputStream
+				
+				4.  FileOutputStream
+				
+				
+				Reading and Writing Objects
+				
+					Serialization : 
+					
+						Is a Process of Writing the State of the Objects on Some Persistence Storage Media [ Files / Or Any Storage ].
+						
+							State --- Attributes
+				
+					DeSerialization : 
+					
+						Is a Process of Reading the State of the Objects From Some Persistence Storage Media [ Files / Or Any Storage ].
+						
+							State --- Attributes
+				
+				
+					Transient ( Variable )
+					
+						Transient is an Access Modifier Used on Variables, Its Feature is the Variable which is Marked Transient is Excluded From Serialization
+						
+						[ When Serialization Happens, That Data Associated to the Variable is Not Saved in Persistence Storage Media ]
+				
+				
+				
+		Lesson 11 : Inheritance
+				
+					1.  Reusability    [ Using Attributes and Operations From Parent ]
+					
+					2.  Expandability  [ Adding New Attributes and Operations ]
+					
+					
+					Becoz of Inheritance All Properties and Methods [ Irrespective of Modifiers ] are 
+					
+					1.  Availability  [ Everything is Available to Derived Class ]
+					
+					2.  Accessiblity  [ But What is Accessible What is Not Accessible is All Depending on the Modifier ]
+					
+					
+					Super Reference
+					
+					1.  Can Be Used for Accessing Base Class Constructors
+					
+					2.  Can Even Used for Accessing Base Class Variables
+						[ When Both The classes Have Same Variable name ]
+						
+					3.  Can Even Be used for Accessing Base Class Methods
+						[ While Sub Class is Overriding the Method of Base Class, But Still it needs the Defination of Base Class ] 
+					
+					
+					
+					Overriding Usage 
+					
+					class DBMSOperations
+					{
+					
+						public void connectToDB() {
+							Connects to Oracle DB
+						}
+						
+						public void executeOnDB() {
+							SELECT
+						}
+						
+						public void disconnectFromDB() {
+							Disconnects From Oracle DB
+						}
+					}
+					
+					
+					class InsertOperations extends DBMSOperations 
+					{
+						public void executeOnDB() {
+							INSERT 
+							super.executeOnDB();
+						}
+					}
+					
+					class UpdateOperations extends DBMSOperations 
+					{
+						public void executeOnDB() {
+							UPDATE 
+							super.executeOnDB();
+						}
+					}
+					
+					class DeleteOperations extends DBMSOperations 
+					{
+						public void executeOnDB() {
+							DELETE
+							super.executeOnDB();
+						}
+					}
+					
+					
+				Treating Sub Class As its Super Class
+				
+					int i = 123;
+					
+					float f = 456.78f;
+					
+					f = i;  // f = 123.0f;
+					
+					i = (int)f;  //i = 456; 
+					
+			Final     ( Variable, Method & Class )
+			
+				Final on Variable = Constant 
+				
+				Final on Method   = Overriding NOT POSSIBLE 
+				
+				Final on Class    = Inheritance NOT POSSIBLE 
+				
+				
+				
+	ON TMS
+	
+		1.  Clerk Generates a Report , The Report Data Should Be Stored in the Folder [ Monthwise ] Then Store the Data in a File
+		
+		2.  Proof Will be an Image 
+		
+		3.  Load OwnerDetails and VehicleDetails [ Given By Dealer in the XML Form / Any Other Form, So RTO Can Read this File Later Push This Data into DB [ Rather Doing a Data Entry Job ]
+		
+		... 

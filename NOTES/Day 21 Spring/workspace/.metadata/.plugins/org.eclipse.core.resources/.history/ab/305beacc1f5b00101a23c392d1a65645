@@ -1,0 +1,72 @@
+package training.iqgateway.controller;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+public class Employee {
+	
+	 	@Size(min = 1, message = "Employee FirstName can't be empty")
+	    private String firstName;
+	     
+	    @Size(min = 1, message = "Employee LastName can't be empty")
+	    private String lastName;
+	     
+	    @Min(value = 1000, message = "ID must be a four digit number")
+	    private int empId;
+	     
+	     // custom validation
+	    @Address   
+	    private String address;
+	    
+	    
+	    public Employee(@NotNull String givenFirstName, @NotNull String givenLastName,
+	            @Min(value = 1000, message = "Roll number must be a four digit number") 
+	            int givenEmpId,
+	            @Size(min = 20, message = "Address must contains atleast 20 letters") 
+	    		@Size(max = 40, message = "Address must contains atleast 20 letters") 
+	            String address) {
+	            super();
+	            this.firstName = givenFirstName;
+	            this.lastName = givenLastName;
+	            this.empId = givenEmpId;
+	            this.address = address;
+	        }
+	         
+	        public Employee() {
+	        }
+
+			public String getFirstName() {
+				return firstName;
+			}
+
+			public void setFirstName(String firstName) {
+				this.firstName = firstName;
+			}
+
+			public String getLastName() {
+				return lastName;
+			}
+
+			public void setLastName(String lastName) {
+				this.lastName = lastName;
+			}
+
+			public int getEmpId() {
+				return empId;
+			}
+
+			public void setEmpId(int empId) {
+				this.empId = empId;
+			}
+
+			public String getAddress() {
+				return address;
+			}
+
+			public void setAddress(String address) {
+				this.address = address;
+			}
+	        
+	        
+	     
+}

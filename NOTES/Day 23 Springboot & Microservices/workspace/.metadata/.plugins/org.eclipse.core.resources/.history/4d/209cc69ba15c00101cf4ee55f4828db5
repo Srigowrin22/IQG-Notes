@@ -1,0 +1,39 @@
+package training.iqgateway;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import training.iqgateway.entities.RoleEO;
+import training.iqgateway.service.AdminService;
+
+@SpringBootApplication
+public class TMSSpringbootJPA implements CommandLineRunner{
+	
+	
+	@Autowired(required = true)
+	private AdminService adminServiceRef;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(TMSSpringbootJPA.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		RoleEO roleEO = new RoleEO(5l, "New Role");
+		adminServiceRef.persistRoleEO(roleEO);
+		List<RoleEO> roleEOList = adminServiceRef.getRoleEOFindAll();
+
+		for (Iterator<DepartmentEO> iterator = deptList.iterator(); iterator.hasNext();) {
+			DepartmentEO departmentEO = (DepartmentEO) iterator.next();
+			System.out.println(departmentEO);
+		}
+		
+	}
+	
+	
+}

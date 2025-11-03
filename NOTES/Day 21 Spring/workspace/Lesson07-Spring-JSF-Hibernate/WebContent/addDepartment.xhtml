@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<center>
+		<h2>Please Enter Department Details</h2>
+	<h:form>
+		<table>
+			<tr> 
+				<td> Department ID </td>
+				<td> <h:inputText value="#{departmentVORef.deptId}" /></td> 
+			</tr>
+			<tr> 
+				<td> Department Name Type </td>
+				<td> <h:inputText value="#{departmentVORef.deptName}" /></td> 
+			</tr>
+			<tr> 
+				<td> Manager ID </td>
+				<td> <h:inputText value="#{departmentVORef.mgrId}" /></td> 
+			</tr>
+			<tr> 
+				<td> Location Id</td>
+				<td> <h:inputText value="#{departmentVORef.locId}" /></td> 
+			</tr>
+			<tr> 
+				<td> <h:commandButton value="Submit" action="#{departmentVORef.navigate}" /></td> 
+			</tr>	
+		
+		</table>
+		</h:form>
+	</center>
+
+</body> 
+</html>

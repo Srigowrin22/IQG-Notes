@@ -1,0 +1,11 @@
+package training.iqgateway.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import training.iqgateway.entities.AdminEO;
+
+public interface AdminEORepository extends JpaRepository<AdminEO, String> {
+
+	AdminEO findBydesignationId(String designationId);
+
+}

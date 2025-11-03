@@ -1,0 +1,1712 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>PRODUCTS</name>
+    <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+    <schemaName>FOD</schemaName>
+    <type>TABLE</type>
+  </ID>
+  <name>PRODUCTS</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>DESCRIPTION</name>
+        <identifier class="java.lang.String">568ec39b-1ba6-4fde-9f14-857373262fcd</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>DESCRIPTION</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">0f01bf46-0c3a-4af3-9cb3-70f5c8b4e039</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>DESCRIPTION</name>
+            <identifier class="java.lang.String">568ec39b-1ba6-4fde-9f14-857373262fcd</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">4000</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>DESCRIPTION</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>DESCRIPTION</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>ADDITIONAL_INFO</name>
+        <identifier class="java.lang.String">6f0ad8f8-6cb7-4fb0-9fb3-ae91f9afd26b</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>ADDITIONAL_INFO</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">438bae83-0432-4e27-88dd-e188b40f2646</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>ADDITIONAL_INFO</name>
+            <identifier class="java.lang.String">6f0ad8f8-6cb7-4fb0-9fb3-ae91f9afd26b</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">4000</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ADDITIONAL_INFO</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ADDITIONAL_INFO</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>COST_PRICE</name>
+        <identifier class="java.lang.String">e4b9c446-5b8d-4895-b8ed-6aa62f8a680c</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>COST_PRICE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">d84b0cc8-1909-4cfb-8843-b6d4b89ed32f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>COST_PRICE</name>
+            <identifier class="java.lang.String">e4b9c446-5b8d-4895-b8ed-6aa62f8a680c</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">2</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>COST_PRICE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>COST_PRICE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SUPPLIER_ID</name>
+        <identifier class="java.lang.String">c6780274-b69d-4ee9-a4a4-1f1cd4b05a43</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>SUPPLIER_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">893d64f5-ab85-4e35-982c-0385fddfded6</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SUPPLIER_ID</name>
+            <identifier class="java.lang.String">c6780274-b69d-4ee9-a4a4-1f1cd4b05a43</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>SUPPLIER_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SUPPLIER_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCT_NAME</name>
+        <identifier class="java.lang.String">87ac1abb-6b10-4dc9-9811-e3b89931d924</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>PRODUCT_NAME</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">4a4c6e59-e15e-4023-b61a-2f0ebf535e8a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCT_NAME</name>
+            <identifier class="java.lang.String">87ac1abb-6b10-4dc9-9811-e3b89931d924</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PRODUCT_NAME</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCT_NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>LIST_PRICE</name>
+        <identifier class="java.lang.String">9404009e-acf3-4fbe-86cf-b802b5e87d42</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>LIST_PRICE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">03f595c1-44ce-4276-8049-26ba64fda335</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LIST_PRICE</name>
+            <identifier class="java.lang.String">9404009e-acf3-4fbe-86cf-b802b5e87d42</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">2</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>LIST_PRICE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LIST_PRICE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCT_ID</name>
+        <identifier class="java.lang.String">fffd612f-ed93-4b4a-ab7a-474f0f7b5a8e</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>PRODUCT_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">817c419f-2123-475f-9cda-8188d0e79d30</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCT_ID</name>
+            <identifier class="java.lang.String">fffd612f-ed93-4b4a-ab7a-474f0f7b5a8e</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PRODUCT_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCT_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CATEGORY_ID</name>
+        <identifier class="java.lang.String">f3f35724-4cfa-49d7-8921-32c0918fbb9b</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>CATEGORY_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">5726a30b-ce91-4a50-8c50-3d472daaa88a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CATEGORY_ID</name>
+            <identifier class="java.lang.String">f3f35724-4cfa-49d7-8921-32c0918fbb9b</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>CATEGORY_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>MIN_PRICE</name>
+        <identifier class="java.lang.String">702fb00c-f13a-4cf0-8aea-223608940e4c</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>MIN_PRICE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1ef73e46-e107-4cc8-a3c8-69ded5498e9f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>MIN_PRICE</name>
+            <identifier class="java.lang.String">702fb00c-f13a-4cf0-8aea-223608940e4c</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">2</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>MIN_PRICE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MIN_PRICE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>WARRANTY_PERIOD_MONTHS</name>
+        <identifier class="java.lang.String">a02547b9-0a3e-4ec5-8519-0d6b8b8d1783</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>WARRANTY_PERIOD_MONTHS</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">df250878-f944-465d-bb97-c6210a7c3b50</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>WARRANTY_PERIOD_MONTHS</name>
+            <identifier class="java.lang.String">a02547b9-0a3e-4ec5-8519-0d6b8b8d1783</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">2</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>WARRANTY_PERIOD_MONTHS</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>WARRANTY_PERIOD_MONTHS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SHIPPING_CLASS_CODE</name>
+        <identifier class="java.lang.String">c200ecfa-cd03-40a8-9bd9-351c5feddf69</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>SHIPPING_CLASS_CODE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">44308d86-06bc-4d9c-aaf6-a04ef6d39e17</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SHIPPING_CLASS_CODE</name>
+            <identifier class="java.lang.String">c200ecfa-cd03-40a8-9bd9-351c5feddf69</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">30</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>SHIPPING_CLASS_CODE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SHIPPING_CLASS_CODE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>EXTERNAL_URL</name>
+        <identifier class="java.lang.String">92aaf03a-1797-4cb2-92ac-aa776f07f14d</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>EXTERNAL_URL</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1ff5f5da-d453-4192-9781-6e7e50afcad4</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>EXTERNAL_URL</name>
+            <identifier class="java.lang.String">92aaf03a-1797-4cb2-92ac-aa776f07f14d</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">200</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>EXTERNAL_URL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>EXTERNAL_URL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>ATTRIBUTE_CATEGORY</name>
+        <identifier class="java.lang.String">7298dfb4-b320-42a2-ab0b-d54cd6bd3f5a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>ATTRIBUTE_CATEGORY</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">4e4a2c9e-2f5a-400a-bdc7-bdd40515dbaf</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>ATTRIBUTE_CATEGORY</name>
+            <identifier class="java.lang.String">7298dfb4-b320-42a2-ab0b-d54cd6bd3f5a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">30</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ATTRIBUTE_CATEGORY</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ATTRIBUTE_CATEGORY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CREATED_BY</name>
+        <identifier class="java.lang.String">2c38b59e-f46a-4a63-8bcd-0d928908d53b</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>CREATED_BY</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1db45481-516a-489c-b010-ecc54034db38</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CREATED_BY</name>
+            <identifier class="java.lang.String">2c38b59e-f46a-4a63-8bcd-0d928908d53b</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">60</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>CREATED_BY</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CREATED_BY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CREATION_DATE</name>
+        <identifier class="java.lang.String">5f614bba-9a67-49ad-b9be-1c448c9b3498</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>CREATION_DATE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">9b415db3-e7de-407d-b8b0-a51dd16e8def</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CREATION_DATE</name>
+            <identifier class="java.lang.String">5f614bba-9a67-49ad-b9be-1c448c9b3498</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DATE</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>CREATION_DATE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CREATION_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>LAST_UPDATED_BY</name>
+        <identifier class="java.lang.String">fea89e9b-daaf-4ac2-a88d-875c6f75b40b</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>LAST_UPDATED_BY</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2168e612-3fd7-4777-b669-2ee72de8ff7b</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LAST_UPDATED_BY</name>
+            <identifier class="java.lang.String">fea89e9b-daaf-4ac2-a88d-875c6f75b40b</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">60</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>LAST_UPDATED_BY</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LAST_UPDATED_BY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>LAST_UPDATE_DATE</name>
+        <identifier class="java.lang.String">3e792f30-392c-4d4c-b912-67cc80805382</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>LAST_UPDATE_DATE</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">0b0c96e3-4f10-4f89-9a4e-e56db54bff92</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LAST_UPDATE_DATE</name>
+            <identifier class="java.lang.String">3e792f30-392c-4d4c-b912-67cc80805382</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DATE</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>LAST_UPDATE_DATE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LAST_UPDATE_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>OBJECT_VERSION_ID</name>
+        <identifier class="java.lang.String">e3714240-b5f2-4e7a-bbf5-ccdad239271e</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>OBJECT_VERSION_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">4512d6df-915a-4d17-a4fd-9f3bd183dbad</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>OBJECT_VERSION_ID</name>
+            <identifier class="java.lang.String">e3714240-b5f2-4e7a-bbf5-ccdad239271e</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>PRODUCTS</name>
+              <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>FOD</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>OBJECT_VERSION_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCTS</name>
+                  <identifier class="java.math.BigDecimal">30529</identifier>
+                  <schemaName>FOD</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OBJECT_VERSION_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCTS_PRODUCT_CATEGORIES_FK</name>
+        <identifier class="java.lang.String">d6d7bcc0-60ee-49df-a326-85273db3d0cf</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>PRODUCTS_PRODUCT_CATEGORIES_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CATEGORY_ID</name>
+          <identifier class="java.lang.String">f3f35724-4cfa-49d7-8921-32c0918fbb9b</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCTS</name>
+            <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCTS_PRODUCT_CATEGORIES_FK</name>
+            <childObjectNames>
+              <childObjectName>CATEGORY_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CATEGORIES_PK</name>
+        <identifier class="java.lang.String">2d024edb-adba-48d6-ac3c-83ffc25f455f</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>CATEGORIES</name>
+          <identifier class="java.lang.String">ba39b7b0-c14e-40d1-941f-f199d9ed4eac</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCTS_SUPPLIERS_FK</name>
+        <identifier class="java.lang.String">c2a2a34e-657d-4c24-ad0f-1e6dc4237ac7</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>PRODUCTS_SUPPLIERS_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>SUPPLIER_ID</name>
+          <identifier class="java.lang.String">c6780274-b69d-4ee9-a4a4-1f1cd4b05a43</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCTS</name>
+            <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCTS_SUPPLIERS_FK</name>
+            <childObjectNames>
+              <childObjectName>SUPPLIER_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.ReferenceID">
+        <name>SUPPLIERS_PK</name>
+        <childObjectNames>
+          <childObjectName>SUPPLIER_ID</childObjectName>
+        </childObjectNames>
+        <parent class="oracle.javatools.db.ReferenceID">
+          <name>SUPPLIERS</name>
+          <identifier class="java.math.BigDecimal">30427</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <subType>PKConstraint</subType>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCTS_PK</name>
+        <identifier class="java.lang.String">662a4148-9937-4c86-98c2-975fa8d7864f</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCTS</name>
+          <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+          <schemaName>FOD</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOD</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>PRODUCTS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>PRODUCT_ID</name>
+          <identifier class="java.lang.String">fffd612f-ed93-4b4a-ab7a-474f0f7b5a8e</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCTS</name>
+            <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCTS_PK</name>
+            <childObjectNames>
+              <childObjectName>PRODUCT_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTS</name>
+              <identifier class="java.math.BigDecimal">30529</identifier>
+              <schemaName>FOD</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>PRODUCTS</name>
+        <identifier class="java.math.BigDecimal">30529</identifier>
+        <schemaName>FOD</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">dba9b24c-4636-4876-87d1-18af7d9544b1</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PRODUCTS</name>
+            <identifier class="java.lang.String">c43023f7-0880-40ac-8c7d-5cc31769d43d</identifier>
+            <schemaName>FOD</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>FOD</schemaName>
+          <type>OracleStorageProperties</type>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <maxtrans>255</maxtrans>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PRODUCTS</name>
+                <identifier class="java.math.BigDecimal">30529</identifier>
+                <schemaName>FOD</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespace>USERS</tablespace>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+    <entry>
+      <key>Timestamp</key>
+      <value class="java.lang.Long">1217888326000</value>
+    </entry>
+  </properties>
+  <schema>
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <name>FOD</name>
+      <identifier class="java.lang.String">5bd21afc-68c4-48be-be8a-ab0848711f74</identifier>
+      <schemaName>FOD</schemaName>
+      <type>SCHEMA</type>
+    </ID>
+    <name>FOD</name>
+  </schema>
+</table>

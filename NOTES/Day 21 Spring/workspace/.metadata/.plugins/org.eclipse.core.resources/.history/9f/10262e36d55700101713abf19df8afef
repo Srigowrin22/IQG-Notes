@@ -1,0 +1,22 @@
+package training.iqgateway.driver;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DriverApp {
+	public static void main(String[] args) {
+		
+//		Instantiate IOC Container
+		BeanFactory beanfactory = new ClassPathXmlApplicationContext("/beans.xml");
+		
+//		Expose Interface for Triggering Life Cycle events
+		ConfigurableApplicationContext configureContextRef = (ConfigurableApplicationContext) banFactory;
+		
+//		Triggering the Life Cycle events on IOC
+		configureContextRef.start();
+		configureContextRef.stop();
+		configureContextRef.close();
+	}
+
+}

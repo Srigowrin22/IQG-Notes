@@ -1,0 +1,8 @@
+package training.iqgateway.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CustomerRepository extends MongoRepository<CustomerEO, Integer>{
+
+}

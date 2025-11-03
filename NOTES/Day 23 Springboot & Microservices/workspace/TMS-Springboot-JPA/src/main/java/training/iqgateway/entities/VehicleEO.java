@@ -1,0 +1,128 @@
+package training.iqgateway.entities;
+
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity
+@Table(name = "VEHICLE")
+public class VehicleEO {
+
+	@Id
+	@Column(name = "VEHICLE_ID")
+	private Long vehicleId;
+
+	@Column(name = "VEHICLE_BRAND", length = 50, nullable = false)
+	private String vehicleBrand;
+
+	@Column(name = "VEHICLE_MODEL", length = 50, nullable = false)
+	private String vehicleModel;
+
+	@Column(name = "VEHICLE_TYPE", length = 50, nullable = false)
+	private String vehicleType;
+
+	@Column(name = "FUEL_TYPE", length = 10)
+	private String fuelType = "Petrol";
+
+	@Column(name = "NO_OF_EXHAUST")
+	private Integer noOfExhaust = 1;
+
+	@Column(name = "COLOR", length = 20)
+	private String color = "White";
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "MANUFACTURE_DATE")
+	private Date manufactureDate;
+
+	// One vehicle can have many registrations
+	@OneToMany(mappedBy = "vehicle")
+    @JsonManagedReference(value = "vehicle-registrations")
+	private Set<RegistrationEO> registrations;
+
+	// Constructors, getters, setters
+
+	public VehicleEO() {
+		this.manufactureDate = new Date();
+	}
+
+	public Long getVehicleId() {
+		return vehicleId;
+	}
+
+	public void setVehicleId(Long vehicleId) {
+		this.vehicleId = vehicleId;
+	}
+
+	public String getVehicleBrand() {
+		return vehicleBrand;
+	}
+
+	public void setVehicleBrand(String vehicleBrand) {
+		this.vehicleBrand = vehicleBrand;
+	}
+
+	public String getVehicleModel() {
+		return vehicleModel;
+	}
+
+	public void setVehicleModel(String vehicleModel) {
+		this.vehicleModel = vehicleModel;
+	}
+
+	public String getVehicleType() {
+		return vehicleType;
+	}
+
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
+
+	public String getFuelType() {
+		return fuelType;
+	}
+
+	public void setFuelType(String fuelType) {
+		this.fuelType = fuelType;
+	}
+
+	public Integer getNoOfExhaust() {
+		return noOfExhaust;
+	}
+
+	public void setNoOfExhaust(Integer noOfExhaust) {
+		this.noOfExhaust = noOfExhaust;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public Date getManufactureDate() {
+		return manufactureDate;
+	}
+
+	public void setManufactureDate(Date manufactureDate) {
+		this.manufactureDate = manufactureDate;
+	}
+
+	public Set<RegistrationEO> getRegistrations() {
+		return registrations;
+	}
+
+	public void setRegistrations(Set<RegistrationEO> registrations) {
+		this.registrations = registrations;
+	}
+}

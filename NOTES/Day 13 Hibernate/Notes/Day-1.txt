@@ -1,0 +1,58 @@
+	Module-12		Hibernate Framework
+
+	
+	
+	Softwares to Installed At Our Side
+	
+	1.  JDK 8
+		
+		https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+	
+	2.  IDE ( Eclipse IDE Neon 2 )
+	
+		https://www.eclipse.org/downloads/packages/release/neon/2/eclipse-ide-java-ee-developers
+		
+	3.  DB  ( Oracle 11g XE )
+		https://www.oracle.com/database/technologies/xe-prior-releases.html
+	
+	4.  Hibernate Package
+	
+		http://hibernate.org/orm/releases/5.4/
+		
+		Extract Zip to Desired Directory
+		
+		
+	What is Design Pattern
+	
+		Set of Guides 
+		
+		Service Layer
+		
+		DAO / DTO
+		
+	ORM
+	
+		Object Relational Mapping
+		
+		Entity Object Class ----   Table 
+		
+		EO's Attributes     ----   Column
+		
+		EO Instance         ----   Record
+		
+	
+		Mapping 
+		
+		a.  XML Based   ( HBM Files )
+		
+		b.  Annotations ( Pre Defined Annotations Via JPA )
+		
+		
+		Persistence Layers
+		
+		1.  Entity Object Class
+		
+		
+		
+		public class AccountEO		{					private int id;						private Date accountOpeningDate;						...						private List<AccountTransactionEO> acctTrans					}				Account.hbm.xml				<hibernate-mapping>					<property .. >						<property name="acctTrans" cascade="delete" />					</hibernate-mapping>
+				

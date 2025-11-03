@@ -1,0 +1,283 @@
+Day 3 
+
+	Agenda :
+	
+		Lesson 04 : Developing Web Applications Using JSP 
+		
+		Lesson 05 : Naming Service Using JNDI and Dependency Injection 
+		
+		Lesson 06 : Building Business Logic Using EJB Session Beans 
+		
+		
+		Lesson 04 : Developing Web Applications Using JSP 
+		
+		
+				Phases In JSP
+
+				1.  Translation Phase 
+				
+					PageCompileServlet Converts JSP Page into Servlets 
+								
+				2.  Request Processing Phase 
+				
+					Now Container Will Ask the Generated Servlet to Process the Request 
+					
+					
+		
+			Any Application 
+			
+			UI 
+			
+			Business 
+			
+			Data 
+			
+			
+			In Servlets or JSP [ Data Communication ] for Storing Data 
+			
+			1.  Instance Variables 
+			
+				Problem [ Data Gets Shared With Everyone Since There is Only One Instance of Servlet Created ]
+				
+			2.  ServletRequest 
+			
+					setAttribute(Name, Value)
+					
+					getAttribute(Name)
+					
+					removeAttribute(Name)
+				
+				Problem [ Data is Not Stored after Giving the Response ]
+				
+			3.  HttpSession 
+			
+					setAttribute(Name, Value)
+					
+					getAttribute(Name)
+					
+					removeAttribute(Name)
+					
+					** Per User [ Data Can Span More than One Client Request ]
+					
+			4.  ServletContext 
+			
+					setAttribute(Name, Value)
+					
+					getAttribute(Name)
+					
+					removeAttribute(Name)
+					
+					Resembles Static Variables in Java 
+					
+					Problem [ Data Gets Shared With Everyone ( Clients and Servlets ) Since There is Only One Instance of ServletContext Created ]
+			
+			JEE Says [ Every Component Should Have Limited Duty To Be Self Consistent ]
+			
+			
+			DP and Architecture Came into Action 
+			
+				MVC I
+				
+				M - Model [ Temp Data Store ]
+				
+				V - View  [ UI of the Application ]
+				
+				C - Controller 
+				
+					a.  Interpreting the client Request
+					
+					b.  Delegation of Control to business Unit
+					
+					c.  Navigation 
+					
+				
+				In Our Case 
+				
+				M - Java Beans [ POJO ] 
+				
+				V and C - JSP Pages 
+				
+				
+				How to Access Java Bean in JSP 
+				
+				1.  <% 
+				
+						LanguageBean lbRef = new LanguageBean();
+						lbRef.setter
+						lbRef.getter
+						
+					%>
+					
+				2.  Using Predefined Custom Tags 
+				
+					<jsp:useBean id="lbRef" class="training.iqgateway.LanguageBean"
+								 scope="session">
+								 
+					
+						<jsp:getProperty name="lbRef" property="name" />
+						
+						<jsp:getProperty name="lbRef" property="language" />
+					
+					
+						<jsp:setProperty name="lbRef" property="name" value="Rahul"/>
+
+						<jsp:setProperty name="lbRef" property="language" value="Java"/>
+					
+					
+					</jsp:useBean>
+					
+					
+				Custom Tags
+
+					javax.servlet.jsp.tagext.*;
+
+					Custom Tags are nothing but User Defined Tags which are typically XML Based Tags
+
+						Idea
+
+							1. Abstraction
+
+							2. Seperation of Concern
+
+							3. Easy Management
+
+							4. Reusable
+
+					Tag
+
+						1.  Predefined
+
+						2.  User Defined
+
+							a. Tag with Body with Attributes
+								<BODY BGCOLOR>
+							
+							b. Tag with Body without Attributes
+								<p>
+							
+							c. Tag withOut Body with Attributes
+								<hr>
+							
+							d. Tag Without Body without Attributes
+								<br>
+
+							<Start>
+
+							</End>
+
+
+					Custom Tags 
+
+					Requriments
+
+						1.	Tag Handler  ( Java Class )
+								
+						2.	Tag Library Descriptor File (.tld)
+
+						3.	JSP page which uses Custom Tags
+
+
+
+					Keep the jsp-api.jar file in classpath 
+
+
+					Create a context
+
+								Context
+									|
+									|
+									-------WEB-INF
+									|		|
+									|		|
+								(Jsp 	files		------classes
+								tld files		|	|
+								html files)	|	|
+											|	-----  Java Tag handler file
+											|		with other java files
+											|
+											|-----lib
+											|	|
+											|	|
+											|	----	jar files
+											|
+											|
+											|
+											-------web.xml,.tld
+										
+															
+					Compile the Java Tag Handler
+
+
+
+
+					Tag Handler
+
+						The functionality which defines the properties of that tag
+
+
+						Tag interface ( Bodyless Tag )
+
+							doStartTag()
+
+								Return Types
+
+									SKIP_BODY
+
+									EVAL_BODY_INCLUDE
+
+							doEndTag()
+
+								Return Types
+
+									EVAL_PAGE
+
+									SKIP_PAGE
+
+
+							release()
+
+						BodyTag Interface
+
+
+					After Completing the logic for the tag and Tag Handler..
+
+					Register it in TLD File.
+
+
+			Lesson 05 : Naming Service Using JNDI and Dependency Injection 
+			
+					Naming Service 
+					
+						WHERE TO LOOKUP [   ]  Location 
+						
+						WHAT TO LOOKUP  [   ]  Component 
+						
+						
+					Dependency Injection 
+					
+						Customer [ Target ]
+						{
+							...
+							
+						}
+						
+						Order [ Dependent ]
+						{
+							...
+							Customer customer;
+							
+						}
+						
+						Order ordObj = new Order();
+						
+						Customer custRef1 = new Customer();
+						
+						// Associating the Customer Object With Order 
+						
+						ordObj.setCustomer(custRef1);
+						
+						
+						
+						
+						
+						
